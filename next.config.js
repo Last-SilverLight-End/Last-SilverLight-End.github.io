@@ -5,7 +5,7 @@ const name = 'ShowMeTheHomepage';
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: debug ? '' : `/${name}`
+  assetPrefix: debug ? '' : `/${name}/`
 }
 
 module.exports = nextConfig
