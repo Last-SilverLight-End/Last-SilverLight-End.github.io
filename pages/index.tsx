@@ -13,7 +13,13 @@ const NextButton:FC = () => {
 const Home: NextPage = () => {
   
   return (
-    <NextButton />
+    <div>
+
+      <h1>홈페이지에 오신걸 환영합니다!</h1>
+      <h2>자기소개</h2>
+  
+      <NextButton />
+    </div>
   )
 }
 

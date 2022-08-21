@@ -1,11 +1,11 @@
-const debug = process.env.NODE_ENV !== 'production';
 const name = 'ShowMeTheHomepage';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: debug ? '' : `/${name}/`
+  assetPrefix: `/${name}/`,
+  basePath: `/${name}`
 }
 
 module.exports = nextConfig
