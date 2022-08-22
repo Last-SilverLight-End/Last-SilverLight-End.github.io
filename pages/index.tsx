@@ -14,7 +14,7 @@ const IntroduceButton:FC = () => {
   }
   return( 
   
-    <a href='' onClick={handleClick}>
+    <a href='/test' onClick={handleClick}>
 
       눌러 내 자기소개야
       </a>
