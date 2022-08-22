@@ -9,8 +9,6 @@ const nextConfig = {
 }
 
 module.exports = {
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "https://last-silverlight-end.github.io/ShowMeTheHomepage/"
-      : "",
+  assetPrefix: "https://last-silverlight-end.github.io/ShowMeTheHomepage/",
+
 };
