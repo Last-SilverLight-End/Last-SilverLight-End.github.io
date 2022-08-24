@@ -1,15 +1,32 @@
 import type { NextPage } from 'next'
+import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { FC, useState } from 'react'
 
 const NextButton:FC = () => {
   const router = useRouter();
 
-  return <button onClick={() => router.push("/test")}>
-    눌러
-  </button>;
+
+  return(
+
+  <Link href="/test">
+   <a>
+    눌러 내 자기 소개야22
+    </a></Link>
+  )
 }
 
+const GitLinkButton:FC = () => {
+
+  const router = useRouter();
+
+  return(
+  <Link href="https://github.com/Last-SilverLight-End">
+   <a>
+    눌러 내 깃허브 링크야
+    </a></Link>
+  )
+}
 const Home: NextPage = () => {
   
   return (
