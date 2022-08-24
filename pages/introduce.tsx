@@ -27,19 +27,15 @@ import Header from '@components/Header';
  */
 
 const introduce: NextPage = () => {
-  return <>
-    <Header />
+  return(
     <div>
-
-      <h1>홈페이지에 오신걸 환영합니다!</h1>
-      <br></br>
-      <h2>자기소개</h2>
-  
-      <NextButton />
-      <br /><br />
-      <GitLinkButton />
+    <Header />
+    
+      <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
+        <h2>지금은 공사중이니 나중에 올께요</h2>
     </div>
-  </>;
-}
+    
+    )
+};
 
 export default introduce
