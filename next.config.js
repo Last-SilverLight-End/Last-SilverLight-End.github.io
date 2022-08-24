@@ -8,4 +8,16 @@ const nextConfig = {
   basePath: `/${name}`
 }
 
-module.exports = nextConfig
+module.exports = {
+  basePath: `/${name}`,
+  assetPrefix:
+  process.env.NODE_ENV === "production"
+    ? "https://last-silverlight-end.github.io/ShowMeTheHomepage/"
+    : "/ShowMeTheHomepage/",
+    reactStrictMode: true,
+    swcMinify: true,
+  
+
+};
+
+ /*module.exports = nextConfig*/
