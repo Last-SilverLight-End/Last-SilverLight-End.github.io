@@ -1,0 +1,20 @@
+.header{
+    background-color: #9459f9;
+    color: #fff;
+    text-align: center;
+}
+.header ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+}
+.header li{
+    padding: 10px;
+}
+
+.current{
+    background-color: rgb(179, 115, 239);
+}

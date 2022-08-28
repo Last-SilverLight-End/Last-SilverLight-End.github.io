@@ -5,13 +5,13 @@ import { FC, useState } from 'react';
 import NextButton from '@components/NextButton';
 import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
-
+import styles from '../styles/main.module.css';
 
 
 const Home: NextPage = () => {
   return <>
     <Header />
-    <div>
+    <div className={styles.linkHighlight}>
 
       <h1>홈페이지에 오신걸 환영합니다!</h1>
       <br></br>

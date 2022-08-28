@@ -1,42 +1,40 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import "./global.css"
+import style from '@styles/header.module.css'
+import { useRouter } from 'next/router';
 
 /*FC -> functional component */
 const Header: FC = () => {
-
+  const router = useRouter();
+  
   return (
-    <div> 
+    <div className = {style.header}> 
       <ul>
-        <li>
         <Link href="/">
-              <li className='header_menu'> 
+              <li className={router.asPath === "/" ? style.current : undefined}> 
                 메인
               </li>
           </Link>
           <Link href="/introduce">
-            <li className='header_menu'> 
+          <li className={router.asPath === "/introduce" ? style.current : undefined}> 
               자기소개
             </li>
           </Link>
           <Link href="/portfolio">
-            <li className='header_menu'> 
+          <li className={router.asPath === "/portfolio" ? style.current : undefined}> 
               포트폴리오
             </li>
           </Link>
           <Link href="/privateChat">
-          <li className='header_menu'> 
+          <li className={router.asPath === "/privateChat" ? style.current : undefined}> 
               개인 잡담
-
-              </li> 
+          </li> 
           </Link>
           <Link href="/jjoripingBabo">
-          <li className='header_menu'> 
+          <li className={router.asPath === "/jjoripingBabo" ? style.current : undefined}> 
             쪼리핑 바보
-            <ul></ul> 
             </li> 
           </Link>
-        </li>
       </ul>
     </div>
   )

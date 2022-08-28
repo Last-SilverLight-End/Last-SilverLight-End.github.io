@@ -26,14 +26,14 @@ import styles from '../styles/main.module.css';
  * }
  */
 
-const introduce: NextPage = () => {
+const portfolio: NextPage = () => {
   return(
     <div>
     <Header />
     <footer className={styles.footer} >
-      <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
+      <h1>포트폴리오 페이지에 오신걸 환영합니다!!!</h1>
       <br></br>
-        <h2>지금은 공사중이니 나중에 올께요</h2>
+        <h2>지금은 공사중ing이니 나중에 올께요</h2>
 
     </footer>
     </div>
@@ -41,4 +41,4 @@ const introduce: NextPage = () => {
     )
 };
 
-export default introduce
+export default portfolio

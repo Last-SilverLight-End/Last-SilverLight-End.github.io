@@ -11,7 +11,7 @@ module.exports = {
       ? "https://last-silverlight-end.github.io/ShowMeTheHomepage/"
       : undefined,
 
-  reactStrictMode: true,
+  reactStrictMode: false,
 
   swcMinify: true,
 
