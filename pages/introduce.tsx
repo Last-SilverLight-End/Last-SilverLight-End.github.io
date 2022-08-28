@@ -26,18 +26,45 @@ import styles from '../styles/main.module.css';
  * }
  */
 
+//<></> 의 유래와 정의 (fragment)
+/*<div>
+  <MyComponent />
+</div>
+
+// MyComponent
+return <>
+  <a>123</a>
+  <a>123</a>
+  <a>123</a>
+</>
+
+// 렌더링 결과
+<div>
+  <a>123</a>
+  <a>123</a>
+  <a>123</a>
+</div>
+*/
+
 const introduce: NextPage = () => {
-  return(
-    <div>
+  return(<>
     <Header />
-    <footer className={styles.footer} >
+
+    <main className={styles.main} >
       <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
-      <br></br>
-        <h2>이창근</h2>
-        <h3>NickName : HuunterKiller</h3>
-    </footer>
-    </div>
-    
+        <br></br>
+          <h2>이창근</h2>
+          <h3>NickName : HuunterKiller</h3>
+          <h4>Email : cg456456@naver.com</h4>
+          <h4>GitHub : 
+            <Link href="https://github.com/Last-SilverLight-End">
+                <a>
+                  Last_SilverLight_End
+                </a>
+            </Link>
+          </h4>
+    </main>
+  </>
     )
 };
 
