@@ -53,13 +53,15 @@ const introduce: NextPage = () => {
     <main className={styles.main} >
       <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
         <br></br>
+        <aside>
           <h2>이창근</h2>
-          <h3>NickName : HuunterKiller</h3>
+          <h3>NickName : HunterKiller</h3>
+          </aside>
           <h4>Email : cg456456@naver.com</h4>
           <h4>GitHub : 
             <Link href="https://github.com/Last-SilverLight-End">
-                <a>
-                  Last_SilverLight_End
+                <a className ={styles.linkHighlight}>
+                  Last-SilverLight-End
                 </a>
             </Link>
           </h4>

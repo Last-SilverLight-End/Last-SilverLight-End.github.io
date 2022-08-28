@@ -11,7 +11,7 @@ import styles from '../styles/main.module.css';
 const Home: NextPage = () => {
   return <>
     <Header />
-    <div className={styles.linkHighlight}>
+    <div>
 
       <h1>홈페이지에 오신걸 환영합니다!</h1>
       <br></br>

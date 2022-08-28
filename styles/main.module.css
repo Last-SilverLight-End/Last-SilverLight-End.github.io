@@ -1,15 +1,16 @@
 .linkHighlight {
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+  text-decoration-line: underline;
+  text-decoration-color: rgb(10, 82, 227);
+
   }
 .main {
   padding: 5px; 
   background-color: #45a1ff;
   color: #fff;
   text-align: center;
+}
+
+.linkHighlight:hover{
+  color: aqua;
 }
