@@ -54,6 +54,7 @@ const introduce: NextPage = () => {
       <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
         <br></br>
         <aside>
+          <h1>인적사항</h1>
           <h2>이창근</h2>
           <h3>NickName : HunterKiller</h3>
           </aside>

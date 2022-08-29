@@ -13,4 +13,6 @@
 
 .linkHighlight:hover{
   color: aqua;
+  cursor: pointer;
 }
+
