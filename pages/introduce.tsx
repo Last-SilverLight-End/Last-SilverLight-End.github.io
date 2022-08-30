@@ -59,7 +59,7 @@ const introduce: NextPage = () => {
               (김헌킬)
             </h2>
               
-            <Image className ={styles.alignImage}  src="/HunterKiller.png" alt="HunterKiller" width={150} height={150} />
+            <Image className ={styles.alignImage}  src="/images/HunterKiller.png" alt="HunterKiller" width={150} height={150} />
           </aside>
 
           <h3>NickName : HunterKiller</h3>
