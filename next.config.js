@@ -15,4 +15,10 @@ module.exports = {
 
   swcMinify: true,
 
+  experimental: {
+    images: {
+        unoptimized: true
+    }
+}
+
 }
