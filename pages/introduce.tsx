@@ -6,6 +6,7 @@ import NextButton from '@components/NextButton';
 import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
 import styles from '../styles/main.module.css';
+import Image from 'next/image';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -53,11 +54,15 @@ const introduce: NextPage = () => {
     <main className={styles.main} >
       <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
         <br></br>
-        <aside>
+        
           <h1>인적사항</h1>
           <h2>이창근</h2>
-          <h3>NickName : HunterKiller</h3>
+          <aside>
+          <Image src="/HunterKiller.png" alt="HunterKiller" width={320} height={320} />
+
+          
           </aside>
+          <h3>NickName : HunterKiller</h3>
           <h4>Email : cg456456@naver.com</h4>
           <h4>GitHub : 
             <Link href="https://github.com/Last-SilverLight-End">
@@ -67,6 +72,20 @@ const introduce: NextPage = () => {
             </Link>
           </h4>
     </main>
+
+    <div>
+      <p>
+        앱에 관련 하여 관심이 많아 Android Studio로 앱을 만들거나 Unity를 통해 Android 기반 앱을 만들었습니다.
+      </p>
+      <p>
+        AR / VR를활용한Android 앱 개발에 관심이 생겨 MVR Lab에서 연구생으로 공부 중입니다.
+      </p>
+      <p>
+      방학 시즌때마다프로젝트 결과물을만들어 베포 하기위해 지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.
+
+      </p>
+
+    </div>
   </>
     )
 };
