@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { FC, useState } from 'react';
 import Header from '@components/Header';
 import styles from '../styles/introduce.module.css';
-import Image from 'next/image';
+import Image from '@components/Image';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -54,12 +54,11 @@ const introduce: NextPage = () => {
         
           <h1>인적사항</h1>
           <aside className = {styles.alignAside}>
-            <h2 className ={styles.alignName}>이창근
+            <h2 className ={styles.alignName}>
               <br></br>
               (김헌킬)
-            </h2>
-              
-            <Image className ={styles.alignImage}  src="/images/HunterKiller.png" alt="HunterKiller" width={150} height={150} />
+            </h2>    
+            <Image/>
           </aside>
 
           <h3>NickName : HunterKiller</h3>
