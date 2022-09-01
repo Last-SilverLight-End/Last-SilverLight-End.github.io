@@ -75,21 +75,27 @@ const introduce: NextPage = () => {
 
     <main className={styles.myExplaination}>
       <p>
-       * 앱에 관련 하여 관심이 많아 Android Studio로 앱을 만들거나 Unity를 통해 Android 기반 앱을 만들었습니다.
+       * &nbsp; 앱에 관련 하여 관심이 많아 Android Studio로 앱을 만들거나 Unity를 통해 Android 기반 앱을 만들었습니다.
       </p>
       <p>
-       * 메타버스에 관련된 컨텐츠나 연구를 찾아보면서 공부 중 입니다. 
+       * &nbsp; 메타버스에 관련된 컨텐츠나 연구를 찾아보면서 공부 중 입니다. 
         <br></br>
-         최근 메타 휴먼과 이에 따른 메타 딥러닝에 관하여 보고 있습니다. 
+        &nbsp; 최근 메타 휴먼과 이에 따른 메타 딥러닝에 관하여 보고 있습니다. 
         <br></br>
-         또한 VR/AR MVR 연구실에서 근무하여 연구 활동을 하였습니다.
+        &nbsp; 또한 VR/AR MVR 연구실에서 근무하여 연구 활동을 하였습니다.
         <br></br>
       </p>
       <p>
-      * 방학이나 학기중, 프로젝트 결과물들을 만들어 베포 하기위해 지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.
+      &nbsp; * 방학이나 학기중, 프로젝트 결과물들을 만들어 베포 하기위해 
+      <br></br>
+      &nbsp; 지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.
+
+      &nbsp;  기본 개념을 복습하고 모르는 부분을 바로 잡기 위해 블로그를 통해
+      <br></br> 
+      &nbsp; Formatting , Naming Convention 등등 공부하는 것들을 기재하는 중 입니다. 
       </p>
       <p>
-     * 최근 웹앱으로 만드는 경향이 있어 웹 형태인 JavaScript 나 TypeScript 를 이용한 웹 개발 하여 앱으로 변환 과정들을 공부중에 있습니다.
+      &nbsp; * 최근 웹앱으로 만드는 경향이 있어 웹 형태인 JavaScript 나 TypeScript 를 이용한 웹 개발 하여 앱으로 변환 과정들을 공부중에 있습니다.
       </p>
 
     </main>

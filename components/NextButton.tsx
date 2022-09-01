@@ -5,7 +5,7 @@ const NextButton:FC = () => {
   return (
     <Link href="/test">
       <a>
-        눌러 내 자기 소개야22
+        test용 버튼 다른 링크로 이동됩니다. 엥 안될줄 알았다고? 나약하군
       </a>
     </Link>
   );
