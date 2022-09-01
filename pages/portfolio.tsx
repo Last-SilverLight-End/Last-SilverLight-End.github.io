@@ -35,6 +35,12 @@ const portfolio: NextPage = () => {
             <h1>포트폴리오 페이지에 오신걸 환영합니다!!!</h1>
             <br></br>
                 <h2>현재 포트폴리오 내역들입니다!</h2>
+
+                <h3>FAS (Face Accessary Studio)</h3>
+                <h4>진행 기간 2022.03 ~ 2022.06</h4>
+                
+
+                <h4></h4>
                 <Link href ="www.naver.com">
                 <h2 className ={styles.linkHighlight}> 포트폴리오 링크는 여기로!(공사중)</h2>
                 </Link>

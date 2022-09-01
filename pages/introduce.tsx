@@ -55,10 +55,11 @@ const introduce: NextPage = () => {
           <h1>인적사항</h1>
           <aside className = {styles.alignAside}>
             <h2 className ={styles.alignName}>
+              이창근
               <br></br>
               (김헌킬)
             </h2>    
-            <Image/>
+            <Image className={styles.alignImage} src = "images/HunterKiller.png" width={120} height= {120}/>
           </aside>
 
           <h3>NickName : HunterKiller</h3>
@@ -85,7 +86,7 @@ const introduce: NextPage = () => {
         <br></br>
       </p>
       <p>
-      * 방학이나 하기중, 프로젝트 결과물들을 만들어 베포 하기위해 지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.
+      * 방학이나 학기중, 프로젝트 결과물들을 만들어 베포 하기위해 지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.
       </p>
       <p>
      * 최근 웹앱으로 만드는 경향이 있어 웹 형태인 JavaScript 나 TypeScript 를 이용한 웹 개발 하여 앱으로 변환 과정들을 공부중에 있습니다.

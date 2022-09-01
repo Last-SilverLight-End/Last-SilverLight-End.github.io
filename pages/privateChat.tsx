@@ -33,7 +33,7 @@ const introduce: NextPage = () => {
     <footer className={styles.footer} >
       <h1>개인잡담 페이지에 오신걸 환영합니다!!!</h1>
       <br></br>
-        <h2> 개인 잡담 페이지 개발 중이에요</h2>
+        <h2> 잘하자 헌킬아 넌 할수 있다.</h2>
 
     </footer>
     </div>
