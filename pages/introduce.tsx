@@ -77,7 +77,6 @@ const introduce: NextPage = () => {
         <li>
           앱에 관련 하여 관심이 많아 Android Studio로 앱을 만들거나 Unity를 통해 Android 기반 앱을 만들었습니다.
         </li>
-        <br />
         <li>
           메타버스에 관련된 컨텐츠나 연구를 찾아보면서 공부 중 입니다.
           <br />

@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import NextImage, { ImageProps } from "next/image";
 
-
-const Image: FC<ImageProps> = (props) => {
+const Image: FC<JSX.IntrinsicElements['img']> = (props) => {
 
 
   let temp = props.src;
@@ -13,7 +11,8 @@ const Image: FC<ImageProps> = (props) => {
   }
 
   return (
-    <NextImage {...props} src={temp} />
-  );
+    // eslint-disable-next-line @next/next/no-img-element,jsx-a11y/alt-text
+    <img {...props} src={temp} />
+  );  
 };
 export default Image;
