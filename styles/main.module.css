@@ -16,3 +16,56 @@
   cursor: pointer;
 }
 
+.header_myName{
+  text-align: center;
+  margin-top : 15%;
+  text-transform: uppercase;
+
+}
+
+@keyframes Hacked{
+  from{
+    background-color: red;
+    transform: scale(1);
+  }
+  50%{
+    padding: 100px;
+    background-color: green;
+    transform: scale(10) rotate(180deg);
+  }
+  to{
+    background-color: magenta;
+    transform: scale(2) rotate(100deg);
+  }
+}
+
+.header_myName h1{
+  background: #3f51b5;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 30px 5px 30px;
+  font-weight: 900;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.header_myName h1:hover {
+  box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;
+}
+
+.header_menu{
+  text-align : right;
+
+}
+
+.header_upMenu a{
+  display: inline-block;
+  color: rgb(0, 113, 189);
+  padding: 8px 0 6px 10px;
+  transition: color 0.3s ease;
+  font-family: "Gothic A1", sans-serif;
+}
+
+.header_upMenu a:hover{
+  color: #ccc;
+}

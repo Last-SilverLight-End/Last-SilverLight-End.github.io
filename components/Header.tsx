@@ -11,30 +11,30 @@ const Header: FC = () => {
     <div className = {style.header}> 
       <ul>
         <Link href="/">
-              <li className={router.asPath === "/" ? style.current : undefined}> 
+          <li className={router.asPath === "/" ? style.current : undefined}> 
                 메인
-              </li>
-          </Link>
-          <Link href="/introduce">
+          </li>
+        </Link>
+        <Link href="/introduce">
           <li className={router.asPath === "/introduce" ? style.current : undefined}> 
               자기소개
-            </li>
-          </Link>
-          <Link href="/portfolio">
+          </li>
+        </Link>
+        <Link href="/portfolio">
           <li className={router.asPath === "/portfolio" ? style.current : undefined}> 
               포트폴리오
-            </li>
-          </Link>
-          <Link href="/privateChat">
+          </li>
+        </Link>
+        <Link href="/privateChat">
           <li className={router.asPath === "/privateChat" ? style.current : undefined}> 
               개인 잡담
           </li> 
-          </Link>
-          <Link href="/jjoripingBabo">
+        </Link>
+        <Link href="/jjoripingBabo">
           <li className={router.asPath === "/jjoripingBabo" ? style.current : undefined}> 
             쪼리핑 바보
-            </li> 
-          </Link>
+          </li> 
+        </Link>
       </ul>
     </div>
   )

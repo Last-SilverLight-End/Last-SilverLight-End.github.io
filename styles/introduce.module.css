@@ -34,23 +34,23 @@
   cursor: pointer;
 }
 
-.alignAside{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.alignGrid{
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  gap : 5%;
 }
 
-.alignName{
-  margin-left: 5%;
-  margin-right: 5%;
- }
-
-.alignImage{
-  margin-left: 0;
-  margin-right: 0;
+.alignGrid>h2{
+  text-align : right;
 }
 
+.alignGrid>img{
+  margin : auto 0;
+  margin-right: auto;
+}
 
+.myExplaination p{
+  margin-left: 1%;
+}
 
 

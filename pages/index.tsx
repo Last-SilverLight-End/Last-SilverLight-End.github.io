@@ -11,25 +11,23 @@ import styles from '../styles/main.module.css';
 const Home: NextPage = () => {
   return <>
     <Header />
-    <div>
+    <div className={styles.header_Container}>
 
-      <h1>홈페이지에 오신걸 환영합니다!</h1>
-      <br></br>
-      <h3>자기소개, 포트폴리오 , 개인 잡담 등등 다양하게 존재합니다!</h3>
-      <h3> 위에 탭을 눌러서 이동해 보세요!</h3>
-      <h3>다른 공지 사항들이 존재하면 따로 적을께요!!</h3>
+      <div className={styles.header_upMenu}>
+        <a href="https://last-silverlight-end.tistory.com/">Blog</a>
+        <a href="https://github.com/Last-SilverLight-End/">Github</a>
+        <a href="https://last-silverlight-end.github.io/ShowMeTheHomepage/">Webstandard</a>
+      </div>
 
-      <h4> ** 기초 버튼 테스팅 **</h4>
-      <NextButton  />
-      <br /><br />
-      <GitLinkButton />
-      <br></br>
-      
-    </div>
-    <div>
-      <h1>공지사항</h1>
-        <p> 내일 정처기 발표다 망했다</p>
-        <p> 현재 유니티 게임 구상중 </p>
+      <div className={styles.header_myName}>
+        <h1>
+          Last-Silver-Light WEB 성장기
+        </h1>
+        <br />
+        <a href='https://www.google.com'>구글</a>
+        <a href='https://www.naver.com'>네이버</a>
+
+      </div>
     </div>
   </>;
 }

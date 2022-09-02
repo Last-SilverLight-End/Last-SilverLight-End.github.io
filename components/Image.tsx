@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import NextImage from "next/image";
+import NextImage, { ImageProps } from "next/image";
 
 
-const Image : FC<JSX.IntrinsicElements['img']> = (props) => {
+const Image: FC<ImageProps> = (props) => {
 
-    
-    let temp =props.src;
 
-    if(process.env.NODE_ENV === "production"){
-        temp = "/ShowMeTheHomepage" + temp;
-    } 
+  let temp = props.src;
+
+  if (process.env.NODE_ENV === "production") {
+    temp = "/ShowMeTheHomepage" + temp;
+  }
 
   return (
-    <img {...props} src = {temp} />
+    <NextImage {...props} src={temp} />
   );
 };
 export default Image;

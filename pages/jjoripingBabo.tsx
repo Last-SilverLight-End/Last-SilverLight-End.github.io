@@ -27,18 +27,18 @@ import styles from '../styles/main.module.css';
  */
 
 const introduce: NextPage = () => {
-  return(
+  return (
     <div>
-    <Header />
-    <footer className={styles.footer} >
-      <h1>ww 쪼리핑 바보 ww</h1>
-      <br></br>
-        <h2> 쪼리핑은 빡빡이다.</h2>
+      <Header />
+      <footer className={styles.footer} >
+        <h1>ww 헌킬 바보 ww</h1>
+        <br></br>
+        <h2> 헌킬은 빡빡이다.</h2>
 
-    </footer>
+      </footer>
     </div>
-    
-    )
+
+  )
 };
 
 export default introduce
