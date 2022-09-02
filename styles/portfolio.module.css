@@ -1,0 +1,33 @@
+
+.header{
+    padding: 2px; 
+    background-color: #00b90c;
+    color: #fff;
+    text-align: center;
+    flex:1 ; 
+  }
+
+
+.portfolio_nailArt {
+    padding: 2px; 
+    background-color: #45a1ff;
+    color: #fff;
+    text-align: center;
+    flex:1 ; 
+  }
+
+  .portfolio_FAS {
+    padding: 2px; 
+    background-color: #dc2a74;
+    color: #fff;
+    text-align: center;
+    flex:1 ; 
+  }
+
+  .portfolio_baristaSimulation{
+    padding: 2px; 
+    background-color: #ac747b;
+    color: #fff;
+    text-align: center;
+    flex:1 ; 
+  }
