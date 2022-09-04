@@ -2,6 +2,8 @@
     background-color: #9459f9;
     color: #fff;
     text-align: center;
+    
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 .header ul{
     display: grid;
@@ -10,9 +12,20 @@
     margin: 0;
     list-style: none;
     cursor: pointer;
+    
 }
 .header li{
     padding: 10px;
+    
+}
+.header li:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: #1e6b7b;
+    background: aliceblue;
+}
+.header li:active {
+    transform: scale(1.5);
 }
 
 .current{
