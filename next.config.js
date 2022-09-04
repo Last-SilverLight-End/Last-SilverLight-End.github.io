@@ -3,12 +3,12 @@
 
 
 module.exports = {
-  basePath: 
+  basePath:
     process.env.NODE_ENV === "production"
       ? "/ShowMeTheHomepage"
       : undefined,
-    
-    
+
+
   assetPrefix:
     process.env.NODE_ENV === "production"
       ? "https://last-silverlight-end.github.io/ShowMeTheHomepage/"
@@ -20,8 +20,8 @@ module.exports = {
 
   experimental: {
     images: {
-        unoptimized: true
+      unoptimized: true
     }
-}
+  }
 
 }

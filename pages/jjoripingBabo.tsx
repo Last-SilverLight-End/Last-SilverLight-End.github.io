@@ -31,9 +31,9 @@ const introduce: NextPage = () => {
     <div>
       <Header />
       <footer className={styles.footer} >
-        <h1>ww 헌킬 바보 ww</h1>
+        <h1>ww 캐시 바보 ww</h1>
         <br></br>
-        <h2> 헌킬은 빡빡이다.</h2>
+        <h2> 캐시는 빡빡이다.</h2>
 
       </footer>
     </div>

@@ -11,14 +11,30 @@
   text-align: center;
 }
 
+.body{
+  background: #b2b8dd;
+}
+.container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
 .linkHighlight:hover{
   color: aqua;
   cursor: pointer;
 }
 
+
+.header_container{
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .header_myName{
   text-align: center;
-  margin-top : 15%;
+  margin-top : 5%;
+  margin-bottom: 5%;
   text-transform: uppercase;
 
 }
@@ -53,9 +69,8 @@
   box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;
 }
 
-.header_menu{
+.header_upMenu{
   text-align : right;
-
 }
 
 .header_upMenu a{
@@ -68,4 +83,63 @@
 
 .header_upMenu a:hover{
   color: #ccc;
+}
+
+.nav {
+  display: none;
+  overflow: hidden;
+  padding: 25px 0;
+}
+.nav > div {
+  float: left;
+  width: 40%;
+}
+.nav > div:last-child {
+  width: 20%;
+}
+.nav > div h3 {
+  font-size: 18px;
+  color: #25a2d0;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.nav > div ol {
+  overflow: hidden;
+}
+.nav > div li {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+.nav > div:last-child li {
+  width: 100%;
+}
+.nav > div li:before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #25a2d0;
+  top: 8px;
+  left: 0;
+}
+.nav > div li a {
+  position: relative;
+}
+.nav > div li:hover a:after {
+  width: 100%;
+}
+.nav > div li a:after {
+  position: absolute;
+  width: 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  transition: all 0.2s ease-out;
+  background: #25a2d0;
+  bottom: 0;
+  left: 0;
 }
