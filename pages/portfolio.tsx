@@ -110,11 +110,47 @@ const portfolio: NextPage = () => {
                     </Link>
                   </h4>
                 </ul>
-
               </div>
             </section>
           </div>
         </div>
+        <div className={styles.portfolio_liveChattingApp}>
+          <h3> 실시간 채팅 앱 </h3>
+          <h4>진행 기간</h4>
+          <p>2021.05 ~ 2021.07</p>
+          <div>
+
+            <h4>사용 언어 및 기타사항</h4>
+            <p> JAVA를 활용한 Android Studio 내 채팅 앱 개발 </p>
+            <h4>세부 과정</h4>
+            <section className={styles.twoColumnSection}>
+              <Image alt="Chatting App Picture 1" src="images/portfolio_LiveChattingApp1.png" width={300} height={200} />
+              <div>
+                <ul style={{ listStyle: '" *   "' }} >
+                  <li>
+                    로그인 화면 등 Android UI 부분들을 XML로 Layout, Fragment로 사용하여 구성.
+                  </li>
+                  <li>
+                    FireBase auth를 통해 회원가입 및 로그인 구성 과정 구현.
+                  </li>
+                  <li>
+                    채팅창의 실시간 로그를 기록 및 저장, 화면 나갔다 와도 유지될 수 있도록 구현.
+                  </li>
+                  <li>
+                    추후 프로필 추가등 업데이트 및 수정 예정.
+                  </li>
+                  <h4>프로젝트 결과 , GitHub URL or 동영상</h4>
+                  <h4>
+                    <Link href="https://github.com/Last-SilverLight-End/android_page">
+                      ## 채팅앱 깃허브 링크 ##
+                    </Link>
+                  </h4>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+
         <h2 className={styles.linkHighlight}> 포트폴리오 링크는 여기로!(공사중)</h2>
       </main>
     </div>
