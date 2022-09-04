@@ -41,10 +41,29 @@
   grid-template-columns: 1fr 1fr;
   gap: 10%;
 }
+.twoColumnSection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
 .twoColumnSection>img{
-  margin: auto 0;
+  margin: 0 0;
   margin-left: auto;
 }
 .twoColumnSection>div{
   text-align: left;
+}
+
+.twoColumnSection2{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 10%;
+}
+
+.twoColumnSection2>img{
+  justify-self: space-between;
+}
+.twoColumnSection2>div{
+  text-align: left;
+  
 }
