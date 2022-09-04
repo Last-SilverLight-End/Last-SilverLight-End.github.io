@@ -86,7 +86,9 @@ const portfolio: NextPage = () => {
             <p>C# 기반 unity 와 Oculus 2 를 이용하여 구현</p>
             <h4>세부 과정</h4>
             <section className={styles.twoColumnSection}>
-              <Image alt="Barista Simulation Picture" src="/images/portfolio_baristaSimulation.png" width={300} height={200} />
+              <div>
+                <Image alt="Barista Simulation Picture" src="/images/portfolio_baristaSimulation.png" width={400} height={300} />
+              </div>
               <div>
                 <ul style={{ listStyle: '" *   "' }} >
                   <li>
@@ -124,11 +126,14 @@ const portfolio: NextPage = () => {
             <p> JAVA를 활용한 Android Studio 내 채팅 앱 개발 </p>
             <h4>세부 과정</h4>
             <section className={styles.twoColumnSection2}>
-              <div className ={styles.twoColumnSection2_img}>
-                <Image alt="Chatting App Picture 1" src="/images/portfolio_LiveChattingApp1.png" width={200} height={300} />
-                <Image alt="Chatting App Picture 1" src="/images/portfolio_LiveChattingApp2.png" width={200} height={300} />
+              <div >
+
+                <Image alt="Chatting App Picture 1" src="/images/portfolio_LiveChattingApp1.png" width={250} height={350} />
+
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_LiveChattingApp2.png" width={250} height={350} />
               </div>
-              <div>
+
+              <div >
                 <ul style={{ listStyle: '" *   "' }} >
                   <li>
                     로그인 화면 등 Android UI 부분들을 XML로 Layout, Fragment로 사용하여 구성.

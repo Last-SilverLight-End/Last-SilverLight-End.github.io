@@ -36,34 +36,58 @@
 .portfolioFormat p{
   margin-left: 10px;
 }
+
+/** portfolio barista simulation */
+
 .twoColumnSection{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10%;
+  gap: 20px;
 }
-.twoColumnSection{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10%;
+
+.twoColumnSection img{
+  display: block;
+  margin: 0 10px;
 }
-.twoColumnSection>img{
-  margin: 0 0;
-  margin-left: auto;
+
+.twoColumnSection div{
+  display: flex;
+  gap: 10px;
+  margin: auto 0;
 }
-.twoColumnSection>div{
+.twoColumnSection>div>img{
+  margin: auto;
+}
+
+.twoColumnSection>div>ul{
   text-align: left;
+  margin :auto 0;
 }
+
+/** portfolio live chatting app */
 
 .twoColumnSection2{
   display: grid;
   grid-template-columns:  1fr 1fr;
-  gap: 10%;
+  gap: 20px;
 }
 
-.twoColumnSection2>img{
-  justify-self: space-between;
+.twoColumnSection2 img{
+  display: block;
+  margin: 0 10px;
 }
-.twoColumnSection2>div{
+
+.twoColumnSection2 div{
+  display: flex;
+  gap: 10px;
+  margin: auto 0;
+}
+
+.twoColumnSection2>div>img{
+  margin: auto;
+}
+
+.twoColumnSection2>div>ul{
   text-align: left;
-  
+  margin :auto 0;
 }
