@@ -104,4 +104,4 @@ const introduce: NextPage = () => {
   )
 };
 
-export default introduce
+export default introduce;

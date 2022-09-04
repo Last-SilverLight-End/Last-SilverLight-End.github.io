@@ -11,7 +11,7 @@ import styles from '../styles/main.module.css';
 const Home: NextPage = () => {
   return (<>
     <div className={styles.body}>
-      <div className="container">
+      <div className={styles.container}>
         <div className="row">
           <div className={styles.header_container}>
             <div className={styles.header_upMenu}>
@@ -35,27 +35,27 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      
+
     </div>
     <div>
       <Header />
     </div>
     <div>
-        <h3>언어 관련 자료 내용들</h3>
-        <ol>
-          <li>
-            <a href='https://developer.mozilla.org/ko/docs/Web/JavaScript'>
-              JavaScript 내용들
-            </a>
-            <a href='https://docs.oracle.com/en/java/'>
-              Java
-            </a>
-            <a href='https://kotlinlang.org/docs/home.html'>
-              Kotlin
-            </a>
-          </li>
-        </ol>
-      </div>
+      <h3>언어 관련 자료 내용들</h3>
+      <ol>
+        <li>
+          <a href='https://developer.mozilla.org/ko/docs/Web/JavaScript'>
+            JavaScript 내용들
+          </a>
+          <a href='https://docs.oracle.com/en/java/'>
+            Java
+          </a>
+          <a href='https://kotlinlang.org/docs/home.html'>
+            Kotlin
+          </a>
+        </li>
+      </ol>
+    </div>
   </>
   )
 };

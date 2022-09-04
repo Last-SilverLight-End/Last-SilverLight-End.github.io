@@ -19,6 +19,7 @@
   width: 1200px;
   margin: 0 auto;
 }
+
 .linkHighlight:hover{
   color: aqua;
   cursor: pointer;
