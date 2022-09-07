@@ -33,6 +33,14 @@
   text-align: center;
   flex:1 ; 
 }
+.portfolio_timeMatters{
+  padding: 2px; 
+  background-color: #223fe4;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+
 .portfolioFormat p{
   margin-left: 10px;
 }
@@ -80,11 +88,11 @@
 .twoColumnSection2 div{
   display: flex;
   gap: 10px;
-  margin: auto 0;
+  margin: 5px 0;
 }
 
 .twoColumnSection2>div>img{
-  margin: auto;
+  margin: 40px;
 }
 
 .twoColumnSection2>div>ul{

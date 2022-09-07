@@ -159,6 +159,52 @@ const portfolio: NextPage = () => {
           </div>
         </div>
 
+        <div className={styles.portfolio_timeMatters}>
+          <h3> Time Matters / 당신의 선택으로 인해 엔딩이 결정되는 게임 </h3>
+          <h4>진행 기간</h4>
+          <p>2020.12 ~ 2021.02</p>
+          <div>
+
+            <h4>사용 언어 및 기타사항</h4>
+            <p> Unity C#을 활용한 어플리케이션 앱 게임 개발</p>
+            <p> Google Docs로 토의 정리 및 진행방향 결정</p>
+            <h4>세부 과정</h4>
+            <section className={styles.twoColumnSection2}>
+              <div >
+
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_timeMatters1.png" width={160} height={350} />
+
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_timeMatters2.png" width={160} height={350} />
+
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_timeMatters3.png" width={160} height={350} />
+              </div>
+
+              <div >
+                <ul style={{ listStyle: '" *   "' }} >
+                  <li>
+                    게임 전체 디자인 및 제작
+                  </li>
+                  <li>
+                    FireBase auth를 통해 회원가입 및 로그인 구성 과정 구현.
+                  </li>
+                  <li>
+                    선택지 간 UI system 연결
+                  </li>
+                  <li>
+                    로그라이크 특성을 잘 나타내어 구현
+                  </li>
+                  <h4>프로젝트 결과 , GitHub URL or 동영상</h4>
+                  <h4>
+                    <Link href="https://github.com/riroan/Time-Matters-Game">
+                      ## 채팅앱 깃허브 링크 ##
+                    </Link>
+                  </h4>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+
         <h2 className={styles.linkHighlight}> 포트폴리오 링크는 여기로!(공사중)</h2>
       </main>
     </div>
