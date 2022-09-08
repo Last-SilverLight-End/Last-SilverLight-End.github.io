@@ -196,7 +196,7 @@ const portfolio: NextPage = () => {
                   <h4>프로젝트 결과 , GitHub URL or 동영상</h4>
                   <h4>
                     <Link href="https://github.com/riroan/Time-Matters-Game">
-                      ## 채팅앱 깃허브 링크 ##
+                      ## Time Matters 깃허브 링크 ##
                     </Link>
                   </h4>
                 </ul>
@@ -205,7 +205,54 @@ const portfolio: NextPage = () => {
           </div>
         </div>
 
-        <h2 className={styles.linkHighlight}> 포트폴리오 링크는 여기로!(공사중)</h2>
+        <div className={styles.portfolio_loveOfLanguage}>
+          <h3> Love of Language / 컴퓨터 지식이 필요한 미연시 게임 </h3>
+          <h4>진행 기간</h4>
+          <p>2020.07 ~ 2020.09</p>
+          <div>
+
+            <h4>사용 언어 및 기타사항</h4>
+            <p> Android 환경에 대응하는 Renpy Tool 사용, Python을 사용하여 제작</p>
+            <h4>세부 과정</h4>
+            <section className={styles.twoColumnSection2}>
+              <div >
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage1.png" width={350} height={250} />
+
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage2.png" width={350} height={250} />
+              </div>
+
+              <div>
+                <ul style={{ listStyle: '" *   "' }} >
+                  <li>
+                    프로그래밍 문제 출제 및 컴퓨터 구조 공부
+                  </li>
+                  <li>
+                    미연시 게임의 특성에 따라 스토리 제작.
+                  </li>
+                  <li>
+                    Menu에 따른 선택지 코딩 및 mp3 파일을 가져와 music을 삽입.
+                  </li>
+                  <li>
+                    Style 과 add를 이용해 메인화면 일부 수정.
+                  </li>
+                  <h4>프로젝트 결과 , GitHub URL or 동영상</h4>
+                  <h4>
+                    <Link href="https://github.com/SoleRowCoding/Love-of-Language">
+                      ## 언어의 사랑 깃허브 링크 ##
+                    </Link>
+                  </h4>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div className={styles.copyright}>
+          <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>
+
+          <Link href="https://github.com/Last-SilverLight-End">
+            ## 깃허브 홈페이지는 여기로 ## 
+          </Link>
+        </div>
       </main>
     </div>
     <div>
