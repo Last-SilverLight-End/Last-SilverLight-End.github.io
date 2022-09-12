@@ -38,7 +38,64 @@
   margin-top : 5%;
   margin-bottom: 5%;
   text-transform: uppercase;
+}
+.header_icons{
+  display: none;
+}
 
+.header_icon {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 45px;
+}
+.header_icon li {
+  display: inline;
+  margin-right: 2px;
+}
+.header_icon li a {
+  color: white;
+  position: relative;
+  display: inline-block;
+  background: #3192bf;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 35px;
+  transition: all 0.3s ease;
+}
+.header_icon li i{
+  margin-right: 7px;
+}
+.header_icon li a span {
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.6;
+  left: 50%;
+  top: -33px;
+  transform: translateX(-50%);
+  border-radius: 6px 0;
+  transition: all 0.3s ease;  
+  background: #3192bf;
+  padding: 3px 9px;
+}
+.header_container .header_icon li a span:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  margin-left: -5px;
+  border-top: 5px solid #3192bf;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.header_icon li a:hover span {
+  opacity: 1;
+}
+.header_icon li a:hover {
+  box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
+    0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
 @keyframes Hacked{
@@ -144,4 +201,19 @@
   background: #25a2d0;
   bottom: 0;
   left: 0;
+}
+
+.html5 {
+  color: white;
+}
+
+.github{
+  color: white;
+}
+
+.facebook{
+  color: white;
+}
+.twitter{
+  color: white;
 }

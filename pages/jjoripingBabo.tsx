@@ -34,7 +34,7 @@ const introduce: NextPage = () => {
         <h1>ww 캐시 바보 ww</h1>
         <br></br>
         <h2> 캐시는 빡빡이다.</h2>
-
+        <h2> 원지니는 빡빡이다.</h2>
       </footer>
     </div>
 

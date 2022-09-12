@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (<>
     <div className={styles.body}>
       <div className={styles.container}>
-        <div className="row">
+        <div className={styles.header_row}>
           <div className={styles.header_container}>
             <div className={styles.header_upMenu}>
               <a href="https://last-silverlight-end.tistory.com/">Blog</a>
@@ -25,12 +25,32 @@ const Home: NextPage = () => {
                 Last-Silver-Light WEB 성장기
               </h1>
               <br />
-              <a href='https://www.google.com'>구글</a>
-              <a href='https://www.naver.com'>네이버</a>
-              <a href='https://www.daum.com'>다음</a>
             </div>
-
-
+            
+            <div className={styles.header_icon}>
+              <ul>
+                <li>
+                  <a href="https://namu.wiki/w/HTML5">
+                    <i className={styles.html5} aria-hidden="true">H</i
+                    ><span>HTML5</span></a>
+                </li>
+                <li>
+                  <a href="https://github.com/" >
+                    <i className={styles.github} aria-hidden="true">G</i
+                    ><span>Github</span></a>
+                </li>
+                <li>
+                  <a href="https://ko-kr.facebook.com/">
+                    <i className={styles.facebook} aria-hidden="true">F</i
+                    ><span>Facebook</span></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/">
+                    <i className={styles.twitter} aria-hidden="true">T</i
+                    ><span>Twitter</span></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -40,7 +60,7 @@ const Home: NextPage = () => {
     <div>
       <Header />
     </div>
-    <div>
+    <div className ="">
       <h3>언어 관련 자료 내용들</h3>
       <ol>
         <li>
@@ -52,6 +72,12 @@ const Home: NextPage = () => {
           </a>
           <a href='https://kotlinlang.org/docs/home.html'>
             Kotlin
+          </a>
+          <a href='https://kotlinlang.org/docs/home.html'>
+            C++
+          </a>
+          <a href = ''>
+
           </a>
         </li>
       </ol>
