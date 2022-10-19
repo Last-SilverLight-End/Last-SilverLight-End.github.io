@@ -23,9 +23,22 @@ const Footer: FC = () => {
   }
 
   return (
-    <footer className="">
-      <div className = "">
-        (c)  { whatisToday() } LEE CHANG GEUN All rights reserved.
+    <footer className={style.footer}>
+      <div className={style.container}>
+        <ul>
+          <li><a href="#">사이트 도움말</a></li>
+          <li><a href="#">사이트 이용약관</a></li>
+          <li><a href="#">사이트 운영원칙</a></li>
+          <li>
+            <a href="#"><strong>개인정보취급방침</strong></a>
+          </li>
+          <li><a href="#">책임의 한계와 법적고지</a></li>
+          <li><a href="#">게시중단요청서비스</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <address className={style.address} >
+          Copyright © { whatisToday() } LEE CHANG_GEUN All rights reserved.
+        </address>
       </div>
     </footer>
   )

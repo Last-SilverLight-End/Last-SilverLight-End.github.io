@@ -1,6 +1,34 @@
-.footer{
-  width: full;
+#footer{
+  border-top: 1px solid #dbdbdb;
+}
+.footer li {
+  position: relative;
+  display: inline;
+  padding: 0 7px 0 10px;
+  white-space: nowrap;
+}
+.footer li:before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #dbdbdb;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+}
+.footer li:first-child:before {
+  width: 0px;
+}
+.container {
+  position: relative;
   text-align: center;
+  margin: 0 auto;
+}
+.address{
   
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  color:rgb(43, 43, 43);
+  background-color: #dbdbdb;
+  text-align: center;
+  padding: 30px 50px;
 } 

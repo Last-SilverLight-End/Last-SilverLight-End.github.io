@@ -7,7 +7,7 @@ import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
 import styles from '../styles/portfolio.module.css';
 import Image from '@components/Image';
-
+import Footer from '@components/footer';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -258,6 +258,7 @@ const portfolio: NextPage = () => {
     <div>
 
     </div>
+    <Footer/>
   </>
   )
 };
