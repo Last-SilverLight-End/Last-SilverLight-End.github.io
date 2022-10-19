@@ -5,6 +5,7 @@ import { FC, useState } from 'react';
 import Header from '@components/Header';
 import styles from '../styles/introduce.module.css';
 import Image from '@components/Image';
+import Footer from '@components/footer';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -100,6 +101,7 @@ const introduce: NextPage = () => {
         </li>
       </ul>
     </main>
+    <Footer/>
   </>
   )
 };
