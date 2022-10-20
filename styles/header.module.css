@@ -25,6 +25,7 @@
     background: rgb(205, 98, 247);
     transition : 0.5s;
 }
+
 .header li:active {
     transform: scale(1.5);
     transition : 1s;

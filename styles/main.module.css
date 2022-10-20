@@ -203,6 +203,8 @@
   left: 0;
 }
 
+
+
 .html5 {
   color: white;
 }
@@ -218,11 +220,4 @@
   color: white;
 }
 
-.ir_su {
-  overflow: hidden;
-  position: absolute;
-  width: 0;
-  height: 0;
-  line-height: 0;
-  text-indent: -9999px;
-}
+
