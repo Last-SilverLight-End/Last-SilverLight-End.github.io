@@ -21,11 +21,13 @@
 .header li:hover {
     transform: scale(1.2);
     cursor: pointer;
-    color: #1e6b7b;
-    background: aliceblue;
+    color: #ffffff;
+    background: rgb(205, 98, 247);
+    transition : 0.5s;
 }
 .header li:active {
     transform: scale(1.5);
+    transition : 1s;
 }
 
 .current{

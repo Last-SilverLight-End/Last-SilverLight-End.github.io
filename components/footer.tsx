@@ -36,9 +36,9 @@ const Footer: FC = () => {
           <li><a href="#">게시중단요청서비스</a></li>
           <li><a href="#">고객센터</a></li>
         </ul>
-        <address className={style.address} >
+        <div className={style.address} >
           Copyright © { whatisToday() } LEE CHANG_GEUN All rights reserved.
-        </address>
+        </div>
       </div>
     </footer>
   )
