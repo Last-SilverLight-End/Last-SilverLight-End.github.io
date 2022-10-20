@@ -54,18 +54,18 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-    </div>
-    <div>
       <Header />
     </div>
-    
-
-    <nav >
-      <h2 >반응형 사이트 전체 메뉴</h2>
-    </nav>
+    <section >
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <h2>LEE CHANG_GEUN 의 사이트 리뉴얼 작업중</h2>
+        </div>
+      </div>
+    </section>
     <main>
       <section id ={styles.contents}>
-        
+
 
       </section>
     </main>

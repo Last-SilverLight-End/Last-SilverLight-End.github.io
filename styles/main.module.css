@@ -203,7 +203,17 @@
   left: 0;
 }
 
-
+.title {
+  text-align: center;
+  position: relative;
+}
+.title h2 {
+  font-size: 39px;
+  font-family: "Gothic A1", sans-serif;
+  display: inline-block;
+  color: #0093bd;
+  padding: 5px 0;
+}
 
 .html5 {
   color: white;
