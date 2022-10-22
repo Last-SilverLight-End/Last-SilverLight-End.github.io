@@ -1,0 +1,54 @@
+
+.sizeAlign{
+  width: 100%;
+  height: 100%;
+}
+
+
+.myInfo {
+  padding: 1px; 
+  background-color: #45a1ff;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+
+.myExplaination{
+  font-size: 20px;
+  padding: 5px; 
+  background-color: #8738db;
+  color: #fff;
+  text-align: left;
+
+  flex:2;
+}
+
+.linkHighlight {
+
+  text-decoration-line: underline;
+  text-decoration-color: rgb(169, 10, 227);
+
+  }
+.linkHighlight:hover{
+  color: rgb(232, 40, 159);
+  cursor: pointer;
+}
+
+.alignGrid{
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  gap : 5%;
+}
+
+.alignGrid>h2{
+  text-align : right;
+}
+
+.alignGrid>img{
+  margin : auto 0;
+  margin-right: auto;
+}
+
+
+
+

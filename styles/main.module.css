@@ -1,0 +1,270 @@
+.linkHighlight {
+
+  text-decoration-line: underline;
+  text-decoration-color: rgb(10, 82, 227);
+
+  }
+.main {
+  padding: 5px; 
+  background-color: #45a1ff;
+  color: #fff;
+  text-align: center;
+}
+
+.body{
+  background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
+    color: white;
+}
+.container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  padding: 0 15px;
+}
+
+.linkHighlight:hover{
+  color: aqua;
+  cursor: pointer;
+}
+
+.header_container{
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header_myName{
+  text-align: center;
+  margin-top : 5%;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+}
+.header_icons{
+  display: none;
+}
+
+.header_icon {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 45px;
+}
+.header_icon li {
+  display: inline;
+  margin-right: 2px;
+}
+.header_icon li a {
+  color: white;
+  position: relative;
+  display: inline-block;
+  background: #3192bf;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 35px;
+  transition: all 0.3s ease;
+}
+.header_icon li i{
+  margin-right: 7px;
+}
+.header_icon li a span {
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.6;
+  left: 50%;
+  top: -33px;
+  transform: translateX(-50%);
+  border-radius: 6px 0;
+  transition: all 0.3s ease;  
+  background: #3192bf;
+  padding: 3px 9px;
+}
+.header_container .header_icon li a span:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  margin-left: -5px;
+  border-top: 5px solid #3192bf;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.header_icon li a:hover span {
+  opacity: 1;
+}
+.header_icon li a:hover {
+  box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
+    0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+
+@keyframes Hacked{
+  from{
+    background-color: red;
+    transform: scale(1);
+  }
+  50%{
+    padding: 100px;
+    background-color: green;
+    transform: scale(10) rotate(180deg);
+  }
+  to{
+    background-color: magenta;
+    transform: scale(2) rotate(100deg);
+  }
+}
+
+.header_myName h1{
+  background: #3f51b5;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 30px 5px 30px;
+  font-weight: 900;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.header_myName h1:hover {
+  box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;
+}
+
+.header_upMenu{
+  text-align : right;
+}
+
+.header_upMenu a{
+  display: inline-block;
+  color: rgb(0, 113, 189);
+  padding: 8px 0 6px 10px;
+  transition: color 0.3s ease;
+  font-family: "Gothic A1", sans-serif;
+}
+
+.header_upMenu a:hover{
+  color: #ccc;
+}
+
+.nav {
+  display: none;
+  overflow: hidden;
+  padding: 25px 0;
+}
+.nav > div {
+  float: left;
+  width: 40%;
+}
+.nav > div:last-child {
+  width: 20%;
+}
+.nav > div h3 {
+  font-size: 18px;
+  color: #25a2d0;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.nav > div ol {
+  overflow: hidden;
+}
+.nav > div li {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+.nav > div:last-child li {
+  width: 100%;
+}
+.nav > div li:before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #25a2d0;
+  top: 8px;
+  left: 0;
+}
+.nav > div li a {
+  position: relative;
+}
+.nav > div li:hover a:after {
+  width: 100%;
+}
+.nav > div li a:after {
+  position: absolute;
+  width: 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  transition: all 0.2s ease-out;
+  background: #25a2d0;
+  bottom: 0;
+  left: 0;
+}
+
+.titleSection {
+  position: relative;
+  height: 10px;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+}
+.title h2 {
+  font-size: 39px;
+  font-family: "Gothic A1", sans-serif;
+  display: inline-block;
+  color: #0093bd;
+  padding: 5px 0;
+}
+
+.html5 {
+  color: white;
+}
+
+.github{
+  color: white;
+}
+
+.facebook{
+  color: white;
+}
+.twitter{
+  color: white;
+}
+
+.sectionContainer {
+  width: 400px;
+}
+.flex {
+  display: flex;
+}
+.sameRow {
+  border: 2px solid black;
+  height: 40px;
+  width: 100%;
+}
+.normal {
+  height: 40px;
+  border: 2px solid red;
+}
+
+.cont_main{
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+.cont_center {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  overflow: hidden;
+
+  min-height: 800px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
