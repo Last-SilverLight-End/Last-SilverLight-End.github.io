@@ -82,7 +82,7 @@ const Home: NextPage = () => {
             2층
           </div>
           <div>
-            1층
+            1층32313
           </div>
         </div>
         <div className={styles.cont_right}>
