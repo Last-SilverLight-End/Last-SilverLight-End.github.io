@@ -71,6 +71,10 @@ const Home: NextPage = () => {
 
           <h4 className="col_title">최신 Video Player</h4>
 
+
+          {/** 그 docs 보실 */}
+          {/* xzzzzzzzzz */}
+
           <div className={styles.contentYoutube}>
             <Youtube videoId="CVofq1YlKYk" opts={{ height: "390", width: "100%", playerVars: { autoplay: 1 } }} />
           </div>

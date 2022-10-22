@@ -12,6 +12,7 @@ module.exports = {
   assetPrefix:
     process.env.NODE_ENV === "production"
       ? "https://changgeun.strongtrash.com/ShowMeTheHomepage/"
+
       : undefined,
 
   reactStrictMode: false,
