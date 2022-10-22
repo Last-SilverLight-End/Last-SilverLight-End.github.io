@@ -2,9 +2,11 @@
     background-color: #9459f9;
     color: #fff;
     text-align: center;
-    height:45px;
+    height: auto;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
 }
+
 .header ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

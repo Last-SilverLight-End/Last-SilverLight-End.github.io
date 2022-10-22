@@ -20,12 +20,14 @@
   width: 1200px;
   margin: 0 auto;
 }
+.row {
+  padding: 0 15px;
+}
 
 .linkHighlight:hover{
   color: aqua;
   cursor: pointer;
 }
-
 
 .header_container{
   position: relative;
@@ -203,6 +205,11 @@
   left: 0;
 }
 
+.titleSection {
+  position: relative;
+  height: 10px;
+}
+
 .title {
   text-align: center;
   position: relative;
@@ -230,4 +237,34 @@
   color: white;
 }
 
+.sectionContainer {
+  width: 400px;
+}
+.flex {
+  display: flex;
+}
+.sameRow {
+  border: 2px solid black;
+  height: 40px;
+  width: 100%;
+}
+.normal {
+  height: 40px;
+  border: 2px solid red;
+}
 
+.cont_main{
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+.cont_center {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  overflow: hidden;
+
+  min-height: 800px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}

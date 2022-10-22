@@ -7,7 +7,8 @@ import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
 import styles from '../styles/main.module.css';
 import Footer from '@components/footer';
-
+import Youtube from '@components/youtube';
+import { subtle } from 'crypto';
 const Home: NextPage = () => {
   return (<>
     <div className={styles.body}>
@@ -56,24 +57,42 @@ const Home: NextPage = () => {
       </div>
       <Header />
     </div>
-    <section >
-      <div className={styles.container}>
-        <div className={styles.title}>
-          <h2>LEE CHANG_GEUN 의 사이트 리뉴얼 작업중</h2>
+
+    <section className={styles.container}>
+      <div className={styles.title}>
+        <h2>LEE CHANG_GEUN 의 사이트</h2>
+      </div>
+
+      <div className={styles.cont_main}>
+        <div className={styles.cont_left}>
+          <a>hello</a>
+        </div>
+        <div className={styles.cont_center}>
+
+          <h4 className="col_title">최신 Video Player</h4>
+
+          {/** 그 docs 보실 */}
+          {/* xzzzzzzzzz */}
+
+          <div className={styles.contentYoutube}>
+            <Youtube videoId="CVofq1YlKYk" opts={{ height: "390", width: "100%", playerVars: { autoplay: 1 } }} />
+          </div>
+          <div>
+            2층
+          </div>
+          <div>
+            1층
+          </div>
+        </div>
+        <div className={styles.cont_right}>
+          <a>hello</a>
         </div>
       </div>
+
     </section>
-    <main>
-      <section id ={styles.contents}>
-
-
-      </section>
-    </main>
-    
-    
-    <Footer/>
+    <Footer />
   </>
-    
+
   )
 };
 
