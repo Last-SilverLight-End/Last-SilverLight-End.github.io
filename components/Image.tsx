@@ -7,7 +7,7 @@ const Image: FC<JSX.IntrinsicElements['img']> = (props) => {
   let temp = props.src;
 
   if (process.env.NODE_ENV === "production") {
-    temp = "/ShowMeTheHomepage" + temp;
+    temp =  temp;
   }
 
   return (
