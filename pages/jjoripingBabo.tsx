@@ -6,6 +6,7 @@ import NextButton from '@components/NextButton';
 import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
 import styles from '../styles/main.module.css';
+import TicTackto from '../games/tictacto';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -34,6 +35,7 @@ const introduce: NextPage = () => {
         <h1>이 공간은 간단한 토이 프로젝트 무엇이든지 만들고 생산하는 장소 입니다.</h1>
         <br></br>
         <h2> 틱텍토</h2>
+        <TicTackto/>
         <h2> 원지니는 빡빡이다.</h2>
       </footer>
     </div>
