@@ -35,7 +35,7 @@ function Square(props: any) {
 const Board = (props: any) => {
   function renderSquare(i: any) {
     return (
-      <Square 
+      <Square
         value={props.squares[i]}
         onClick={() => props.onClick(i)}
       />
@@ -79,9 +79,9 @@ const Game = () => {
   const history = track.histories;
   const current = history[track.stepNumber];
 
-  console.log( "log1 " + track.stepNumber);
+  console.log("log1 " + track.stepNumber);
   console.log(history[track.stepNumber]);
-  
+
   const winner = calculateWinner(current.squares);
 
   const moves = history.map((step, move) => {
@@ -114,43 +114,43 @@ const Game = () => {
     });
   }
 
-  function jumpTo(step : any) {
+  function jumpTo(step: any) {
 
-    let temp :boolean = false;
-    
-    temp = (step%2)===0 ? true : false;
+    let temp: boolean = false;
+
+    temp = (step % 2) === 0 ? true : false;
     setTrack(track.stepNumber = step);
-    setTrack({...track,stepNumber : step , xIsNext :temp});
-     // xIsNext: (step % 2) === 0
+    setTrack({ ...track, stepNumber: step, xIsNext: temp });
+    // xIsNext: (step % 2) === 0
 
   }
 
-    console.log(track.stepNumber);
-    let status;
-    if (winner) {
-      status = "Winner: " + winner;
-    }else if(track.stepNumber ==9){
-      status = " Tie! ";
-    }
-     else {
-      status = "Next player: " + (track.xIsNext ? "X" : "O");
-    }
+  console.log(track.stepNumber);
+  let status;
+  if (winner) {
+    status = "Winner: " + winner;
+  } else if (track.stepNumber == 9) {
+    status = " Tie! ";
+  }
+  else {
+    status = "Next player: " + (track.xIsNext ? "X" : "O");
+  }
 
-    return (
-      <div className={styles.game}>
-        <div className={styles.game_board}>
-          <Board
-            squares={current.squares}
-            onClick={(i: any) => handleClick(i)}
-          />
-        </div>
-        <div className={styles.game_info}>
-          <div>{status}</div>
-          <ol>{moves}</ol>  
-        </div>
+  return (
+    <div className={styles.game}>
+      <div className={styles.game_board}>
+        <Board
+          squares={current.squares}
+          onClick={(i: any) => handleClick(i)}
+        />
       </div>
-    );
-  
+      <div className={styles.game_info}>
+        <div>{status}</div>
+        <ol>{moves}</ol>
+      </div>
+    </div>
+  );
+
 }
 
 export default Game;
