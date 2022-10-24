@@ -36,7 +36,7 @@ const introduce: NextPage = () => {
         <br></br>
         <h2> 틱텍토</h2>
         <TicTackto/>
-        <h2> 원지니는 빡빡이다.</h2>
+        <h2> 다음 미니 게임을 기대해주세요!</h2>
       </footer>
     </div>
 
