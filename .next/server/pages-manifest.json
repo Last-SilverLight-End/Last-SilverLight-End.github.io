@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/": "pages/index.html",
+  "/api/hello": "pages/api/hello.js",
+  "/portfolio": "pages/portfolio.html",
+  "/test": "pages/test.html",
+  "/jjoripingBabo": "pages/jjoripingBabo.html",
+  "/introduce": "pages/introduce.html",
+  "/_document": "pages/_document.js",
+  "/privateChat": "pages/privateChat.html",
+  "/404": "pages/404.html"
+}
