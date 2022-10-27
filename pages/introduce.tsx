@@ -72,7 +72,7 @@ const introduce: NextPage = () => {
         </Link>
       </h4>
     </main>
-
+    
     <main className={styles.myExplaination}>
       <ul style={{ listStyle: '" *   "' }}>
         <li>

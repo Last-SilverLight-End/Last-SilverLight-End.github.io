@@ -47,9 +47,11 @@
   text-align: center;
   flex:1 ; 
 }
+
 .portfolioFormat p{
   margin-left: 10px;
 }
+
 .copyright{
   padding: 5px; 
   padding-top: 1px;
@@ -74,12 +76,10 @@
 }
 
 .twoColumnSection div{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin: auto 0;
-}
-.twoColumnSection>div>img{
-  margin: auto;
 }
 
 .twoColumnSection>div>ul{
@@ -90,24 +90,17 @@
 /** portfolio live chatting app */
 
 .twoColumnSection2{
-  display: grid;
-  grid-template-columns:  1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
   gap: 20px;
 }
 
-.twoColumnSection2 img{
-  display: block;
-  margin: 0 10px;
-}
-
 .twoColumnSection2 div{
-  display: flex;
-  gap: 10px;
-  margin: 5px 0;
+  margin: 0 auto;
 }
-
-.twoColumnSection2>div>img{
-  margin: 40px;
+.twoColumnSection2 img{
+  
 }
 
 .twoColumnSection2>div>ul{

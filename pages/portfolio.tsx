@@ -215,10 +215,9 @@ const portfolio: NextPage = () => {
             <p> Android 환경에 대응하는 Renpy Tool 사용, Python을 사용하여 제작</p>
             <h4>세부 과정</h4>
             <section className={styles.twoColumnSection2}>
-              <div >
-                <Image alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage1.png" width={350} height={250} />
-
-                <Image alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage2.png" width={350} height={250} />
+              <div>
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage1.png" />
+                <Image alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage2.png"  />
               </div>
 
               <div>
