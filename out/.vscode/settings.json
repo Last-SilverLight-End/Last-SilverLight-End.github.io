@@ -1,0 +1,8 @@
+// eslint 설정칸 by 쪼
+{
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "[javascript, typescript, typescriptreact, json, css]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
+}

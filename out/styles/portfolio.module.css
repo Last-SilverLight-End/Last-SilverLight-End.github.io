@@ -1,0 +1,109 @@
+.header{
+  padding: 2px; 
+  background-color: #00b90c;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+.portfolio_nailArt {
+  padding: 2px; 
+  background-color: #45a1ff;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+.portfolio_FAS {
+  padding: 2px; 
+  background-color: #dc2a74;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+.portfolio_baristaSimulation{
+  padding: 2px; 
+  background-color: #ac747b;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+.portfolio_liveChattingApp{
+  padding: 2px; 
+  background-color: #efac49;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+.portfolio_timeMatters{
+  padding: 2px; 
+  background-color: #223fe4;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+.portfolio_loveOfLanguage{
+  padding: 2px; 
+  background-color: #e48181;
+  color: #fff;
+  text-align: center;
+  flex:1 ; 
+}
+
+.portfolioFormat p{
+  margin-left: 10px;
+}
+
+.copyright{
+  padding: 5px; 
+  padding-top: 1px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+  flex:1 ;
+}
+
+/** portfolio barista simulation */
+
+.twoColumnSection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.twoColumnSection img{
+  display: block;
+  margin: 0 10px;
+}
+
+.twoColumnSection div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: auto 0;
+}
+
+.twoColumnSection>div>ul{
+  text-align: left;
+  margin :auto 0;
+}
+
+/** portfolio live chatting app */
+
+.twoColumnSection2{
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  gap: 20px;
+}
+
+.twoColumnSection2 div{
+  margin: 0 auto;
+}
+.twoColumnSection2 img{
+  
+}
+
+.twoColumnSection2>div>ul{
+  text-align: left;
+  margin :auto 0;
+}
