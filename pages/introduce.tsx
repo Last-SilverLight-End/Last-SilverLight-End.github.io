@@ -101,7 +101,7 @@ const introduce: NextPage = () => {
         </li>
       </ul>
     </main>
-    <Footer/>
+
   </>
   )
 };

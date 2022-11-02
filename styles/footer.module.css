@@ -1,7 +1,9 @@
 .footer{
   border-top: 1px solid #dbdbdb;
   background-color: #dfdfdf;
+  margin-top: auto;
 }
+
 .footer li {
   position: relative;
   display: inline;

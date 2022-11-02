@@ -1,109 +1,74 @@
 .header{
   padding: 2px; 
-  background-color: #00b90c;
-  color: #fff;
+  background-color: #b8ecbb;
+  color: rgb(71, 71, 71);
   text-align: center;
   flex:1 ; 
 }
-.portfolio_nailArt {
-  padding: 2px; 
-  background-color: #45a1ff;
-  color: #fff;
-  text-align: center;
-  flex:1 ; 
-}
-.portfolio_FAS {
-  padding: 2px; 
-  background-color: #dc2a74;
-  color: #fff;
-  text-align: center;
-  flex:1 ; 
-}
+
 .portfolio_baristaSimulation{
   padding: 2px; 
-  background-color: #ac747b;
-  color: #fff;
+  background-color: #e9e9e9;
+  color: rgb(71, 70, 70);
   text-align: center;
   flex:1 ; 
-}
-.portfolio_liveChattingApp{
-  padding: 2px; 
-  background-color: #efac49;
-  color: #fff;
-  text-align: center;
-  flex:1 ; 
-}
-.portfolio_timeMatters{
-  padding: 2px; 
-  background-color: #223fe4;
-  color: #fff;
-  text-align: center;
-  flex:1 ; 
-}
-.portfolio_loveOfLanguage{
-  padding: 2px; 
-  background-color: #e48181;
-  color: #fff;
-  text-align: center;
-  flex:1 ; 
+  border : 2px solid;
 }
 
-.portfolioFormat p{
-  margin-left: 10px;
-}
-
-.copyright{
-  padding: 5px; 
-  padding-top: 1px;
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 10px;
-  flex:1 ;
-}
 
 /** portfolio barista simulation */
 
 .twoColumnSection{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.twoColumnSection img{
-  display: block;
-  margin: 0 10px;
-}
-
-.twoColumnSection div{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: auto 0;
-}
-
-.twoColumnSection>div>ul{
-  text-align: left;
-  margin :auto 0;
-}
-
-/** portfolio live chatting app */
-
-.twoColumnSection2{
   display: flex;
   flex-wrap: wrap;
   width: auto;
   gap: 20px;
 }
 
-.twoColumnSection2 div{
+.twoColumnSection div{
   margin: 0 auto;
 }
-.twoColumnSection2 img{
-  
-}
 
-.twoColumnSection2>div>ul{
+.twoColumnSection ul{
   text-align: left;
   margin :auto 0;
+}
+
+/** portfolio live chatting app */
+
+@media (max-width : 1020px){
+
+  .header{
+    padding: 2px; 
+    background-color: #00b90c;
+    color: #fff;
+    text-align: center;
+    flex:1 ; 
+  }
+
+
+  .portfolio_baristaSimulation{
+    padding: 2px; 
+    background-color: #ac747b;
+    color: #fff;
+    text-align: center;
+    flex:1 ; 
+  }
+
+  .twoColumnSection{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 20px;
+  }
+  
+  .twoColumnSection div{
+    margin: 0 auto;
+  }
+  
+  .twoColumnSection div ul{
+    text-align: left;
+    margin :auto 0;
+  }
+
 }

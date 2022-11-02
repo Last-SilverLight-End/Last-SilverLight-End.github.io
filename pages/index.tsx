@@ -91,9 +91,7 @@ const Home: NextPage = () => {
       </div>
 
     </section>
-    <Footer />
   </>
-
   )
 };
 

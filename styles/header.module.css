@@ -39,7 +39,7 @@
     background-color: rgb(179, 115, 239);
 }
 
- @media (max-width : 1012px){
+ @media (max-width : 1020px){
     .menu-button-container{
         flex-direction: column;
     }

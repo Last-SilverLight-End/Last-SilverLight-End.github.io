@@ -32,7 +32,7 @@ const Header: FC = () => {
         </Link>
         <Link href="/jjoripingBabo">
           <li className={router.asPath === "/jjoripingBabo" ? style.current : undefined}> 
-            쪼리핑 바보
+            놀이 공간
           </li> 
         </Link>
       </ul>
