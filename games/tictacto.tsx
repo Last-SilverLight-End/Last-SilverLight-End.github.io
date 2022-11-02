@@ -1,11 +1,9 @@
-import type { AppProps } from 'next/app'
-import React, { ButtonHTMLAttributes, useState } from 'react';
+import React, {  useState } from 'react';
 import styles from "@styles/tictacto.module.css";
-
-// "../styles/main.module.css"
 
 function calculateWinner(squares: any) {
   const lines = [
+
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -13,7 +11,8 @@ function calculateWinner(squares: any) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
+
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
@@ -21,7 +20,9 @@ function calculateWinner(squares: any) {
       return squares[a];
     }
   }
+
   return null;
+
 }
 
 function Square(props: any) {
@@ -62,7 +63,6 @@ const Board = (props: any) => {
     </div>
   );
 }
-
 
 const Game = () => {
   const [track, setTrack] = useState({
