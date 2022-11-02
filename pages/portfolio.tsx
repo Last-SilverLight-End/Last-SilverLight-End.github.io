@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { FC, useState } from 'react';
+import { css } from '@emotion/react';
 import NextButton from '@components/NextButton';
 import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
@@ -32,45 +33,46 @@ import Youtube from '@components/youtube';
 interface CardParagraphProps extends React.PropsWithChildren {
   title: string
 }
-// 굳이 보완해야할 점이라면 사용 빈도에 비해 이름이 너무 길다는건데
-// 자주쓰이는데 이름이 겁나길어서ㅇㅇ,,
+//ss
 const CardParagraph: React.FC<CardParagraphProps> = (props) =>
   <div>
     <h4>{props.title}</h4>
     <div>{props.children}</div>
   </div>
-/**
-<h4>사용 언어 및 기타사항</h4>
-<p>C# 기반 unity 와 Oculus 2 를 이용하여 구현</p>
 
-이거를
-
-h4랑 div같은걸 일일이 쓰지 않아도 된다는 점에서 충분히 의미있지않나요
-
- * <CardPptParagraph title="사용 언어 및 기타사항">
- *   C# 기반 unity 와 Oculus 2 를 이용하여 구현 //그렇죠
- * </CardPptParagraph>
- * 
- * 대충 이런식으로쓰게되는거죠
- */
 interface CardProps {
-  // bg가 뭔지 아시면 됩니다
-  // 일단 기능적 구현 먼저 하고 css는 나중으로 하죠
-
-  projectName: string // <h3>FAS (Face Accessary Studio)</h3> 프로젝트 이름
-  duration: [string, string] // <h4>진행 기간 2022.03 ~ 2022.06</h4>
-  language: React.ReactNode // 이게 사용 언어 및 기타사항인데 이름 괜찮나요
+  projectName: string
+  duration: [string, string]
+  language: React.ReactNode
   images?: Array<JSX.Element>
   videos?: 0 // 임시
   details: Array<string>
   links: Array<{ href: string; text: string }> // 여러개 링크 존재
 }
 
+// 포트폴리오 카드 컴포넌트
+
 const Card: React.FC<CardProps> = (props) => {
   return (
-    <section className={styles.portfolio_baristaSimulation}>
-      <h3>{props.projectName}</h3>
+    <section css={css`
+      padding: 2px; 
+      color: rgb(71, 70, 70);
+      text-align: center;
+      flex: 1; 
+      margin :2px;
+      border: 2px solid #6b6b6b;
+      background-color: #efefef;
+      
+      @media (max-width: 1020px) {
+        
+      }
+    `}>
+      <h1 className={styles.underLine}>{props.projectName}</h1>
 
+      <div className={styles.underPhoto}>
+        {props.images}
+      </div>
+      
       <CardParagraph title="진행 기간">
         {props.duration[0]} ~ {props.duration[1]}
       </CardParagraph>
@@ -80,11 +82,18 @@ const Card: React.FC<CardProps> = (props) => {
       </CardParagraph>
 
       <CardParagraph title="세부 과정">
-        <div className={styles.twoColumnSection}>
-          <div>
-            {props.images}
-          </div>
-          <ul style={{ listStyle: '" *   "' }}>
+        <div css={css`
+          display: flex;
+          flex-direction: column;
+          
+          gap: 20px;
+        `}>
+          <ul css={css`
+            list-style: '* ';
+            width: max-content;
+            text-align: left;
+            margin: 0 auto;
+          `}>
             {props.details.map((detail, i) =>
               <li key={i}>{detail}</li>
             )}
@@ -102,26 +111,45 @@ const Card: React.FC<CardProps> = (props) => {
   )
 }
 
+
+// 포트폴리오 메인 설명
+
 const portfolio: NextPage = () => {
   return (<>
     <Header />
     <div>
       <main id="p" >
-        <div className={styles.header}>
-          <h1 >포트폴리오 페이지에 오신걸 환영합니다!!!</h1>
-          <br></br>
-          <h2>현재 포트폴리오 내역들입니다!</h2>
+        <div css={css`
+          padding: 2px;
+          background: linear-gradient(-45deg, #edb9f8   ,#c5f7af  );
+          color: rgb(48, 48, 48);
+          text-align: center;
+          flex: 1; 
+          border: 1px solid #edf1b9;
+        `}>
+          <h1 css={css`
+            font-weight: bold;
+          `}>LEE CHANG_GEUN PORTFOLIO</h1>
+          <br />
+          <h2>Projects</h2>
         </div>
-        <div className={styles.portfolio_FAS}>
+        
+        {/* <div className={styles.portfolio_FAS}>
           <h3>FAS (Face Accessary Studio)</h3>
           <h4>진행 기간 2022.03 ~ 2022.06</h4>
 
           <h4></h4>
         </div>
+        */ }
         <Card
           projectName="Nail Art 제작 플랫폼"
           duration={['2022.03', '2022.06']}
           language="ReactJs와 Flask 를 이용한 네일 아트 제작 플랫폼 서비스 사용자 UI 개발"
+          images={[
+            <Image key={0} alt="Nail Art Picture" src="/images/portfolio_NailArt1.png" />,
+            <Image key={1} alt="Nail Art Picture" src="/images/portfolio_NailArt2.jpg" />,
+            <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png" />,
+          ]}
           details={[
             '사용자가 네일 하트 한 그림이나 작품을 도면화 하여',
             'NFT, Zepeto , SnapShot 에 올릴 수 있도록 도면화 및 자동 올리기 서비스 제공',
@@ -141,7 +169,7 @@ const portfolio: NextPage = () => {
           duration={['2021.10', '2021.12']}
           language="C# 기반 unity 와 Oculus 2 를 이용하여 구현"
           images={[
-            <Image key={0} alt="Barista Simulation Picture" src="/images/portfolio_baristaSimulation.png" width={400} height={300} />,
+            <Image key={0} alt="Barista Simulation Picture" src="/images/portfolio_baristaSimulation.png" />,
           ]}
           details={[
             'XR Tool Kit 를 이용하여 OVRPlayer 움직일수 있도록 설정.',
@@ -162,8 +190,8 @@ const portfolio: NextPage = () => {
           duration={['2021.05', '2021.07']}
           language="JAVA를 활용한 Android Studio 내 채팅 앱 개발"
           images={[
-            <Image key={0} alt="Chatting App Picture 1" src="/images/portfolio_LiveChattingApp1.png" width={250} height={350} />,
-            <Image key={1} alt="Chatting App Picture 2" src="/images/portfolio_LiveChattingApp2.png" width={250} height={350} />,
+            <Image key={0} alt="Chatting App Picture 1" src="/images/portfolio_LiveChattingApp1.png" />,
+            <Image key={1} alt="Chatting App Picture 2" src="/images/portfolio_LiveChattingApp2.png" />,
           ]}
           details={[
             '로그인 화면 등 Android UI 부분들을 XML로 Layout, Fragment로 사용하여 구성.',
@@ -186,9 +214,9 @@ const portfolio: NextPage = () => {
             <p>Google Docs로 토의 정리 및 진행방향 결정</p>
           </>}
           images={[
-            <Image key={0} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters1.png" width={160} height={350} />,
-            <Image key={1} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters2.png" width={160} height={350} />,
-            <Image key={2} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters3.png" width={160} height={350} />,
+            <Image key={0} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters1.png" />,
+            <Image key={1} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters2.png" />,
+            <Image key={2} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters3.png" />,
           ]}
           details={[
             '게임 전체 디자인 및 제작',
@@ -224,7 +252,6 @@ const portfolio: NextPage = () => {
             }
           ]}
         />
-
 
         <div className={styles.copyright}>
           <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>

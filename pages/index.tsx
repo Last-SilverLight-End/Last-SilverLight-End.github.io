@@ -1,14 +1,9 @@
 import type { NextPage } from 'next'
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import { FC, useState } from 'react';
-import NextButton from '@components/NextButton';
-import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
 import styles from '../styles/main.module.css';
 import Footer from '@components/footer';
 import Youtube from '@components/youtube';
-import { subtle } from 'crypto';
+
 const Home: NextPage = () => {
   return (<>
     <div className={styles.body}>
@@ -71,10 +66,6 @@ const Home: NextPage = () => {
 
           <h4 className="col_title">최신 Video Player</h4>
 
-
-          {/** 그 docs 보실 */}
-          {/* xzzzzzzzzz */}
-
           <div className={styles.contentYoutube}>
             <Youtube videoId="CVofq1YlKYk" opts={{ height: "390", width: "100%", playerVars: { autoplay: 1 } }} />
           </div>
@@ -91,7 +82,9 @@ const Home: NextPage = () => {
       </div>
 
     </section>
+    <Footer />
   </>
+
   )
 };
 
