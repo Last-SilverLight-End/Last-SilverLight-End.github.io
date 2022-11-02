@@ -1,15 +1,11 @@
 
 /** @type {import('next').NextConfig} */
 
-/*module.exports = {
-  basePath:
-    process.env.NODE_ENV === "production"
-      ? "/ShowMeTheHomepage"
-      : undefined,*/
+
 module.exports = {
   basePath:
     process.env.NODE_ENV === "production"
-      ? ""
+      ? "/ShowMeTheHomepage"
       : undefined,
 
 

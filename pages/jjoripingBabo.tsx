@@ -5,8 +5,9 @@ import { FC, useState } from 'react';
 import NextButton from '@components/NextButton';
 import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
-import styles from '../styles/main.module.css';
+import styles from '../styles/jjoripingBabo.module.css';
 import TicTackto from '../games/tictacto';
+import Footer from '@components/footer';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -30,14 +31,19 @@ import TicTackto from '../games/tictacto';
 const introduce: NextPage = () => {
   return (
     <div>
+      <h1>이 공간은 간단한 토이 프로젝트 무엇이든지 만들고 생산하는 장소 입니다.</h1>
       <Header />
-      <footer className={styles.footer} >
-        <h1>이 공간은 간단한 토이 프로젝트 무엇이든지 만들고 생산하는 장소 입니다.</h1>
-        <br></br>
-        <h2> 틱텍토</h2>
-        <TicTackto/>
-        <h2> 다음 미니 게임을 기대해주세요!</h2>
-      </footer>
+      <div className = {styles.gameProject}>
+      
+        <div className={styles.tictacto} >
+          
+          
+          <h1> 틱텍토</h1>
+          <TicTackto />
+          <h2> 다음 미니 게임을 기대해주세요!</h2>
+        </div>
+      </div>
+      <Footer />
     </div>
 
   )

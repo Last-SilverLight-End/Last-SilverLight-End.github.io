@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import styles from "@styles/tictacto.module.css";
 
 function calculateWinner(squares: any) {
