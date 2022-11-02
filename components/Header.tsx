@@ -1,40 +1,45 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import style from '@styles/header.module.css'
-import { useRouter } from 'next/router';
+import { useRouter, type NextRouter } from 'next/router';
+
+interface HeaderButtonProps {
+  router: NextRouter
+  path: string
+  text: string
+}
+const HeaderButton: React.FC<HeaderButtonProps> = (props) =>
+  <Link href={props.path}>
+    <li className={props.router.asPath === props.path ? style.current : undefined}>
+      {props.text}
+    </li>
+  </Link>
+
+// router={router}가 반복되니까 이걸 없애려고
+// router가 제외된 HeaderButtonProps를 가져온 뒤에
+// router={router}를 알아서 넣어주는 컴포넌트를 만든거죠
+
+type _ = Omit<HeaderButtonProps, 'router'> // 네 router라는 키를 제외한 객체
+
+const createRouterProvidedHeaderButton = (router: NextRouter) => {
+  const RouterProvidedHeaderButton = (props: Omit<HeaderButtonProps, 'router'>) =>
+    <HeaderButton {...props} router={router} />
+  return RouterProvidedHeaderButton
+}
 
 /*FC -> functional component */
 const Header: FC = () => {
   const router = useRouter();
-  
+  const RouterProvidedHeaderButton = createRouterProvidedHeaderButton(router);
+
   return (
-    <div className = {style.header}> 
+    <div className={style.header}>
       <ul>
-        <Link href="/">
-          <li className={router.asPath === "/" ? style.current : undefined}> 
-                메인
-          </li>
-        </Link>
-        <Link href="/introduce">
-          <li className={router.asPath === "/introduce" ? style.current : undefined}> 
-              자기소개
-          </li>
-        </Link>
-        <Link href="/portfolio">
-          <li className={router.asPath === "/portfolio" ? style.current : undefined}> 
-              포트폴리오
-          </li>
-        </Link>
-        <Link href="/privateChat">
-          <li className={router.asPath === "/privateChat" ? style.current : undefined}> 
-              개인 잡담
-          </li> 
-        </Link>
-        <Link href="/jjoripingBabo">
-          <li className={router.asPath === "/jjoripingBabo" ? style.current : undefined}> 
-            놀이 공간
-          </li> 
-        </Link>
+        <RouterProvidedHeaderButton path="/" text="메인" />
+        <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
+        <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
+        <RouterProvidedHeaderButton path="/privateChat" text="개인 잡담" />
+        <RouterProvidedHeaderButton path="/jjoripingBabo" text="놀이 공간" />
       </ul>
     </div>
   )
@@ -58,6 +63,6 @@ const headerLinks = [
           <link
           >
         ))}
-*/ 
+*/
 export default Header;
 

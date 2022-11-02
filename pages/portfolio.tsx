@@ -63,15 +63,12 @@ const Card: React.FC<CardProps> = (props) => {
       border: 2px solid #6b6b6b;
       background-color: #efefef;
       
-      @media (max-width: 1020px) {
-        
-      }
     `}>
-      <h1 className={styles.underLine}>{props.projectName}</h1>
 
+      <h1 className={styles.underLine}>{props.projectName}</h1>
       <div className={styles.underPhoto}>
         {props.images}
-      </div>
+      </div>  
       
       <CardParagraph title="진행 기간">
         {props.duration[0]} ~ {props.duration[1]}
@@ -122,7 +119,7 @@ const portfolio: NextPage = () => {
         <div css={css`
           padding: 2px;
           background: linear-gradient(-45deg, #edb9f8   ,#c5f7af  );
-          color: rgb(48, 48, 48);
+          color: rgb(100, 100, 100);
           text-align: center;
           flex: 1; 
           border: 1px solid #edf1b9;
@@ -148,8 +145,9 @@ const portfolio: NextPage = () => {
           images={[
             <Image key={0} alt="Nail Art Picture" src="/images/portfolio_NailArt1.png" />,
             <Image key={1} alt="Nail Art Picture" src="/images/portfolio_NailArt2.jpg" />,
-            <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png" />,
+            <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png"  />
           ]}
+
           details={[
             '사용자가 네일 하트 한 그림이나 작품을 도면화 하여',
             'NFT, Zepeto , SnapShot 에 올릴 수 있도록 도면화 및 자동 올리기 서비스 제공',
@@ -157,12 +155,14 @@ const portfolio: NextPage = () => {
             '용도로 사용할 수 있도록 제작, 저장된 사진을 자동화 파일과 주고 받을 수 있게 하는',
             'Flask 로 서버 구축 , 직접적으로 배포 하기 위한 Ngnix와 ngrok를 이용하여 연결 및 구현',
           ]}
+
           links={[
             {
               text: 'Nail Art 제작 플랫폼 링크',
               href: 'https://github.com/MyAndroidAppstudy/MyAndroidAppstudy.github.io'
             }
           ]}
+
         />
         <Card
           projectName="Barista Simulation"
@@ -253,7 +253,14 @@ const portfolio: NextPage = () => {
           ]}
         />
 
-        <div className={styles.copyright}>
+        <div css={css`
+          padding: 2px;
+          background: linear-gradient(-45deg, #edb9f8   ,#c5f7af  );
+          color: rgb(100, 100, 100);
+          text-align: center;
+          flex: 1; 
+          border: 1px solid #edf1b9;
+        `}>
           <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>
 
           <Link href="https://github.com/Last-SilverLight-End">
