@@ -255,11 +255,11 @@ const portfolio: NextPage = () => {
 
         <div css={css`
           padding: 2px;
-          background: linear-gradient(-45deg, #edb9f8   ,#c5f7af  );
+          background: linear-gradient(-45deg, #ffd5d5   ,#d0d5ff  );
           color: rgb(100, 100, 100);
           text-align: center;
           flex: 1; 
-          border: 1px solid #edf1b9;
+          border: 1px solid #ede6ff;
         `}>
           <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>
 
