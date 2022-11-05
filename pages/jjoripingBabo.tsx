@@ -30,22 +30,19 @@ import Footer from '@components/footer';
 
 const introduce: NextPage = () => {
   return (
-    <>
+    <div>
+      <h1>이 공간은 간단한 토이 프로젝트 무엇이든지 만들고 생산하는 장소 입니다.</h1>
       <Header />
       <div className={styles.gameProject}>
-        <h1>이 공간은 간단한 토이 프로젝트 무엇이든지 만들고 생산하는 장소 입니다.</h1>
-        <div className={styles.games}>
-          <div className={styles.tictacto} >
-
-
-            <h1> 틱텍토</h1>
-            <TicTackto />
-
-          </div>
+        <div className={styles.tictacto} >
+          <h1> 틱텍토</h1>
+          <TicTackto />
+          <h2> 다음 미니 게임을 기대해주세요!</h2>
         </div>
-        <h1> 다음 미니 게임을 기대해주세요!</h1>
       </div>
-    </>
+      <Footer />
+    </div>
+
   )
 };
 

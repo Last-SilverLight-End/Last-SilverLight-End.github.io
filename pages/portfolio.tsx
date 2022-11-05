@@ -54,22 +54,13 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = (props) => {
   return (
-    <section css={css`
-      padding: 2px; 
-      color: rgb(71, 70, 70);
-      text-align: center;
-      flex: 1; 
-      margin :2px;
-      border: 2px solid #6b6b6b;
-      background-color: #efefef;
-      
-    `}>
+    <section className={styles.portfolio_cardSection}>
 
       <h1 className={styles.underLine}>{props.projectName}</h1>
       <div className={styles.underPhoto}>
         {props.images}
-      </div>  
-      
+      </div>
+
       <CardParagraph title="진행 기간">
         {props.duration[0]} ~ {props.duration[1]}
       </CardParagraph>
@@ -115,22 +106,14 @@ const portfolio: NextPage = () => {
   return (<>
     <Header />
     <div>
-      <main id="p" >
-        <div css={css`
-          padding: 2px;
-          background: linear-gradient(-45deg, #edb9f8   ,#c5f7af  );
-          color: rgb(100, 100, 100);
-          text-align: center;
-          flex: 1; 
-          border: 1px solid #edf1b9;
-        `}>
+      <main className = {styles.portfolio_main} >
+        <div className={styles.portfolio_intro}>
           <h1 css={css`
             font-weight: bold;
-          `}>LEE CHANG_GEUN PORTFOLIO</h1>
-          <br />
-          <h2>Projects</h2>
+          `}>Projects</h1>
+
         </div>
-        
+
         {/* <div className={styles.portfolio_FAS}>
           <h3>FAS (Face Accessary Studio)</h3>
           <h4>진행 기간 2022.03 ~ 2022.06</h4>
@@ -145,7 +128,7 @@ const portfolio: NextPage = () => {
           images={[
             <Image key={0} alt="Nail Art Picture" src="/images/portfolio_NailArt1.png" />,
             <Image key={1} alt="Nail Art Picture" src="/images/portfolio_NailArt2.jpg" />,
-            <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png"  />
+            <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png" />
           ]}
 
           details={[
@@ -254,12 +237,12 @@ const portfolio: NextPage = () => {
         />
 
         <div css={css`
-          padding: 2px;
-          background: linear-gradient(-45deg, #ffd5d5   ,#d0d5ff  );
-          color: rgb(100, 100, 100);
+          padding: 20px;
+          background: #2b9def;
+          color: rgb(255, 255, 255);
           text-align: center;
           flex: 1; 
-          border: 1px solid #ede6ff;
+
         `}>
           <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>
 

@@ -1,12 +1,12 @@
-.header{
-  padding: 2px; 
+.header {
+  padding: 2px;
   background-color: #b8ecbb;
   color: rgb(71, 71, 71);
   text-align: center;
-  flex:1 ; 
+  flex: 1;
 }
 
-.underLine{
+.underLine {
   text-align: center;
 }
 
@@ -18,7 +18,11 @@
   margin: 20px auto;
 }
 
-.underPhoto{
+.portfolio_main {
+  background-color: #2b9def;
+}
+
+.underPhoto {
   text-align: center;
 }
 
@@ -30,72 +34,44 @@
   margin: 20px auto;
 }
 
-.underPhoto>img{
+.underPhoto>img {
   object-fit: contain;
-  margin : 8px;
+  margin: 8px;
   max-width: 100%;
 }
 
+.portfolio_intro {
+  padding: 2px;
+  font-size: 50px;
+  font-weight: 200;
+  background: #2b9def;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  flex: 1;
 
-.portfolio_baristaSimulation{
-  padding: 2px; 
-  background-color: #e9e9e9;
+}
+
+.portfolio_cardSection {
+
+  border-radius: 60px 80px 60px 80px / 60px 80px 60px 80px;
+  padding: 20px;
   color: rgb(71, 70, 70);
   text-align: center;
-  flex:1 ; 
-  border : 2px solid;
+  flex: 1;
+  margin: 30px;
+  border: 2px solid #c1bebe;
+  background-color: #ffffff;
 }
 
-.twoColumnSection{
-  display: flex;
-  flex-wrap: wrap;
-  width: auto;
-  gap: 20px;
-}
+@media (max-width : 1020px) {
 
-.twoColumnSection div{
-  margin: 0 auto;
-}
-
-.twoColumnSection ul{
-  text-align: left;
-  margin :auto 0;
-}
-
-
-@media (max-width : 1020px){
-
-  .header{
-    padding: 2px; 
+  .header {
+    padding: 2px;
     background-color: #00b90c;
     color: #fff;
     text-align: center;
-    flex:1 ; 
+    flex: 1;
   }
 
-
-  .portfolio_baristaSimulation{
-    padding: 2px; 
-    background-color: #ac747b;
-    color: #fff;
-    text-align: center;
-    flex:1 ; 
-  }
-
-  .twoColumnSection{
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
-    gap: 20px;
-  }
-  
-  .twoColumnSection div{
-    margin: 0 auto;
-  }
-  
-  .twoColumnSection ul{
-    text-align: left;
-    margin :auto 0;
-  }
 
 }
