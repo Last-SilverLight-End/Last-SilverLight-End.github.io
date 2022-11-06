@@ -52,26 +52,21 @@ interface CardProps {
 
 
 // 포트폴리오 카드 컴포넌트
-const CardCarousel :React.FC<{ children: React.ReactNode }>= (props) => {
-  
-  function eventClick (N : number) {
-    const [moveImg, setMoveImg] = useState(0);
-    
-  }
+const CardCarousel: React.FC<{ children: React.ReactNode }> = (props) => {
 
-  function moveSlide(N : number){
 
-  }
 
   return (
-    <div className={styles.portfolio_carousel}>
-      <div className={styles.underPhoto}>
-        {props.children}
+    <div>
+      <div className={styles.portfolio_carousel}>
+        <div className={styles.underPhoto}>
+          {props.children}
+        </div>
+
+        <a className={styles.Prev} onClick={() => { }}> PREV </a>
+        <a className={styles.Next} onClick={() => { }}> NEXT </a>
+
       </div>
-
-      <a className ={styles.Prev} onClick={() => { eventClick(-1); }}> PREV </a>
-      <a className = {styles.Next} onClick={() => { eventClick(1); }}> NEXT </a>
-
     </div>
   )
 }
@@ -79,12 +74,12 @@ const CardCarousel :React.FC<{ children: React.ReactNode }>= (props) => {
 const Card: React.FC<CardProps> = (props) => {
   return (
     <section className={styles.portfolio_cardSection}>
-
+    
       <h1 className={styles.underLine}>{props.projectName}</h1>
-
-      // 이 사진 부분 대체
+      
+      {/* 이 사진 부분 대체 */}
       <CardCarousel>
-          {props.images}
+        {props.images}
       </CardCarousel>
 
       <CardParagraph title="진행 기간">
