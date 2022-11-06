@@ -226,17 +226,26 @@
 .header_icons{
   display: none;
 }
-
+.header_icon ul{
+    margin-left: 0;
+}
 .header_icon {
+  
   text-align: center;
   margin-top: 40px;
   padding-bottom: 45px;
 }
+.header_icon ul {
+  margin-left: 0;
+  
+}
 .header_icon li {
   display: inline;
   margin-right: 2px;
+  
 }
 .header_icon li a {
+  
   color: white;
   position: relative;
   display: inline-block;
@@ -248,6 +257,7 @@
   font-size: 35px;
   transition: all 0.3s ease;
 }
+.header_icon 
 .header_icon li i{
   margin-right: 7px;
 }

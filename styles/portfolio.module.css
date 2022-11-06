@@ -18,27 +18,40 @@
   margin: 20px auto;
 }
 
-.portfolio_main {
+.portfolio_container {
+  display: flex;
   background-color: #2b9def;
 }
 
-.underPhoto {
-  text-align: center;
+.portfolio_main {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.underPhoto:after {
-  content: "";
-  display: block;
-  width: 270px;
-  border-bottom: 2px solid #bcbcbc;
-  margin: 20px auto;
+.underPhoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
 }
+
 
 .underPhoto>img {
+  width: 100%;
+  height:100%;
   object-fit: contain;
-  margin: 8px;
-  max-width: 100%;
+  object-position: center;
 }
+
+.portfolio_carousel {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+
 
 .portfolio_intro {
   padding: 2px;
@@ -52,14 +65,14 @@
 }
 
 .portfolio_cardSection {
-
+  object-fit: contain;
   border-radius: 60px 80px 60px 80px / 60px 80px 60px 80px;
   padding: 20px;
   color: rgb(71, 70, 70);
   text-align: center;
   flex: 1;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   margin: 30px;
-  border: 2px solid #c1bebe;
   background-color: #ffffff;
 }
 

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { css } from '@emotion/react';
 import NextButton from '@components/NextButton';
 import GitLinkButton from '@components/GitLinkButton';
@@ -50,16 +50,42 @@ interface CardProps {
   links: Array<{ href: string; text: string }> // 여러개 링크 존재
 }
 
+
 // 포트폴리오 카드 컴포넌트
+const CardCarousel :React.FC<{ children: React.ReactNode }>= (props) => {
+  
+  function eventClick (N : number) {
+    const [moveImg, setMoveImg] = useState(0);
+    
+  }
+
+  function moveSlide(N : number){
+
+  }
+
+  return (
+    <div className={styles.portfolio_carousel}>
+      <div className={styles.underPhoto}>
+        {props.children}
+      </div>
+
+      <a className ={styles.Prev} onClick={() => { eventClick(-1); }}> PREV </a>
+      <a className = {styles.Next} onClick={() => { eventClick(1); }}> NEXT </a>
+
+    </div>
+  )
+}
 
 const Card: React.FC<CardProps> = (props) => {
   return (
     <section className={styles.portfolio_cardSection}>
 
       <h1 className={styles.underLine}>{props.projectName}</h1>
-      <div className={styles.underPhoto}>
-        {props.images}
-      </div>
+
+      // 이 사진 부분 대체
+      <CardCarousel>
+          {props.images}
+      </CardCarousel>
 
       <CardParagraph title="진행 기간">
         {props.duration[0]} ~ {props.duration[1]}
@@ -70,15 +96,15 @@ const Card: React.FC<CardProps> = (props) => {
       </CardParagraph>
 
       <CardParagraph title="세부 과정">
+        display: flex;
         <div css={css`
-          display: flex;
           flex-direction: column;
           
           gap: 20px;
         `}>
           <ul css={css`
             list-style: '* ';
-            width: max-content;
+            width: 100%;
             text-align: left;
             margin: 0 auto;
           `}>
@@ -105,8 +131,8 @@ const Card: React.FC<CardProps> = (props) => {
 const portfolio: NextPage = () => {
   return (<>
     <Header />
-    <div>
-      <main className = {styles.portfolio_main} >
+    <div className={styles.portfolio_container}>
+      <main className={styles.portfolio_main} >
         <div className={styles.portfolio_intro}>
           <h1 css={css`
             font-weight: bold;
