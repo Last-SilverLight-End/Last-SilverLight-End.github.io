@@ -1,6 +1,6 @@
 .footer{
-  border-top: 1px solid #dbdbdb;
-  background-color: #dfdfdf;
+  border-top: 1px solid #e4e4e4;
+  background-color: #e4e4e4;
   margin-top: auto;
 }
 
@@ -14,7 +14,7 @@
   content: "";
   width: 1px;
   height: 12px;
-  background-color: #afacac;
+  background-color: #e4e4e4;
   position: absolute;
   left: 0px;
   top: 2px;
@@ -28,12 +28,17 @@
   margin: 0 auto;
 }
 .address{
-  
-  box-shadow: 0 15px 35px 
-  rgba(0, 0, 0, 0.2);
-  color:rgb(0, 0, 0);
-  background-color: #b4b4b4;
+
+  background-color: #e4e4e4;
   text-align: center;
   padding: 30px 50px;
 
 } 
+.linebar::after{
+  content: "";
+  display: block;
+  width: 800px;
+  border-bottom: 1px solid #bcbcbc;
+  margin: 10px auto;
+
+}

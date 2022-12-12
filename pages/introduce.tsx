@@ -50,19 +50,21 @@ const introduce: NextPage = () => {
   return (<>
     <Header />
     <main className={styles.myInfo} >
-      <h1>자기소개 페이지에 오신걸 환영합니다!!!</h1>
+      <h1>INTRODUCTION</h1>
       <br></br>
 
-      <h1>인적사항</h1>
+      <h1>PROFILE
+      </h1>
       <aside className={styles.alignGrid}>
         <h2>
-          김헌킬
+          이창근
           <br></br>
         </h2>
         <Image alt="myHandsome picture" src="/images/HunterKiller.png" width={120} height={120} />
       </aside>
-
       <h3>NickName : HunterKiller</h3>
+      
+      <h4>School : Sejong University</h4>
       <h4>Email : cg456456@naver.com</h4>
       <h4>GitHub :
         <Link href="https://github.com/Last-SilverLight-End">
@@ -71,10 +73,12 @@ const introduce: NextPage = () => {
           </a>
         </Link>
       </h4>
+      
     </main>
     
     <main className={styles.myExplaination}>
       <ul style={{ listStyle: '" *   "' }}>
+        - MY WORDS
         <li>
           앱에 관련 하여 관심이 많아 Android Studio로 앱을 만들거나 Unity를 통해 Android 기반 앱을 만들었습니다.
         </li>
