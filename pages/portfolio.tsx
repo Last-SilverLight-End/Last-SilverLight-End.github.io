@@ -44,7 +44,7 @@ interface CardCarouselProps extends React.PropsWithChildren {
 }
 const CardCarousel: React.FC<CardCarouselProps> = (props) => {
   const [showingItemIndex, setShowingItemIndex] = useState(0)
-  
+
   return (
     <div css={css`
       display: flex;
@@ -105,7 +105,7 @@ const CardCarousel: React.FC<CardCarouselProps> = (props) => {
 }
 
 interface ProjectInfoTableProps {
-  items: Array<[ string, React.ReactNode ]>
+  items: Array<[string, React.ReactNode]>
 }
 const ProjectInfoTable: React.FC<ProjectInfoTableProps> = (props) => {
   return (
@@ -147,7 +147,7 @@ const Card: React.FC<CardProps> = (props) => {
       margin: 30px;
       background-color: #ffffff;
     `}>
-    
+
       <h1 css={css`
         text-align: center;
       `}>
@@ -161,7 +161,7 @@ const Card: React.FC<CardProps> = (props) => {
           ['진행 기간', <>{props.duration[0]} ~ {props.duration[1]}</>],
           ['언어 및 세부사항', props.language],
           ['세부 과정',
-            <ul css={css`
+            <ul key ={"jjoriping"} css={css`
               list-style: '* ';
               width: 100%;
               text-align: left;
