@@ -1,12 +1,11 @@
-import type { NextPage } from 'next';
-import { useState } from 'react';
-import Link from 'next/link';
-import { css } from '@emotion/react';
 import Header from '@components/Header';
-import { Table, Row, Head, Cell } from '@components/Table';
-import styles from '../styles/portfolio.module.css';
 import Image from '@components/Image';
-import React from 'react';
+import { Cell, Head, Row, Table } from '@components/Table';
+import { css } from '@emotion/react';
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import styles from '../styles/portfolio.module.css';
 
 /**
  * 컴퓨터 입장에서는
@@ -47,25 +46,19 @@ const CardCarousel: React.FC<CardCarouselProps> = (props) => {
 
   return (
     <div css={css`
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      width: 100%;
-      max-width: 800px;
+      display: grid;
+      grid-template-rows: 1fr auto;
       height: 600px;
-      border: 1px solid black;
-      overflow: hidden;
     `}>
       <div css={css`
         display: flex;
         height: 100%;
         flex-direction: column;
         align-items: center;
-        
         & img {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
       `}>
         {props.items[showingItemIndex]}
@@ -103,7 +96,7 @@ const CardCarousel: React.FC<CardCarouselProps> = (props) => {
     </div>
   )
 }
-
+// 프로젝트 정보 세팅 
 interface ProjectInfoTableProps {
   items: Array<[string, React.ReactNode]>
 }
@@ -122,6 +115,7 @@ const ProjectInfoTable: React.FC<ProjectInfoTableProps> = (props) => {
   )
 }
 
+// 카드 안에 들어갈 전체 정보들
 interface CardProps {
   projectName: string
   duration: [string, string]
@@ -161,7 +155,7 @@ const Card: React.FC<CardProps> = (props) => {
           ['진행 기간', <>{props.duration[0]} ~ {props.duration[1]}</>],
           ['언어 및 세부사항', props.language],
           ['세부 과정',
-            <ul key ={"jjoriping"} css={css`
+            <ul key ={"li_key"} css={css`
               list-style: '* ';
               width: 100%;
               text-align: left;
