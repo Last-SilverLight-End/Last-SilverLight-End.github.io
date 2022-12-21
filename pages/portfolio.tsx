@@ -1,15 +1,13 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router'
-import React, { FC, useState } from 'react';
 import { css } from '@emotion/react';
-import NextButton from '@components/NextButton';
-import GitLinkButton from '@components/GitLinkButton';
 import Header from '@components/Header';
+import { Table, Row, Head, Cell } from '@components/Table';
 import styles from '../styles/portfolio.module.css';
 import Image from '@components/Image';
-import Footer from '@components/footer';
-import Youtube from '@components/youtube';
+import React from 'react';
+
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -33,12 +31,96 @@ import Youtube from '@components/youtube';
 interface CardParagraphProps extends React.PropsWithChildren {
   title: string
 }
-//ss
+
 const CardParagraph: React.FC<CardParagraphProps> = (props) =>
   <div>
     <h4>{props.title}</h4>
     <div>{props.children}</div>
   </div>
+
+// 포트폴리오 카드 컴포넌트
+interface CardCarouselProps extends React.PropsWithChildren {
+  items: Array<JSX.Element>
+}
+const CardCarousel: React.FC<CardCarouselProps> = (props) => {
+  const [showingItemIndex, setShowingItemIndex] = useState(0)
+  
+  return (
+    <div css={css`
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 600px;
+      border: 1px solid black;
+      overflow: hidden;
+    `}>
+      <div css={css`
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+        & img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      `}>
+        {props.items[showingItemIndex]}
+      </div>
+      <div css={css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      `}>
+        <div css={css`
+          display: flex;
+          gap: 10px;
+        `}>
+          <button
+            className={styles.Prev}
+            onClick={() => {
+              if (showingItemIndex <= 0) setShowingItemIndex(props.items.length - 1);
+              else setShowingItemIndex(showingItemIndex - 1)
+            }}
+          >
+            PREV
+          </button>
+          <span>{showingItemIndex + 1} / {props.items.length}</span>
+          <button
+            className={styles.Next}
+            onClick={() => {
+              if (showingItemIndex >= props.items.length - 1) setShowingItemIndex(0)
+              else setShowingItemIndex(showingItemIndex + 1)
+            }}
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+interface ProjectInfoTableProps {
+  items: Array<[ string, React.ReactNode ]>
+}
+const ProjectInfoTable: React.FC<ProjectInfoTableProps> = (props) => {
+  return (
+    <Table width={2} style={css`
+      column-gap: 30px;
+    `}>
+      {props.items.map(([title, content], i) =>
+        <Row key={i}>
+          <Head>{title}</Head>
+          <Cell>{content}</Cell>
+        </Row>
+      )}
+    </Table>
+  )
+}
 
 interface CardProps {
   projectName: string
@@ -49,66 +131,53 @@ interface CardProps {
   details: Array<string>
   links: Array<{ href: string; text: string }> // 여러개 링크 존재
 }
-
-
-// 포트폴리오 카드 컴포넌트
-const CardCarousel: React.FC<{ children: React.ReactNode }> = (props) => {
-
-
-
-  return (
-    <div>
-      <div className={styles.portfolio_carousel}>
-        <div className={styles.underPhoto}>
-          {props.children}
-        </div>
-
-        <a className={styles.Prev} onClick={() => { }}> PREV </a>
-        <a className={styles.Next} onClick={() => { }}> NEXT </a>
-
-      </div>
-    </div>
-  )
-}
-
 const Card: React.FC<CardProps> = (props) => {
   return (
-    <section className={styles.portfolio_cardSection}>
+    <section css={css`
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+      object-fit: contain;
+      border-radius: 60px 80px 60px 80px / 60px 80px 60px 80px;
+      padding: 20px;
+      color: rgb(71, 70, 70);
+      flex: 1;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+      margin: 30px;
+      background-color: #ffffff;
+    `}>
     
-      <h1 className={styles.underLine}>{props.projectName}</h1>
-      
+      <h1 css={css`
+        text-align: center;
+      `}>
+        {props.projectName}
+      </h1>
       {/* 이 사진 부분 대체 */}
-      <CardCarousel>
-        {props.images}
-      </CardCarousel>
+      <CardCarousel items={props.images ?? []} />
 
-      <CardParagraph title="진행 기간">
-        {props.duration[0]} ~ {props.duration[1]}
-      </CardParagraph>
+      <ProjectInfoTable
+        items={[
+          ['진행 기간', <>{props.duration[0]} ~ {props.duration[1]}</>],
+          ['언어 및 세부사항', props.language],
+          ['세부 과정',
+            <ul css={css`
+              list-style: '* ';
+              width: 100%;
+              text-align: left;
+              margin: 0 auto;
+              padding-left: 0;
+            `}>
+              {props.details.map((detail, i) =>
+                <li key={i} css={css`
+                  list-style-position: outside;
+                `}>{detail}</li>
+              )}
+            </ul>
+          ],
+        ]}
+      />
 
-      <CardParagraph title="사용 언어 및 기타사항">
-        {props.language}
-      </CardParagraph>
-
-      <CardParagraph title="세부 과정">
-        display: flex;
-        <div css={css`
-          flex-direction: column;
-          
-          gap: 20px;
-        `}>
-          <ul css={css`
-            list-style: '* ';
-            width: 100%;
-            text-align: left;
-            margin: 0 auto;
-          `}>
-            {props.details.map((detail, i) =>
-              <li key={i}>{detail}</li>
-            )}
-          </ul>
-        </div >
-      </CardParagraph>
       <h4>
         {props.links.map((link, i) =>
           <Link key={i} href={link.href}>
@@ -151,7 +220,6 @@ const portfolio: NextPage = () => {
             <Image key={1} alt="Nail Art Picture" src="/images/portfolio_NailArt2.jpg" />,
             <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png" />
           ]}
-
           details={[
             '사용자가 네일 하트 한 그림이나 작품을 도면화 하여',
             'NFT, Zepeto , SnapShot 에 올릴 수 있도록 도면화 및 자동 올리기 서비스 제공',
@@ -159,7 +227,6 @@ const portfolio: NextPage = () => {
             '용도로 사용할 수 있도록 제작, 저장된 사진을 자동화 파일과 주고 받을 수 있게 하는',
             'Flask 로 서버 구축 , 직접적으로 배포 하기 위한 Ngnix와 ngrok를 이용하여 연결 및 구현',
           ]}
-
           links={[
             {
               text: 'Nail Art 제작 플랫폼 링크',
@@ -214,8 +281,12 @@ const portfolio: NextPage = () => {
           projectName="  Time Matters / 당신의 선택으로 인해 엔딩이 결정되는 게임 "
           duration={['2020.12', '2021.02']}
           language={<>
-            <p>Unity C#을 활용한 어플리케이션 앱 게임 개발</p>
-            <p>Google Docs로 토의 정리 및 진행방향 결정</p>
+            <p css={css`
+          margin : 0;
+        `}>Unity C#을 활용한 어플리케이션 앱 게임 개발</p>
+            <p css={css`
+          margin : 0;
+        `}>Google Docs로 토의 정리 및 진행방향 결정</p>
           </>}
           images={[
             <Image key={0} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters1.png" />,
@@ -263,7 +334,6 @@ const portfolio: NextPage = () => {
           color: rgb(255, 255, 255);
           text-align: center;
           flex: 1; 
-
         `}>
           <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>
 

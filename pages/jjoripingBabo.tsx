@@ -1,13 +1,7 @@
-import type { NextPage } from 'next'
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import { FC, useState } from 'react';
-import NextButton from '@components/NextButton';
-import GitLinkButton from '@components/GitLinkButton';
+import type { NextPage } from 'next';
 import Header from '@components/Header';
 import styles from '../styles/jjoripingBabo.module.css';
 import TicTackto from '../games/tictacto';
-import Footer from '@components/footer';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -40,9 +34,7 @@ const introduce: NextPage = () => {
           <h2> 다음 미니 게임을 기대해주세요!</h2>
         </div>
       </div>
-      <Footer />
     </div>
-
   )
 };
 

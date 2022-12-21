@@ -4,4 +4,6 @@
 
 https://last-silverlight-end.github.io/ShowMeTheHomepage/
 
-현재 기본적인 ui 구성 중
+2022-12-21 / 이미지 맞춤 필요 , 글자 , 글씨 이쁘게 꾸미기 필요
+
+

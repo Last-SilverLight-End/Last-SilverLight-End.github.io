@@ -1,9 +1,4 @@
-import type { NextPage } from 'next'
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import { FC, useState } from 'react';
-import NextButton from '@components/NextButton';
-import GitLinkButton from '@components/GitLinkButton';
+import type { NextPage } from 'next';
 import Header from '@components/Header';
 import styles from '../styles/main.module.css';
 /**
@@ -26,7 +21,7 @@ import styles from '../styles/main.module.css';
  * }
  */
 
-const introduce: NextPage = () => {
+const Introduce: NextPage = () => {
   return(
     <div>
       <Header />
@@ -41,4 +36,4 @@ const introduce: NextPage = () => {
   )
 };
 
-export default introduce
+export default Introduce;

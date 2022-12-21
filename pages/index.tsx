@@ -27,23 +27,23 @@ const Home: NextPage = () => {
               <ul>
                 <li>
                   <a href="https://namu.wiki/w/HTML5">
-                    <i className={styles.html5} aria-hidden="true">H</i
-                    ><span>HTML5</span></a>
+                    <i className={styles.html5} aria-hidden="true">H</i>
+                    <span>HTML5</span></a>
                 </li>
                 <li>
                   <a href="https://github.com/" >
-                    <i className={styles.github} aria-hidden="true">G</i
-                    ><span>Github</span></a>
+                    <i className={styles.github} aria-hidden="true">G</i>
+                    <span>Github</span></a>
                 </li>
                 <li>
                   <a href="https://ko-kr.facebook.com/">
-                    <i className={styles.facebook} aria-hidden="true">F</i
-                    ><span>Facebook</span></a>
+                    <i className={styles.facebook} aria-hidden="true">F</i>
+                    <span>Facebook</span></a>
                 </li>
                 <li>
                   <a href="https://twitter.com/">
-                    <i className={styles.twitter} aria-hidden="true">T</i
-                    ><span>Twitter</span></a>
+                    <i className={styles.twitter} aria-hidden="true">T</i>
+                    <span>Twitter</span></a>
                 </li>
               </ul>
             </div>
@@ -83,9 +83,7 @@ const Home: NextPage = () => {
 
     </section>
 
-  </>
-
-  )
+  </>)
 };
 
-export default Home
+export default Home;
