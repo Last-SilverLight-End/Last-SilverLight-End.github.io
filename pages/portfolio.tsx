@@ -104,6 +104,7 @@ const ProjectInfoTable: React.FC<ProjectInfoTableProps> = (props) => {
   return (
     <Table width={2} style={css`
       column-gap: 30px;
+      row-gap : 10px;
     `}>
       {props.items.map(([title, content], i) =>
         <Row key={i}>

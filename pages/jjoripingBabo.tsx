@@ -1,7 +1,8 @@
-import type { NextPage } from 'next';
 import Header from '@components/Header';
-import styles from '../styles/jjoripingBabo.module.css';
+import type { NextPage } from 'next';
 import TicTackto from '../games/tictacto';
+import TicTacto2 from '../games/tictacto2';
+import styles from '../styles/jjoripingBabo.module.css';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -32,6 +33,9 @@ const introduce: NextPage = () => {
           <h1> 틱텍토</h1>
           <TicTackto />
           <h2> 다음 미니 게임을 기대해주세요!</h2>
+        </div>
+        <div>
+          <TicTacto2/>
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
-import type { NextPage } from 'next'
 import Header from '@components/Header';
-import styles from '../styles/main.module.css';
-import Footer from '@components/footer';
 import Youtube from '@components/youtube';
+import type { NextPage } from 'next';
+import styles from '../styles/main.module.css';
 
 const Home: NextPage = () => {
   return (<>

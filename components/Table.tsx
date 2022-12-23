@@ -9,7 +9,7 @@ export const Cell: React.FC<React.PropsWithChildren & AcceptsStyle> = (props) =>
 // title , 내용의 제목
 export const Head: React.FC<React.PropsWithChildren> = ({ children }) =>
   <Cell style={css`
-	text-align: center;
+	text-align: left;
 	font-weight: bold;
 `}>
     {children}
@@ -24,7 +24,7 @@ type TableProps = React.PropsWithChildren & AcceptsStyle & {
 export const Table: React.FC<TableProps> = (props) =>
   <div css={css`
 	display: grid;
-	margin-right: auto;
+  
 	//width: 100%;
 	grid-template-columns: repeat(${props.width}, minmax(min-content, max-content));
 	max-width: 100%;
