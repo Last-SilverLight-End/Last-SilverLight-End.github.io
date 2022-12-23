@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import styles from "@styles/tictacto.module.css";
+import { useState } from 'react';
 
 function calculateWinner(squares: any) {
   const lines = [
