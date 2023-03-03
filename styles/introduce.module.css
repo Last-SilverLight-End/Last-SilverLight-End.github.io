@@ -7,8 +7,8 @@
 
 .myInfo {
   padding: 1px; 
-  background-color: #7fb93d;
-  color: #fff;
+  background-color: #ccf3a0;
+
   text-align: center;
   flex:1 ; 
 }
@@ -16,8 +16,8 @@
 .myExplaination{
   font-size: 20px;
   padding: 5px; 
-  background-color: #7fb93d;
-  color: #fff;
+
+  
   text-align: left;
 
   flex:2;

@@ -1,11 +1,8 @@
-import type { NextPage } from 'next'
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import { FC, useState } from 'react';
 import Header from '@components/Header';
-import styles from '../styles/introduce.module.css';
 import Image from '@components/Image';
-import Footer from '@components/footer';
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import styles from '../styles/introduce.module.css';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -78,30 +75,35 @@ const introduce: NextPage = () => {
     
     <main className={styles.myExplaination}>
       <ul style={{ listStyle: '" *   "' }}>
-        - MY WORDS
+        - MY INTRO_WORDS
         <li>
-          앱에 관련 하여 관심이 많아 Android Studio로 앱을 만들거나 Unity를 통해 Android 기반 앱을 만들었습니다.
+         처음 Android 에 관심이 있어 1대1 채팅앱을 만들거나 그 이외에 갖가지 기능을 구현 하는 등 공부를 하였습니다. 
+         <br/>
+         앱을 확장하여 학습하고 싶어 웹 앱에서 ReactJS, Ts 등 관련 프레임워크와 언어를 이용해서 개발 노력을 가하고 있습니다.
         </li>
+
+        <br/>
         <li>
-          메타버스에 관련된 컨텐츠나 연구를 찾아보면서 공부 중 입니다.
+          모바일 가상현실 센터에서 학부연구생으로 1년 1개월 동안 AI,메타버스 관련 업무와 연구를 진행했습니다.
           <br />
-          최근 메타 휴먼과 이에 따른 메타 딥러닝에 관하여 보고 있습니다.
-          <br />
-          또한 VR/AR MVR 연구실에서 근무하여 연구 활동을 하였습니다...
+          참의학기제의 NFT,AI 관련 메타버스 프로젝트를 진행하여 React 기반 Nail Art Studio 플랫폼을 제작했습니다.
+          <br/>
+          연구 내용을 바탕으로 KSC 논문을 내어 학부생 논문에 입상하였습니다.
         </li>
+
         <br />
         <li>
           방학이나 학기중, 프로젝트 결과물들을 만들어 베포 하기위해
           <br />
-          지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.....
+          지인,사이트나, 디스코드 등 인원을 모집하여 진행하였습니다.
           <br />
           기본 개념을 복습하고 모르는 부분을 바로 잡기 위해 블로그를 통해
           <br />
-          Formatting , Naming Convention 등등 공부하는 것들을 기재하는 중 입니다.
+          Formatting , Naming Convention 등등 개념을 기재합니다.
         </li>
         <br />
         <li>
-          최근 웹앱으로 만드는 경향이 있어 웹 형태인 JavaScript 나 TypeScript 를 이용한 웹 개발 하여 앱으로 변환 과정들을 공부중에 있습니다.
+        
         </li>
       </ul>
     </main>
