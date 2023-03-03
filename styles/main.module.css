@@ -480,11 +480,16 @@
 
 }
 .helloMe{
-  background: linear-gradient(-45deg, #d7ebe6 0%, #ffe4f1 100%);
+  
 }
 .myAwards{
-  background-color: #ff99cc;
+  border-top: 1px solid #444444;
+  margin: 30px auto;
+  width: 500px;        
 }
+
 .myWords{
-  background-color: #3f51b5;
+  border-top: 1px solid #444444;
+  margin: 30px auto;
+  width: 500px;        
 }

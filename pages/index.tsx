@@ -54,7 +54,7 @@ const Home: NextPage = () => {
     <section className={styles.container}>
       <div className={styles.title}>
         <h2>
-          LEE CHANG_GEUN 
+           CHANG_GEUN LEE 
           </h2>        
       </div>
 
@@ -63,18 +63,35 @@ const Home: NextPage = () => {
          
 
           <div className={styles.helloMe}>
-            
-             <h1>NICE TO MEET YOU</h1>
+    
+             <h1>만나서 반갑습니다!</h1>
              <Image alt="myHandsome pictures" src="/images/HunterKillerSleep.png" width={120} height={120} />
+
+             <h2>Front_End Developer</h2>
+             <h3>Also Can Do Back_End & Android Develop</h3>
 
           </div>
           
           <div className = {styles.myAwards}>
             <h1>My Awards</h1>
+
+            <h2> MapleStoryWorld MSW HACKERTON 우수 수상 </h2>
+            <h2> KSC 학부 논문 NAil Art Studio 입상 (장려) </h2>
+
+            <h3> Others....</h3>
+            <h4> SDS 삼성 알고리즘 특강 수료 </h4>
+            <h4> UCPC 코딩 대회 참여 ( 2020, 2021 )</h4>
           </div>
 
           <div className = {styles.myWords}>
             <h1>My Words</h1>
+              <h2> Be Polite, Be Creative , Be Ambitious</h2>
+          </div>
+
+          <div>
+            <h1>세부 사항은 제 홈페이지 내용들을 확인해주세요!</h1>
+
+            <h1> THANK YOU!</h1>
           </div>
 
         </div>
