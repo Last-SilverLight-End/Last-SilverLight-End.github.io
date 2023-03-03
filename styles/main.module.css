@@ -12,6 +12,7 @@
 
   #cont_center {
     min-height: 350px;
+    width:100%;
   }
   #contents .container {
     border: 0;
@@ -198,9 +199,10 @@
     color: white;
 }
 .container {
+
   position: relative;
   width: auto;
-  margin: 0 auto;
+  margin: 10px 10px;
 }
 .row {
   padding: 0 15px;
@@ -308,6 +310,14 @@
   }
 }
 
+.cont_left{
+
+}
+
+.blog_image{
+  display : flex;
+  justify-content: center;
+}
 .header_myName h1{
   background: #3f51b5;
   display: inline-block;
@@ -404,6 +414,7 @@
 
 .title {
   text-align: center;
+  
   position: relative;
 }
 .title h2 {
@@ -447,16 +458,33 @@
 
 .cont_main{
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  margin: auto;
+  grid-template-columns: 1fr;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
+  text-align: center;
 }
 .cont_center {
   display: grid;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1fr;
   overflow: hidden;
+
+
 
   min-height: 800px;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
+}
+
+.cont_right{
+
+}
+.helloMe{
+  background: linear-gradient(-45deg, #d7ebe6 0%, #ffe4f1 100%);
+}
+.myAwards{
+  background-color: #ff99cc;
+}
+.myWords{
+  background-color: #3f51b5;
 }

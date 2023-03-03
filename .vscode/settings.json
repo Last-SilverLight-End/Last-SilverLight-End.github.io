@@ -7,6 +7,7 @@
         
     },
     "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     "[javascript, typescript, typescriptreact, json, css]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     }

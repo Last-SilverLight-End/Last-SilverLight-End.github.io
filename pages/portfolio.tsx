@@ -27,32 +27,28 @@ import styles from '../styles/portfolio.module.css';
  * }
  */
 
-interface CardParagraphProps extends React.PropsWithChildren {
-  title: string
-}
-
-const CardParagraph: React.FC<CardParagraphProps> = (props) =>
-  <div>
-    <h4>{props.title}</h4>
-    <div>{props.children}</div>
-  </div>
-
 // 포트폴리오 카드 컴포넌트
 interface CardCarouselProps extends React.PropsWithChildren {
-  items: Array<JSX.Element>
+  images: Array<JSX.Element> // 포트폴리오 이미지
+
 }
+
+// 포트폴리오  이미지 show component
+
 const CardCarousel: React.FC<CardCarouselProps> = (props) => {
-  const [showingItemIndex, setShowingItemIndex] = useState(0)
+  const [showingImageIndex, setShowingImageIndex] = useState(0)
 
   return (
+    // 이미지 show 공용 style
     <div css={css`
       display: grid;
-      grid-template-rows: 1fr auto;
-      height: 600px;
+      grid-template-rows: auto auto;
+      gap: 30px;
     `}>
+      {/* 이미지 공간 style & 이미지 자체 조정 style */}
       <div css={css`
         display: flex;
-        height: 100%;
+        height: 400px;
         flex-direction: column;
         align-items: center;
         & img {
@@ -61,54 +57,67 @@ const CardCarousel: React.FC<CardCarouselProps> = (props) => {
           object-fit: contain;
         }
       `}>
-        {props.items[showingItemIndex]}
+        {props.images[showingImageIndex]}
       </div>
+      {/* 이미지 넘기기 버튼 상호작용 component*/}
       <div css={css`
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        gap: 10px;
+        justify-content: center;
       `}>
-        <div css={css`
-          display: flex;
-          gap: 10px;
-        `}>
-          <button
-            className={styles.Prev}
-            onClick={() => {
-              if (showingItemIndex <= 0) setShowingItemIndex(props.items.length - 1);
-              else setShowingItemIndex(showingItemIndex - 1)
-            }}
-          >
-            PREV
-          </button>
-          <span>{showingItemIndex + 1} / {props.items.length}</span>
-          <button
-            className={styles.Next}
-            onClick={() => {
-              if (showingItemIndex >= props.items.length - 1) setShowingItemIndex(0)
-              else setShowingItemIndex(showingItemIndex + 1)
-            }}
-          >
-            NEXT
-          </button>
-        </div>
+        <button // prev button
+          className={styles.Prev}
+          onClick={() => {
+            // 0 미만으로 내려갈 시 반대쪽 끝으로 이동
+            setShowingImageIndex(
+              showingImageIndex <= 0
+                ? props.images.length - 1
+                : showingImageIndex - 1
+            )
+          }}
+        >
+          PREV
+        </button>
+        {/* 이미지 수량 show */}
+        <span>{showingImageIndex + 1} / {props.images.length}</span>
+        <button // next button
+          className={styles.Next}
+          onClick={() => {
+            // 초과할 시 반대쪽 끝으로 이동
+            setShowingImageIndex(
+              showingImageIndex >= props.images.length - 1
+                ? 0
+                : showingImageIndex + 1
+            )
+          }}
+        >
+          NEXT
+        </button>
       </div>
     </div>
   )
 }
-// 프로젝트 정보 세팅 
+// 프로젝트 정보 내용들
 interface ProjectInfoTableProps {
   items: Array<[string, React.ReactNode]>
 }
+
+// 프로젝트 정보 구조 component
 const ProjectInfoTable: React.FC<ProjectInfoTableProps> = (props) => {
   return (
+
+    // 전체 Table 형태 구성 - Table.tsx 참조
     <Table width={2} style={css`
+      width: 100%;
       column-gap: 30px;
       row-gap : 10px;
+      grid-template-columns: 200px 1fr;
     `}>
       {props.items.map(([title, content], i) =>
         <Row key={i}>
-          <Head>{title}</Head>
+          <Head style={css`
+            text-align: right;
+          `}>{title}</Head>
           <Cell>{content}</Cell>
         </Row>
       )}
@@ -126,6 +135,8 @@ interface CardProps {
   details: Array<string>
   links: Array<{ href: string; text: string }> // 여러개 링크 존재
 }
+
+// card props images 
 const Card: React.FC<CardProps> = (props) => {
   return (
     <section css={css`
@@ -148,8 +159,12 @@ const Card: React.FC<CardProps> = (props) => {
       `}>
         {props.projectName}
       </h1>
-      {/* 이 사진 부분 대체 */}
-      <CardCarousel items={props.images ?? []} />
+      {
+        (props.images?.length ?? 0) <= 1
+          ? props.images?.[0]
+          : <CardCarousel images={props.images ?? []} />
+      }
+      
 
       <ProjectInfoTable
         items={[

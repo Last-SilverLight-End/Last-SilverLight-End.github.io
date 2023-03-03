@@ -1,8 +1,7 @@
 import Header from '@components/Header';
-import Youtube from '@components/youtube';
+import Image from '@components/Image';
 import type { NextPage } from 'next';
 import styles from '../styles/main.module.css';
-
 const Home: NextPage = () => {
   return (<>
     <div className={styles.body}>
@@ -54,29 +53,30 @@ const Home: NextPage = () => {
 
     <section className={styles.container}>
       <div className={styles.title}>
-        <h2>LEE CHANG_GEUN 의 사이트</h2>
+        <h2>
+          LEE CHANG_GEUN 
+          </h2>        
       </div>
 
       <div className={styles.cont_main}>
-        <div className={styles.cont_left}>
-          <a>hello</a>
-        </div>
         <div className={styles.cont_center}>
+         
 
-          <h4 className="col_title">최신 Video Player</h4>
+          <div className={styles.helloMe}>
+            
+             <h1>NICE TO MEET YOU</h1>
+             <Image alt="myHandsome pictures" src="/images/HunterKillerSleep.png" width={120} height={120} />
 
-          <div className={styles.contentYoutube}>
-            <Youtube videoId="CVofq1YlKYk" opts={{ height: "390", width: "100%", playerVars: { autoplay: 1 } }} />
           </div>
-          <div>
-            2층
+          
+          <div className = {styles.myAwards}>
+            <h1>My Awards</h1>
           </div>
-          <div>
-            1층32313
+
+          <div className = {styles.myWords}>
+            <h1>My Words</h1>
           </div>
-        </div>
-        <div className={styles.cont_right}>
-          <a>hello</a>
+
         </div>
       </div>
 
