@@ -459,6 +459,7 @@
 .cont_main{
   display: grid;
   margin: auto;
+  
   grid-template-columns: 1fr;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
@@ -483,13 +484,9 @@
   
 }
 .myAwards{
-  border-top: 1px solid #444444;
-  margin: 30px auto;
-  width: 500px;        
+      
 }
 
 .myWords{
-  border-top: 1px solid #444444;
-  margin: 30px auto;
-  width: 500px;        
+     
 }

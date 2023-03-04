@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
             <div className={styles.header_myName}>
               <h1>
-                Last-Silver-Light WEB 성장기
+                Last-Silver-Light (GIT) 성장기
               </h1>
               <br />
             </div>
@@ -89,9 +89,9 @@ const Home: NextPage = () => {
           </div>
 
           <div>
-            <h1>세부 사항은 제 홈페이지 내용들을 확인해주세요!</h1>
+            
 
-            <h1> THANK YOU!</h1>
+            <h1> I WILL DO MY BEST. THANK YOU!</h1>
           </div>
 
         </div>
