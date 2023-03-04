@@ -225,33 +225,39 @@
   margin-bottom: 5%;
   text-transform: uppercase;
 }
+
 .header_icons{
   display: none;
 }
+
 .header_icon ul{
     margin-left: 0;
 }
-.header_icon {
+
+.header_icon{
   
   text-align: center;
   margin-top: 40px;
   padding-bottom: 45px;
 }
+
 .header_icon ul {
   margin-left: 0;
   
 }
+
 .header_icon li {
   display: inline;
   margin-right: 2px;
   
 }
+
 .header_icon li a {
   
   color: white;
   position: relative;
   display: inline-block;
-  background: #3192bf;
+  background: #eb7ddc;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -259,7 +265,11 @@
   font-size: 35px;
   transition: all 0.3s ease;
 }
+.header_icon img {
+  border-radius: 50%;
+}
 .header_icon 
+
 .header_icon li i{
   margin-right: 7px;
 }
@@ -273,7 +283,7 @@
   transform: translateX(-50%);
   border-radius: 6px 0;
   transition: all 0.3s ease;  
-  background: #3192bf;
+  background: #dc6ef1;
   padding: 3px 9px;
 }
 .header_container .header_icon li a span:before {
@@ -282,7 +292,7 @@
   left: 50%;
   bottom: -5px;
   margin-left: -5px;
-  border-top: 5px solid #3192bf;
+  border-top: 5px solid #fc5dd9;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
@@ -290,7 +300,7 @@
   opacity: 1;
 }
 .header_icon li a:hover {
-  box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
+  box-shadow: 0 0 0 3px rgba(201, 113, 204, 0.9) inset,
     0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -421,16 +431,19 @@
   font-size: 39px;
   font-family: "Gothic A1", sans-serif;
   display: inline-block;
-  color: #0093bd;
+  color: #43d6ff;
   padding: 5px 0;
 }
 
 .html5 {
   color: white;
+  background-image: url("/images/html5.png");
+  background-size : covver
 }
 
 .github{
   color: white;
+  background-image: url("/images/facebook.png");
 }
 
 .facebook{
@@ -461,8 +474,8 @@
   margin: auto;
   
   grid-template-columns: 1fr;
-  border-right: 1px solid #dbdbdb;
-  border-left: 1px solid #dbdbdb;
+  border-right: 20% solid #1f1f1f;
+  border-left: 20% solid #0e0e0e;
   text-align: center;
 }
 .cont_center {
@@ -489,4 +502,20 @@
 
 .myWords{
      
+}
+
+.lines{
+  width: 35%;
+}
+
+.eternal_return{
+  text-align: center;
+  
+}
+.plays>h1{
+  text-align: center;
+}
+.youtube{
+  text-align: center;
+
 }

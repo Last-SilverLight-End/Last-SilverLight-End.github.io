@@ -1,5 +1,7 @@
-import type { NextPage } from 'next';
 import Header from '@components/Header';
+import type { NextPage } from 'next';
+import Image from 'next/image';
+import Youtube from 'react-youtube';
 import styles from '../styles/main.module.css';
 /**
  * 컴퓨터 입장에서는
@@ -25,11 +27,26 @@ const Introduce: NextPage = () => {
   return(
     <div>
       <Header />
-      <footer className={styles.footer} >
-        <h1>개인잡담 페이지에 오신걸 환영합니다!!!</h1>
-        <br></br>
-        <h2> 잘하자 헌킬아 넌 할수 있다.</h2>
+      
 
+      <div className = {styles.plays}>
+        <h1 >My Private Plays</h1>
+        <div className={styles.youtube}>
+          <Youtube videoId="NGYYKJ0R0OA" opts={{ height: "600px", width: "80%", playerVars: { autoplay: 1 } }} />
+        
+          <br></br>
+          <h2> 개인적으로 오래된 노래를 은근 듣기도 하고요 .</h2>
+        </div>
+      </div>
+      
+      <div className={styles.eternal_return}>
+        <h2>이터널 리턴 게임을 하기도 하죠</h2>
+        <Image alt="myHandsome pictures" src="/images/favorite_game.jpg" width = {1200} height={700} />
+         
+      </div>
+
+        
+      <footer className={styles.footer} >
       </footer>
     </div>
     

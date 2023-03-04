@@ -1,12 +1,12 @@
 import Header from '@components/Header';
 import Image from '@components/Image';
 import { Cell, Head, Row, Table } from '@components/Table';
+import Youtube from '@components/youtube';
 import { css } from '@emotion/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from '../styles/portfolio.module.css';
-
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
@@ -221,6 +221,30 @@ const portfolio: NextPage = () => {
           <h4></h4>
         </div>
         */ }
+
+        <Card
+          projectName="MSW HACKERTON"
+          duration={['2022.10', '2022.12']}
+          language="Lua Script 와 MSW 툴을 이용한 개발"
+          images={[
+            <Youtube key = {0} videoId="vlAftbcCFS0" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
+            <Youtube key = {1} videoId="3pY1MmxGJww" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
+            <Image key={2} alt="MSW Hackerton" src="/images/portfolio_maple1.png" />,
+            <Image key={3} alt="MSW Hackerton" src="/images/portfolio_maple2.png" />,
+          ]}
+          details={[
+            '해커톤 대표를 맡아 게임 내 스토리 스크립트 연결 알고리즘 제작',
+            '긴급 발생 이벤트의 스토리,버튼 상호작용 구현',
+            '광산 내 광물 캐기 구현 , 스토리 진행을 위한 게임 벨런싱 진행',
+            'MSW 해커톤 내 "우수" 수상.',
+          ]}
+          links={[
+            {
+              text: '## MSW 해커톤 페이지 링크 클릭! ##',
+              href: 'https://maplestoryworlds.nexon.com/play/a72c4612eba147f587e2613332225348'
+            }
+          ]}
+        />
         <Card
           projectName="Nail Art 제작 플랫폼"
           duration={['2022.03', '2022.06']}
@@ -236,10 +260,11 @@ const portfolio: NextPage = () => {
             'Teachable Machine 과 YOLO를 활용한 자동화 파일을 적용하여 Nail을 인식 및 추출하는',
             '용도로 사용할 수 있도록 제작, 저장된 사진을 자동화 파일과 주고 받을 수 있게 하는',
             'Flask 로 서버 구축 , 직접적으로 배포 하기 위한 Ngnix와 ngrok를 이용하여 연결 및 구현',
+            'KSC 학부연구 "메타버스 기반 네일아트 제작 플랫폼 개발" 장려 입상'
           ]}
           links={[
             {
-              text: 'Nail Art 제작 플랫폼 링크',
+              text: ' ## Nail Art 제작 플랫폼 링크 클릭 ##',
               href: 'https://github.com/MyAndroidAppstudy/MyAndroidAppstudy.github.io'
             }
           ]}

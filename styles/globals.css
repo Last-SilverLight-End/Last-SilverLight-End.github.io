@@ -9,7 +9,10 @@ body {
   margin: 0;
   font-family: IBMPlexSansKR-Regular;
 
-} 
+}
+
+
+
   #__next{
     display: flex;
     flex-direction: column;
@@ -19,6 +22,22 @@ body {
     overflow-x: hidden;
     
   }
+  #__next::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  #__next::-webkit-scrollbar {
+  width: 8px;
+}
+
+#__next::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #d1d1d1 0%, #636363 100%);
+ 
+}
+td::-webkit-scrollbar {
+  height: 4px;
+}
 
 @font-face {
   font-family: 'IBMPlexSansKR-Regular';
