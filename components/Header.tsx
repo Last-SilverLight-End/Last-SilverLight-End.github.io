@@ -1,7 +1,7 @@
+import style from '@styles/header.module.css';
 import Link from 'next/link';
-import { FC } from 'react';
-import style from '@styles/header.module.css'
 import { useRouter, type NextRouter } from 'next/router';
+import { FC } from 'react';
 
 interface HeaderButtonProps {
   router: NextRouter
@@ -38,8 +38,8 @@ const Header: FC = () => {
         <RouterProvidedHeaderButton path="/" text="메인" />
         <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
         <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
-        <RouterProvidedHeaderButton path="/privateChat" text="개인 잡담" />
-        <RouterProvidedHeaderButton path="/jjoripingBabo" text="놀이 공간" />
+        
+        
       </ul>
     </div>
   )

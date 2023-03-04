@@ -1,6 +1,6 @@
 .header{
-    background: linear-gradient(-45deg, #c780f7 0%, #eebdf8 100%);
-    color: rgb(255, 242, 242);
+    background: linear-gradient(-45deg, #7796ff 0%, #8591f8 100%);
+    color: rgb(44, 0, 85);
     text-align: center;
     height: auto;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -24,8 +24,8 @@
 .header li:hover {
     transform: scale(1.2);
     cursor: pointer;
-    color: #ffffff;
-    background: rgb(205, 98, 247);
+    color: #000000;
+    background: rgb(255, 255, 255);
     transition : 0.5s;
 }
 
@@ -36,7 +36,9 @@
 
 .current{
     height:45px;
-    background-color: rgb(179, 115, 239);
+    background-color: rgb(74, 114, 255);
+    color :#ffffff
+    
 }
 
  @media (max-width : 1020px){

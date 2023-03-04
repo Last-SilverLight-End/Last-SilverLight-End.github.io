@@ -32,7 +32,7 @@ body {
 
 #__next::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: linear-gradient(-45deg, #d1d1d1 0%, #636363 100%);
+  background: linear-gradient(-45deg, #f7f7f7 0%, #444444 100%);
  
 }
 td::-webkit-scrollbar {
