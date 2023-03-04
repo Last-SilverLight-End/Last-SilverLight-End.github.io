@@ -16,7 +16,7 @@
 
 .portfolio_container {
 
-  background-color: #2b9def;
+  background-color: #2ca7ff;
 }
 
 .portfolio_main {
@@ -42,7 +42,7 @@
   padding: 2px;
   font-size: 50px;
   font-weight: 200;
-  background: #2b9def;
+  background: #2ca7ff;
   color: rgb(255, 255, 255);
   text-align: center;
   flex: 1;

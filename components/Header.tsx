@@ -11,7 +11,7 @@ interface HeaderButtonProps {
 const HeaderButton: React.FC<HeaderButtonProps> = (props) =>
   <Link href={props.path}>
     <li className={props.router.asPath === props.path ? style.current : undefined}>
-      {props.text}
+      <strong>{props.text}</strong>
     </li>
   </Link>
 

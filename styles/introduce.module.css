@@ -9,8 +9,8 @@
 
 .myInfo {
   padding: 1px; 
-  background-color: #d4fccf;
-  color :rgb(12, 36, 8);
+  background-color: #00b627;
+  color :rgb(255, 255, 255);
   text-align: center;
   flex:1 ; 
 }
@@ -18,8 +18,8 @@
 .myExplaination{
   font-size: 20px;
   padding: 5px; 
-  color :rgb(12, 36, 8);
-  background-color: #d4fccf;
+  color :rgb(243, 243, 243);
+  background-color: #2ab600;
   text-align: left;
 
   flex:2;

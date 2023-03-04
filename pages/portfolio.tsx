@@ -229,8 +229,8 @@ const portfolio: NextPage = () => {
           images={[
             <Youtube key = {0} videoId="vlAftbcCFS0" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
             <Youtube key = {1} videoId="3pY1MmxGJww" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
-            <Image key={2} alt="MSW Hackerton" src="/images/portfolio_maple1.png" />,
-            <Image key={3} alt="MSW Hackerton" src="/images/portfolio_maple2.png" />,
+            <Image key={2} alt="MSW Hackerton_image1" src="/images/portfolio_maple1.png" />,
+            <Image key={3} alt="MSW Hackerton_image2" src="/images/portfolio_maple2.png" />,
           ]}
           details={[
             '해커톤 대표를 맡아 게임 내 스토리 스크립트 연결 알고리즘 제작',
@@ -250,9 +250,9 @@ const portfolio: NextPage = () => {
           duration={['2022.03', '2022.06']}
           language="ReactJs와 Flask 를 이용한 네일 아트 제작 플랫폼 서비스 사용자 UI 개발"
           images={[
-            <Image key={0} alt="Nail Art Picture" src="/images/portfolio_NailArt1.png" />,
-            <Image key={1} alt="Nail Art Picture" src="/images/portfolio_NailArt2.jpg" />,
-            <Image key={2} alt="Nail Art Picture" src="/images/portfolio_NailArt3.png" />
+            <Image key={0} alt="Nail Art Picture1" src="/images/portfolio_NailArt1.png" />,
+            <Image key={1} alt="Nail Art Picture2" src="/images/portfolio_NailArt2.jpg" />,
+            <Image key={2} alt="Nail Art Picture3" src="/images/portfolio_NailArt3.png" />
           ]}
           details={[
             '사용자가 네일 하트 한 그림이나 작품을 도면화 하여',
@@ -324,9 +324,9 @@ const portfolio: NextPage = () => {
         `}>Google Docs로 토의 정리 및 진행방향 결정</p>
           </>}
           images={[
-            <Image key={0} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters1.png" />,
-            <Image key={1} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters2.png" />,
-            <Image key={2} alt="Chatting App Picture 2" src="/images/portfolio_timeMatters3.png" />,
+            <Image key={0} alt="timeMatters Picture 1" src="/images/portfolio_timeMatters1.png" />,
+            <Image key={1} alt="timeMatters Picture 2" src="/images/portfolio_timeMatters2.png" />,
+            <Image key={2} alt="timeMatters Picture 3" src="/images/portfolio_timeMatters3.png" />,
           ]}
           details={[
             '게임 전체 디자인 및 제작',
@@ -346,8 +346,8 @@ const portfolio: NextPage = () => {
           duration={['2020.07', '2020.09']}
           language="Android 환경에 대응하는 Renpy Tool 사용, Python을 사용하여 제작"
           images={[
-            <Image key={0} alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage1.png" />,
-            <Image key={1} alt="Chatting App Picture 2" src="/images/portfolio_loveOfLanguage2.png" />,
+            <Image key={0} alt="loveOfLanguage Picture 2" src="/images/portfolio_loveOfLanguage1.png" />,
+            <Image key={1} alt="loveOfLanguage Picture 2" src="/images/portfolio_loveOfLanguage2.png" />,
           ]}
           details={[
             '프로그래밍 문제 출제 및 컴퓨터 구조 공부',
@@ -370,11 +370,8 @@ const portfolio: NextPage = () => {
           text-align: center;
           flex: 1; 
         `}>
-          <h2 className={styles.linkHighlight}> 더더욱 추가될 수 있으니 그때마다 업데이트 하겠습니다</h2>
 
-          <Link href="https://github.com/Last-SilverLight-End">
-            ## 깃허브 홈페이지는 여기로 ##
-          </Link>
+          
         </div>
       </main>
     </div>
