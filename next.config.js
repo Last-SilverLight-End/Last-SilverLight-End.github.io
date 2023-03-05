@@ -2,7 +2,7 @@
 const config = {
   assetPrefix:
     process.env.NODE_ENV === "production"
-      ? "https://changgeun.strongtrash.com"
+      ? "https://last-silverlight-end.github.io/ShowMeTheHomepage/"
       : undefined,
   reactStrictMode: false,
   swcMinify: true,
