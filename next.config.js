@@ -2,7 +2,7 @@
 const config = {
   assetPrefix:
     process.env.NODE_ENV === "production"
-      ? "https://last-silverlight-end.github.io/ShowMeTheHomepage/"
+      ? "https://last-silverlight-end.github.io/"
       : undefined,
   reactStrictMode: false,
   swcMinify: true,
