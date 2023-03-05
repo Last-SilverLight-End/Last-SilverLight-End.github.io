@@ -1,0 +1,19 @@
+
+.tictacto h1{
+  font-size: 13px;
+  color: rgb(84, 84, 84);
+
+}
+
+.gameProject{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.games{
+  flex-grow: 1; /* flex 컨테이너의 자식인 경우에 제대로 발동됨니다 */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
