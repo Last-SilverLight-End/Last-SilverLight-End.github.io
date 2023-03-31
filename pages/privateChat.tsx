@@ -6,7 +6,7 @@ import styles from '../styles/main.module.css';
 /**
  * 컴퓨터 입장에서는
  * `@components/Header`가
- * `C:\Users\Changgeun\githubHomePageNextjs\ShowMeTheHomepage\components\Header`인지 모른다.
+ * `C:\Users\Changgeun\githubHomePageNextjs\TheHomepage\components\Header`인지 모른다.
  * 
  * -> 알게 하려면 tsconfig.json에서 아래와 같이 작성
  * 

@@ -33,8 +33,18 @@ interface CardCarouselProps extends React.PropsWithChildren {
 
 }
 
-// 포트폴리오  이미지 show component
 
+// 한꺼번에 로딩 하기 위한 CardCarousel 구현
+const moveCardCarousel: React.FC<CardCarouselProps> = (props) => {
+
+    <div>
+    {
+      props.images.map((images,i) =>
+        <div key={i} >{images}</div>  
+    )}
+    </div>
+}
+// 포트폴리오  이미지 show component
 const CardCarousel: React.FC<CardCarouselProps> = (props) => {
   const [showingImageIndex, setShowingImageIndex] = useState(0)
 
@@ -159,6 +169,8 @@ const Card: React.FC<CardProps> = (props) => {
       `}>
         {props.projectName}
       </h1>
+      {/*한꺼번에 로딩 하려면 이 부분을 고쳐야 한다.*/}
+
       {
         (props.images?.length ?? 0) <= 1
           ? props.images?.[0]
