@@ -5,7 +5,7 @@ import Youtube from '@components/youtube';
 import { css } from '@emotion/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/portfolio.module.css';
 /**
  * 컴퓨터 입장에서는
@@ -33,8 +33,18 @@ interface CardCarouselProps extends React.PropsWithChildren {
 
 }
 
-// 포트폴리오  이미지 show component
 
+// 한꺼번에 로딩 하기 위한 CardCarousel 구현
+const moveCardCarousel: React.FC<CardCarouselProps> = (props) => {
+  return(
+    <div>{
+      props.images.map((images,i) =>
+        <div key={i} >{images}</div>  
+      )}
+    </div>
+  )
+}
+// 포트폴리오  이미지 show component
 const CardCarousel: React.FC<CardCarouselProps> = (props) => {
   const [showingImageIndex, setShowingImageIndex] = useState(0)
 
@@ -159,6 +169,8 @@ const Card: React.FC<CardProps> = (props) => {
       `}>
         {props.projectName}
       </h1>
+      {/*한꺼번에 로딩 하려면 이 부분을 고쳐야 한다.*/}
+
       {
         (props.images?.length ?? 0) <= 1
           ? props.images?.[0]
@@ -199,10 +211,51 @@ const Card: React.FC<CardProps> = (props) => {
   )
 }
 
-
 // 포트폴리오 메인 설명
 
-const portfolio: NextPage = () => {
+//포트폴리오 이미지 src 모음
+
+const portfolioImage = [
+  [
+    "/images/portfolio_maple1.png",
+    "/images/portfolio_maple2.png"
+  ],
+  [
+    "/images/portfolio_NailArt1.png",
+    "/images/portfolio_NailArt2.jpg",
+    "/images/portfolio_NailArt3.png"
+  ],
+  [
+    "/images/portfolio_baristaSimulation.png",
+  ],
+  [
+    "/images/portfolio_LiveChattingApp1.png",
+    "/images/portfolio_LiveChattingApp2.png"
+  ],
+  [
+    "/images/portfolio_timeMatters1.png",
+    "/images/portfolio_timeMatters2.png",
+    "/images/portfolio_timeMatters3.png"
+  ],
+  [
+    "/images/portfolio_loveOfLanguage1.png",
+    "/images/portfolio_loveOfLanguage2.png",
+  ]
+]
+
+const Portfolio: NextPage = () => {
+ 
+  useEffect(() => {
+    portfolioImage.forEach((image) => {
+ 
+      image.forEach((image2 =>{
+        const images = new window.Image();
+        images.src= image2;
+      }))
+
+    });
+  },[])
+
   return (<>
     <Header />
     <div className={styles.portfolio_container}>
@@ -223,9 +276,9 @@ const portfolio: NextPage = () => {
         */ }
 
         <Card
-          projectName="MSW HACKERTON"
+          projectName="SUPER HACKATHON 2022 HACKATHON"
           duration={['2022.10', '2022.12']}
-          language="Lua Script 와 MSW 툴을 이용한 개발"
+          language="Lua Script 와 MapleStoryWorld 툴을 이용한 개발"
           images={[
             <Youtube key = {0} videoId="vlAftbcCFS0" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
             <Youtube key = {1} videoId="3pY1MmxGJww" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
@@ -236,7 +289,7 @@ const portfolio: NextPage = () => {
             '해커톤 대표를 맡아 게임 내 스토리 스크립트 연결 알고리즘 제작',
             '긴급 발생 이벤트의 스토리,버튼 상호작용 구현',
             '광산 내 광물 캐기 구현 , 스토리 진행을 위한 게임 벨런싱 진행',
-            'MSW 해커톤 내 "우수" 수상.',
+            'SUPER HACKATHON 2022 HACKATHON "우수" 수상.',
           ]}
           links={[
             {
@@ -379,4 +432,4 @@ const portfolio: NextPage = () => {
   )
 };
 
-export default portfolio
+export default Portfolio
