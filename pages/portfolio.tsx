@@ -5,7 +5,7 @@ import Youtube from '@components/youtube';
 import { css } from '@emotion/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/portfolio.module.css';
 /**
  * 컴퓨터 입장에서는
@@ -36,13 +36,13 @@ interface CardCarouselProps extends React.PropsWithChildren {
 
 // 한꺼번에 로딩 하기 위한 CardCarousel 구현
 const moveCardCarousel: React.FC<CardCarouselProps> = (props) => {
-
-    <div>
-    {
+  return(
+    <div>{
       props.images.map((images,i) =>
         <div key={i} >{images}</div>  
-    )}
+      )}
     </div>
+  )
 }
 // 포트폴리오  이미지 show component
 const CardCarousel: React.FC<CardCarouselProps> = (props) => {
@@ -211,10 +211,72 @@ const Card: React.FC<CardProps> = (props) => {
   )
 }
 
-
 // 포트폴리오 메인 설명
 
-const portfolio: NextPage = () => {
+//포트폴리오 이미지 src 모음
+
+const portfolioImage = [
+  [
+    "/images/portfolio_maple1.png",
+    "/images/portfolio_maple2.png"
+  ],
+  [
+    "/images/portfolio_NailArt1.png",
+    "/images/portfolio_NailArt2.png",
+    "/images/portfolio_NailArt3.png"
+  ],
+  [
+    "/images/portfolio_baristaSimulation.png",
+  ],
+  [
+    "/images/portfolio_LiveChattingApp1.png",
+    "/images/portfolio_LiveChattingApp2.png"
+  ],
+  [
+    "/images/portfolio_timeMatters1.png",
+    "/images/portfolio_timeMatters2.png",
+    "/images/portfolio_timeMatters3.png"
+  ],
+  [
+    "/images/portfolio_loveOfLanguage1.png",
+    "/images/portfolio_loveOfLanguage2.png",
+  ]
+]
+
+const Portfolio: NextPage = () => {
+ 
+  useEffect(() => {
+    portfolioImage.forEach((image) => {
+      // 여태까지 코드에서 나온 Image는
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image
+      // 얘 말하는건데요
+      // 님이 만든 컴포넌트인 Image에다 
+      // 저 Image 사용법을 적용하고 있으니
+      // 당연히 오류나죠
+      
+      // 그나저나
+      // error lens 확장 설치해주세요
+      // ㄹㅇ 님한테 필수일듯
+      // 아 귀찬타
+      // 설치해 드렸읍니다.
+      image.forEach((image2 =>{
+        const images = new window.Image();
+        images.src= image2;
+      }))
+      // 된거 같은데
+      //<Image key={2} alt="MSW Hackerton_image1" src="/images/portfolio_maple1.png" />,
+      // 여기에서 src 만 싸악 해서
+      // 똭해서 하고 싶은데 몬가 몬가 쉽지 않네
+      
+      // 지금 그게 문제가 아니라
+      // image 타입을 보실 string 이네요가 아니라 배열이네 개빡치네
+      // 제가 이래서 Type[]를 싫어함
+      // 앞만 봤다가 큰코다치거든요
+      
+      // 그 저는 이런거 쓸때 대소문자를 엄격히 구분합니다
+    });
+  },[])
+
   return (<>
     <Header />
     <div className={styles.portfolio_container}>
@@ -235,9 +297,9 @@ const portfolio: NextPage = () => {
         */ }
 
         <Card
-          projectName="MSW HACKERTON"
+          projectName="SUPER HACKATHON 2022 HACKATHON"
           duration={['2022.10', '2022.12']}
-          language="Lua Script 와 MSW 툴을 이용한 개발"
+          language="Lua Script 와 MapleStoryWorld 툴을 이용한 개발"
           images={[
             <Youtube key = {0} videoId="vlAftbcCFS0" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
             <Youtube key = {1} videoId="3pY1MmxGJww" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
@@ -248,7 +310,7 @@ const portfolio: NextPage = () => {
             '해커톤 대표를 맡아 게임 내 스토리 스크립트 연결 알고리즘 제작',
             '긴급 발생 이벤트의 스토리,버튼 상호작용 구현',
             '광산 내 광물 캐기 구현 , 스토리 진행을 위한 게임 벨런싱 진행',
-            'MSW 해커톤 내 "우수" 수상.',
+            'SUPER HACKATHON 2022 HACKATHON "우수" 수상.',
           ]}
           links={[
             {
@@ -391,4 +453,4 @@ const portfolio: NextPage = () => {
   )
 };
 
-export default portfolio
+export default Portfolio
