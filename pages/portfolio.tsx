@@ -275,33 +275,12 @@ const Portfolio: NextPage = () => {
  
   useEffect(() => {
     portfolioImage.forEach((image) => {
-      // 여태까지 코드에서 나온 Image는
-      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image
-      // 얘 말하는건데요
-      // 님이 만든 컴포넌트인 Image에다 
-      // 저 Image 사용법을 적용하고 있으니
-      // 당연히 오류나죠
-      
-      // 그나저나
-      // error lens 확장 설치해주세요
-      // ㄹㅇ 님한테 필수일듯
-      // 아 귀찬타
-      // 설치해 드렸읍니다.
+
       image.forEach((image2 =>{
         const images = new window.Image();
         images.src= image2;
       }))
-      // 된거 같은데 됬네
-      //<Image key={2} alt="MSW Hackerton_image1" src="/images/portfolio_maple1.png" />,
-      // 여기에서 src 만 싸악 해서
-      // 똭해서 하고 싶은데 몬가 몬가 쉽지 않네
-      
-      // 지금 그게 문제가 아니라
-      // image 타입을 보실 string 이네요가 아니라 배열이네 개빡치네
-      // 제가 이래서 Type[]를 싫어함
-      // 앞만 봤다가 큰코다치거든요
-      
-      // 그 저는 이런거 쓸때 대소문자를 엄격히 구분합니다
+
     });
   },[])
 
@@ -342,7 +321,7 @@ const Portfolio: NextPage = () => {
           ]}
           links={[
             {
-              text: '## MSW 해커톤 페이지 링크 클릭! ##',
+              text: 'MSW 해커톤 작품',
               href: 'https://maplestoryworlds.nexon.com/play/a72c4612eba147f587e2613332225348'
             }
           ]}
@@ -366,7 +345,7 @@ const Portfolio: NextPage = () => {
           ]}
           links={[
             {
-              text: ' ## Nail Art 제작 플랫폼 링크 클릭 ##',
+              text: ' Nail Art 제작 플랫폼 Github',
               href: 'https://github.com/MyAndroidAppstudy/MyAndroidAppstudy.github.io'
             }
           ]}
@@ -387,7 +366,7 @@ const Portfolio: NextPage = () => {
           ]}
           links={[
             {
-              text: '## 바리스타 시뮬레이션 시연 영상 링크 ##',
+              text: '바리스타 시뮬레이션 시연 영상 ',
               href: 'https://youtu.be/uN2SQNCIDV4'
             }
           ]}
@@ -409,7 +388,7 @@ const Portfolio: NextPage = () => {
           ]}
           links={[
             {
-              text: '## 채팅앱 깃허브 링크 ##',
+              text: ' 채팅앱 Github ',
               href: 'https://github.com/Last-SilverLight-End/android_page'
             }
           ]}
@@ -438,7 +417,7 @@ const Portfolio: NextPage = () => {
           ]}
           links={[
             {
-              text: '## Time Matters 깃허브 링크 ##',
+              text: ' Time Matters Github ',
               href: 'https://github.com/riroan/Time-Matters-Game'
             }
           ]}
@@ -459,7 +438,7 @@ const Portfolio: NextPage = () => {
           ]}
           links={[
             {
-              text: '## 언어의 사랑 깃허브 링크 ##',
+              text: ' 언어의 사랑 Github ',
               href: 'https://github.com/SoleRowCoding/Love-of-Language'
             }
           ]}
