@@ -27,12 +27,16 @@ body {
   }
   
   #__next::-webkit-scrollbar {
+
   width: 12px;
+
 }
 
 #__next::-webkit-scrollbar-thumb {
   border-radius: 10px;
+
   background: linear-gradient(-45deg, #9c9c9c 0%, #9c9c9c 100%);
+
  
 }
 td::-webkit-scrollbar {

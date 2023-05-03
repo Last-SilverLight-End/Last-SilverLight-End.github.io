@@ -68,8 +68,10 @@ const Home: NextPage = () => {
             <h1>만나서 반갑습니다!</h1>
             <Image alt="myHandsome pictures" src="/images/HunterKillerSleep.png" width={120} height={120} />
 
-            <h2>Front_End Developer</h2>
-            <h3>Also Can Do Back_End & Android Develop</h3>
+
+            <h2>Front-End Developer</h2>
+            <h3>Also Can Do Back-End & Android Develop</h3>
+
               
           </div>
           

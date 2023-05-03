@@ -1,5 +1,7 @@
 
+
 import YouTube, { YouTubeProps } from 'react-youtube';
+
 
 type Opts = YouTubeProps['opts']
 // 타입이름은 파스칼케이스여야합니다
@@ -26,11 +28,6 @@ const onPlayerReady: YouTubeProps['onReady'] = (event) => {
 
   // 이거 props.data가 잘못될경우도있는건가요
 };*/
-
-// ㄹㅇㅋㅋ
-// 함수아니고 걍 객첸데요
-
-// 제가 머리 박겠습니다
 
 (() => {
   const a = {
@@ -61,6 +58,7 @@ const onPlayerReady: YouTubeProps['onReady'] = (event) => {
 })
 
 const YoutubePlayer = (props: YouTubeProps) =>{
+
   return (
     // 한줄요약: props의 모든 속성을 YouTube에다 그대로 때려박아라
     <YouTube {...props} onReady={onPlayerReady} />
