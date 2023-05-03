@@ -54,7 +54,7 @@
 
     }
     .header{
-        background-color: #9459f9;
+        background-color: #dddddd;
         color: #fff;
         height: auto;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -76,8 +76,8 @@
     .header li:hover {
         transform: scale(1.2);
         cursor: pointer;
-        color: #ffffff;
-        background: rgb(205, 98, 247);
+        color: #000000;
+        background: rgb(255, 247, 220);
         transition : 0.5s;
     }
     .header li:active {
@@ -87,7 +87,7 @@
     .current{
         height:45px;
         text-align: center;
-        background-color: rgb(179, 115, 239);
+        background-color: #fdd8a1;
     }
 } 
 

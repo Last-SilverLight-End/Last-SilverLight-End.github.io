@@ -1,7 +1,5 @@
 
-import Link from 'next/link';
-import YouTube, { type YouTubeEvent, YouTubeProps } from 'react-youtube';
-import style from '@styles/youtube.module.css';
+import YouTube, { YouTubeProps } from 'react-youtube';
 
 type Opts = YouTubeProps['opts']
 // 타입이름은 파스칼케이스여야합니다
@@ -63,7 +61,6 @@ const onPlayerReady: YouTubeProps['onReady'] = (event) => {
 })
 
 const YoutubePlayer = (props: YouTubeProps) =>{
-
   return (
     // 한줄요약: props의 모든 속성을 YouTube에다 그대로 때려박아라
     <YouTube {...props} onReady={onPlayerReady} />

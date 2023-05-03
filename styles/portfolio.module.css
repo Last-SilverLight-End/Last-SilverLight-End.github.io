@@ -49,6 +49,17 @@
 
 }
 
+.Prev{
+  background-color: rgb(184, 184, 184);
+  font-size : 15px;
+  color : rgb(104, 84, 84);
+}
+
+.Next{
+  background-color: rgb(184, 184, 184);
+  font-size : 15px;
+  color : rgb(104, 84, 84);
+}
 
 @media (max-width : 1020px) {
 

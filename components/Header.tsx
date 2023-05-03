@@ -38,7 +38,7 @@ const Header: FC = () => {
         <RouterProvidedHeaderButton path="/" text="메인" />
         <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
         <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
-        
+        <RouterProvidedHeaderButton path="/jjoripingBabo" text="게임들" />
         
       </ul>
     </div>

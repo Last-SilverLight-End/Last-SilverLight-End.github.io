@@ -29,21 +29,10 @@ import styles from '../styles/portfolio.module.css';
 
 // 포트폴리오 카드 컴포넌트
 interface CardCarouselProps extends React.PropsWithChildren {
-  images: Array<JSX.Element> // 포트폴리오 이미지
+  images: Array<JSX.Element>  // 포트폴리오 이미지
 
 }
 
-
-// 한꺼번에 로딩 하기 위한 CardCarousel 구현
-const moveCardCarousel: React.FC<CardCarouselProps> = (props) => {
-  return(
-    <div>{
-      props.images.map((images,i) =>
-        <div key={i} >{images}</div>  
-      )}
-    </div>
-  )
-}
 // 포트폴리오  이미지 show component
 const CardCarousel: React.FC<CardCarouselProps> = (props) => {
   const [showingImageIndex, setShowingImageIndex] = useState(0)
@@ -51,58 +40,65 @@ const CardCarousel: React.FC<CardCarouselProps> = (props) => {
   return (
     // 이미지 show 공용 style
     <div css={css`
-      display: grid;
+
       grid-template-rows: auto auto;
+      
+    `}>
+      <div css={css`
+      max-width: 100%;
+      display: grid;
+      padding : 20px;
       gap: 30px;
     `}>
-      {/* 이미지 공간 style & 이미지 자체 조정 style */}
-      <div css={css`
+        {/* 이미지 공간 style & 이미지 자체 조정 style */}
+        <div css={css`
         display: flex;
+
         height: 400px;
         flex-direction: column;
         align-items: center;
         & img {
-          width: 100%;
           height: 100%;
           object-fit: contain;
         }
       `}>
-        {props.images[showingImageIndex]}
-      </div>
-      {/* 이미지 넘기기 버튼 상호작용 component*/}
-      <div css={css`
+          {props.images[showingImageIndex]}
+        </div>
+        {/* 이미지 넘기기 버튼 상호작용 component*/}
+        <div css={css`
         display: flex;
-        gap: 10px;
+        gap: 20px;
         justify-content: center;
       `}>
-        <button // prev button
-          className={styles.Prev}
-          onClick={() => {
+          <button // prev button
+            className={styles.Prev}
+            onClick={() => {
             // 0 미만으로 내려갈 시 반대쪽 끝으로 이동
-            setShowingImageIndex(
-              showingImageIndex <= 0
-                ? props.images.length - 1
-                : showingImageIndex - 1
-            )
-          }}
-        >
+              setShowingImageIndex(
+                showingImageIndex <= 0
+                  ? props.images.length - 1
+                  : showingImageIndex - 1
+              )
+            }}
+          >
           PREV
-        </button>
-        {/* 이미지 수량 show */}
-        <span>{showingImageIndex + 1} / {props.images.length}</span>
-        <button // next button
-          className={styles.Next}
-          onClick={() => {
+          </button>
+          {/* 이미지 수량 show */}
+          <span>{showingImageIndex + 1} / {props.images.length}</span>
+          <button // next button
+            className={styles.Next}
+            onClick={() => {
             // 초과할 시 반대쪽 끝으로 이동
-            setShowingImageIndex(
-              showingImageIndex >= props.images.length - 1
-                ? 0
-                : showingImageIndex + 1
-            )
-          }}
-        >
+              setShowingImageIndex(
+                showingImageIndex >= props.images.length - 1
+                  ? 0
+                  : showingImageIndex + 1
+              )
+            }}
+          >
           NEXT
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   )
@@ -119,9 +115,12 @@ const ProjectInfoTable: React.FC<ProjectInfoTableProps> = (props) => {
     // 전체 Table 형태 구성 - Table.tsx 참조
     <Table width={2} style={css`
       width: 100%;
-      column-gap: 30px;
-      row-gap : 10px;
-      grid-template-columns: 200px 1fr;
+      column-gap: 20px;
+      row-gap : 20px;
+      gap: 20px 30px;
+      padding-left:75px;
+      padding-right:150px;
+      grid-template-columns: 0.25fr 1fr;
     `}>
       {props.items.map(([title, content], i) =>
         <Row key={i}>
@@ -151,6 +150,7 @@ const Card: React.FC<CardProps> = (props) => {
   return (
     <section css={css`
       display: flex;
+      
       gap: 20px;
       flex-direction: column;
       align-items: center;
@@ -164,19 +164,42 @@ const Card: React.FC<CardProps> = (props) => {
       background-color: #ffffff;
     `}>
 
+
       <h1 css={css`
         text-align: center;
       `}>
         {props.projectName}
       </h1>
-      {/*한꺼번에 로딩 하려면 이 부분을 고쳐야 한다.*/}
+      {/*한꺼번에 로딩 useEffect로 해결.*/}
 
-      {
-        (props.images?.length ?? 0) <= 1
-          ? props.images?.[0]
-          : <CardCarousel images={props.images ?? []} />
-      }
-      
+      {/* 이미지 처리   */}
+      <div css={css`
+        width : 100%;
+
+        background-color : #e9e9e9;
+        justify-content : center;
+      `}>
+
+        <div css={css`
+        &, & * {
+
+          max-width: 100%;
+        }
+      `}>
+          {
+            (props.images?.length ?? 0) <= 1
+              ? 
+              <div css = {css`
+                display : flex;
+                padding : 30px;
+                justify-content : center;
+              `}>
+                {props.images?.[0]}
+              </div>
+              : <CardCarousel images={props.images ?? []} />
+          }
+        </div>
+      </div>
 
       <ProjectInfoTable
         items={[
@@ -184,7 +207,7 @@ const Card: React.FC<CardProps> = (props) => {
           ['언어 및 세부사항', props.language],
           ['세부 과정',
             <ul key ={"li_key"} css={css`
-              list-style: '* ';
+              list-style: ' ◆ ';
               width: 100%;
               text-align: left;
               margin: 0 auto;
@@ -202,9 +225,13 @@ const Card: React.FC<CardProps> = (props) => {
 
       <h4>
         {props.links.map((link, i) =>
+
           <Link key={i} href={link.href}>
-            {link.text}
+            <a target="_blank">
+              {link.text}
+            </a>
           </Link>
+
         )}
       </h4>
     </section >
@@ -263,7 +290,7 @@ const Portfolio: NextPage = () => {
         const images = new window.Image();
         images.src= image2;
       }))
-      // 된거 같은데
+      // 된거 같은데 됬네
       //<Image key={2} alt="MSW Hackerton_image1" src="/images/portfolio_maple1.png" />,
       // 여기에서 src 만 싸악 해서
       // 똭해서 하고 싶은데 몬가 몬가 쉽지 않네
@@ -301,8 +328,8 @@ const Portfolio: NextPage = () => {
           duration={['2022.10', '2022.12']}
           language="Lua Script 와 MapleStoryWorld 툴을 이용한 개발"
           images={[
-            <Youtube key = {0} videoId="vlAftbcCFS0" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
-            <Youtube key = {1} videoId="3pY1MmxGJww" opts={{ height: "400px", width: "600px", playerVars: { autoplay: 1 } }} />,
+            <Youtube key = {0} videoId="vlAftbcCFS0" opts={{  playerVars: { autoplay: 1 } }} />,
+            <Youtube key = {1} videoId="3pY1MmxGJww" opts={{  playerVars: { autoplay: 1 } }} />,
             <Image key={2} alt="MSW Hackerton_image1" src="/images/portfolio_maple1.png" />,
             <Image key={3} alt="MSW Hackerton_image2" src="/images/portfolio_maple2.png" />,
           ]}
