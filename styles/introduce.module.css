@@ -14,8 +14,8 @@
 
   font-size: 20px;
   padding: 5px; 
-  color :rgb(243, 243, 243);
-  background-color: #2ab600;
+  color :어두운 회색 (#333333);
+  background-color: #e5ffdd;
 
   flex:2;
 }
@@ -35,8 +35,8 @@
   flex-direction: column;
   position : flex;
   padding: 1px;   
-  background-color: #96fdad;
-  color :rgb(86, 86, 86);
+  background-color: #dcf7e2;
+  color :검은색 (#000000);
   text-align: center;
   flex:1 ; 
 }
@@ -47,6 +47,16 @@
 
 }
 
+.intro{
+  font-size : 70px;
+    padding: 0;   
+       margin : 0px;
+       width: 100%;
+       height : 100%;
+        color : 연한 회색 (#F5F5F5);
+        background-color : (#8BC34A) ;
+        border : 0;
+}
 
 
 #hr {
@@ -56,7 +66,7 @@
  
 }
 
-.lines{
+.liness{
   width: 35%;
   border-width:1px 0 0 0; border-style:solid; border-color:#bbb;
   background-color: green;
@@ -66,7 +76,7 @@
 .linkHighlight {
 
   
-  text-decoration-color: rgb(169, 10, 227);
+  text-decoration-color: rgb(15, 206, 92);
 
   }
 .linkHighlight:hover{

@@ -225,12 +225,13 @@ const Card: React.FC<CardProps> = (props) => {
 
       <h4>
         {props.links.map((link, i) =>
-
-          <Link key={i} href={link.href}>
-            <a target="_blank">
-              {link.text}
-            </a>
-          </Link>
+          <button key={i} className={styles.readBtn}>
+            <Link  href={link.href}>
+              <a target="_blank">
+                {link.text}
+              </a>
+            </Link>
+          </button>
 
         )}
       </h4>

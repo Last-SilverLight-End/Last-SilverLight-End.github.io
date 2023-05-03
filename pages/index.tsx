@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
             <div className={styles.header_myName}>
               <h1>
-                Last-Silver-Light (GIT) 성장기
+                 WELCOME TO MY HOMEPAGE
               </h1>
               <br />
             </div>
@@ -54,15 +54,13 @@ const Home: NextPage = () => {
 
     <section className={styles.container}>
       <div className={styles.title}>
+        <br></br> 
         <h2>
-           CHANG_GEUN LEE 
-        </h2>        
+           HunterKiller
+        </h2>    
       </div>
-
       <div className={styles.cont_main}>
         <div className={styles.cont_center}>
-         
-
           <div className={styles.helloMe}>
     
             <h1>만나서 반갑습니다!</h1>
@@ -105,8 +103,8 @@ const Home: NextPage = () => {
             <br/>
             <h2> Be Polite, Be Creative , Be Ambitious</h2>
             <h1> I WILL DO MY BEST. THANK YOU!</h1>
+            <h3> For more Infomation, Contact me!</h3>
           </div>
-
         </div>
       </div>
 

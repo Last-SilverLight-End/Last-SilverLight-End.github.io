@@ -9,48 +9,16 @@ import styles from '../styles/introduce.module.css';
  * `C:\Users\Changgeun\githubHomePageNextjs\ShowMeTheHomepage\components\Header`인지 모른다.
  * 
  * -> 알게 하려면 tsconfig.json에서 아래와 같이 작성
- * 
- * tsconfig.json 수정한 뒤에는 서버를 다시 켜 줘야.
- * 참 쉽죠?
- * 도움이 되셨다면 구독과 좋아요, 알람 설정까지.
- * 
- * @example
- * {
- *   "baseUrl": ".",
- *   "paths": {
- *     "@components/*": [ "./components/*" ]
- *   }
- * }
- */
-
-//<></> 의 유래와 정의 (fragment)
-/*<div>
-  <MyComponent />
-</div>
-
-// MyComponent
-return <>
-  <a>123</a>
-  <a>123</a>
-  <a>123</a>
-</>
-
-// 렌더링 결과
-<div>
-  <a>123</a>
-  <a>123</a>
-  <a>123</a>
-</div>
 */
 
 const introduce: NextPage = () => {
   return (<>
     <Header />
     <main className={styles.myInfo} >
-      <h1>INTRODUCTION</h1>
+
       <br></br>
 
-      <h1>PROFILE
+      <h1>Profile
       </h1>
       <aside className={styles.alignGrid}>
         <h2>
@@ -60,8 +28,6 @@ const introduce: NextPage = () => {
         <Image alt="myHandsome picture" src="/images/HunterKiller.png" width={120} height={120} />
       </aside>
       <h3>NickName : HunterKiller</h3>
-      
-      <h4>School : Sejong University</h4>
       <h4>Email : cg456456@naver.com</h4>
       <h4>GitHub :
         <Link href="https://github.com/Last-SilverLight-End">
@@ -70,13 +36,14 @@ const introduce: NextPage = () => {
           </a>
         </Link>
       </h4>
+      <br></br>
       
     </main>
     
     
     <main className={styles.myExplaination}>
       <hr className = {styles.lines}/>
-      <h2> MY INTRO_WORDS </h2>
+      <h2> Words </h2>
       <ul style={{ listStyle: '" *   "' }}>
         
         <h4>
