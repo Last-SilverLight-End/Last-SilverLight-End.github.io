@@ -335,18 +335,20 @@
 
 .header_upMenu{
   text-align : right;
+  font-weight: bold;
 }
 
 .header_upMenu a{
   display: inline-block;
-  color: rgb(0, 113, 189);
+  color: #000000;
+
   padding: 8px 0 6px 10px;
   transition: color 0.3s ease;
   font-family: "Gothic A1", sans-serif;
 }
 
 .header_upMenu a:hover{
-  color: #ccc;
+  color: rgb(0, 90, 150);
 }
 
 .nav {
@@ -529,5 +531,23 @@
 @media (prefers-color-scheme: dark) {
   .lines{
     border-top: 1px solid #ffffff;
+  }
+  .body{
+    background: linear-gradient(-45deg, #26a100 0%, #26a100 100%);
+      color: white;
+  }
+  .header_myName h1{
+    background: #008942;
+
+    color: #fff;
+
+  }
+  .header_upMenu a{
+   
+    color: rgb(243, 243, 243);
+
+  }
+  .header_upMenu a:hover{
+    color: #90008b;
   }
 }

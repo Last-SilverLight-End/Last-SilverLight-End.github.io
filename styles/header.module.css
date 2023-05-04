@@ -22,17 +22,14 @@
     padding: 10px;
 }
 .header li:hover {
-    transform: scale(1.2);
+   
     cursor: pointer;
     color: #000000;
     background: rgb(255, 255, 255);
-    transition : 0.5s;
+
 }
 
-.header li:active {
-    transform: scale(1.5);
-    transition : 1s;
-}
+
 
 .current{
     height:45px;
