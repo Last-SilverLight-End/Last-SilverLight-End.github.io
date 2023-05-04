@@ -55,12 +55,45 @@ const Home: NextPage = () => {
     <section className={styles.container}>
       <div className={styles.title}>
         <br></br> 
-        <h2>
+        <h1>
            HunterKiller
-        </h2>    
+        </h1>
+ 
       </div>
+
       <div className={styles.cont_main}>
-        <div className={styles.cont_center}>
+        <div className ={styles.cont_center}>
+          <div>
+            <h1>Front-End Devleoper</h1>
+          A
+          B
+          C
+          </div>
+          <hr className = {styles.lines}/>
+          <div>
+            <h1>My Awards</h1>
+            <h1>My Awards</h1>
+            <h1>My Awards</h1>
+          A
+          B
+          C
+          D
+          </div>
+          <hr className = {styles.lines}/>
+          <div>
+            <h1>My License</h1>
+          A
+          </div>
+          <hr className = {styles.lines}/>
+          <div>
+            <h1> Be Polite, Be Creative , Be Ambitious</h1>
+            <h3> I WILL DO MY BEST. THANK YOU!</h3>
+            <h3> For more Infomation, Contact me!</h3>
+
+          </div>
+
+        </div>
+        {/*<div className={styles.cont_center}>
           <div className={styles.helloMe}>
     
             <h1>만나서 반갑습니다!</h1>
@@ -68,7 +101,7 @@ const Home: NextPage = () => {
 
 
             <h2>Front-End Developer</h2>
-            <h3>Also Can Do Back-End & Android Develop</h3>
+            <h2>Also Can Do Back-End & Android Develop</h2>
 
               
           </div>
@@ -105,7 +138,7 @@ const Home: NextPage = () => {
             <h1> I WILL DO MY BEST. THANK YOU!</h1>
             <h3> For more Infomation, Contact me!</h3>
           </div>
-        </div>
+        </div>*/}
       </div>
 
     </section>
