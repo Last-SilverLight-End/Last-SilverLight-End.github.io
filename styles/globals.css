@@ -67,6 +67,9 @@ a {
     color: white;
     background: black;
   }
+  border {
+    color:white;
+  }
 }
 .header_menu {
     text-decoration: underline;

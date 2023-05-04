@@ -315,10 +315,6 @@
   }
 }
 
-.cont_left{
-
-}
-
 .blog_image{
   display : flex;
   justify-content: center;
@@ -464,47 +460,24 @@
   border: 2px solid red;
 }
 
-.cont_main{
-  display: grid;
-  margin: auto;
-  
-  border-right: 20% solid #1f1f1f;
-  border-left: 20% solid #0e0e0e;
-  text-align: center;
-}
+
 .cont_center {
-  display: grid;
-  grid-auto-rows: minmax(min-content, auto);
-  grid-gap: 10px;
+  display: flex;
 
+  flex-direction: column;
+  gap : 10px;
+  
+  text-align: center;
   overflow: hidden;
-
-
-
-  min-height: 800px;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
 }
 
-.cont_right{
-
-}
-.helloMe{
-  
-}
-.myAwards{
-      
-}
-
-.myWords{
-     
-}
-
 .lines{
   width: 35%;
-
+  height : max-content;
 	border : 0px;
-  border-top: 1px solid black;
+  border-top: 1px solid #0e0e0e;
 }
 
 .eternal_return{
@@ -517,4 +490,44 @@
 .youtube{
   text-align: center;
 
+}
+.award_cont{
+  display: flex;
+  justify-content: center;
+
+}
+.award_cont > ul{
+  font-size: 20px;
+  max-width: fit-content;
+  font-weight: bold;
+  text-align: start;
+  list-style : "  ☆  ";
+}
+
+.cont_center>div>h1{
+  max-width: 100%;
+  font-size: 30px;
+  margin : auto 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cont_center>div>h2{
+
+  font-size: 20px;
+  margin : auto 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.cont_center>div>h4{
+  font-size: 13px;
+  margin : auto 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lines{
+    border-top: 1px solid #ffffff;
+  }
 }
