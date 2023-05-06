@@ -8,9 +8,12 @@ interface HeaderButtonProps {
   path: string
   text: string
 }
-
-
-
+const HeaderButton: React.FC<HeaderButtonProps> = (props) =>
+  <Link href={props.path}>
+    <li className={props.router.asPath === props.path ? style.current : undefined}>
+      <strong>{props.text}</strong>
+    </li>
+  </Link>
 
 // router={router}가 반복되니까 이걸 없애려고
 // router가 제외된 HeaderButtonProps를 가져온 뒤에
@@ -18,55 +21,31 @@ interface HeaderButtonProps {
 
 type _ = Omit<HeaderButtonProps, 'router'> // 네 router라는 키를 제외한 객체
 
-
+const createRouterProvidedHeaderButton = (router: NextRouter) => {
+  const RouterProvidedHeaderButton = (props: Omit<HeaderButtonProps, 'router'>) =>
+    <HeaderButton {...props} router={router} />
+  return RouterProvidedHeaderButton
+}
 
 /*FC -> functional component */
 const Header: FC = () => {
-
-
-
   const router = useRouter();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isActive,setIsActive] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  function handleMenuClick(){
+    setIsActive(!isActive);
+  }
 
   const [windowSize, setWindowSize] = useState({
     width: 0,
     height: 0,
   });
-
-  const HeaderButton: React.FC<HeaderButtonProps> = (props) =>{
-    const HandleClick = (event: React.MouseEvent<HTMLLIElement>) => {
-      event.preventDefault();
-  
-      router.push({
-        pathname: props.path,
-      }).then(() => {
-        if (typeof window !== 'undefined') {
-          window.scrollTo(0, 0);
-        }
-      });
-    };
-    return(
-      <Link href={props.path}>
-        <li className={props.router.asPath === props.path ? style.current : undefined} onClick = {HandleClick}>
-          <strong>{props.text}</strong>
-        </li>
-      </Link>
-    )
-  }
-
-  const createRouterProvidedHeaderButton = (router: NextRouter) => {
-    const RouterProvidedHeaderButton = (props: Omit<HeaderButtonProps, 'router'>) =>
-      <HeaderButton {...props} router={router} />
-    return RouterProvidedHeaderButton
-  }
-
+  const [Scroll,setScroll] = useState<number | undefined>(0);
+  //const nextScrollRef = useRef<DocumentFragment | null>;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.getElementById('__next')?.scrollTo(0,0);
+
     const handleResize = () => { 
       setWindowSize({
         width: window.innerWidth,
@@ -74,13 +53,15 @@ const Header: FC = () => {
       });
     };
 
+
     window.addEventListener("resize", handleResize);
     handleResize();
+
     return () => window.removeEventListener("resize", handleResize); 
      
   }, []);
-
   console.log(windowSize.width, windowSize.height);
+
   const RouterProvidedHeaderButton = createRouterProvidedHeaderButton(router);
 
   return (
@@ -94,8 +75,8 @@ const Header: FC = () => {
       </div>
     ) : (
       <div className={style.header}>
-        <Image className={style.headerImg} alt="html5" src="/images/menubar.png" height={60} width={60} onClick={handleMenuClick} />
-        <ul >
+        <Image className={style.headerImg} alt="headerBtnImg" src="/images/menubar.png" height={60} width={60} onClick={handleMenuClick} />
+        <ul className = {isActive ? style.active : ''} >
           <RouterProvidedHeaderButton path="/" text="메인" />
           <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />

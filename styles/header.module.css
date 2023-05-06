@@ -51,7 +51,6 @@
         width : 100%;
         justify-content: center;
         align-items: center;
-
     }
     .header{
         background-color: #dddddd;
@@ -60,6 +59,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
+        align-items:flex-end;
         z-index: 1;
         height: auto;
         width:100%;
@@ -76,22 +76,15 @@
         cursor: pointer;
     }
 
-    .header:hover ul{
-
-        display: flex;
+    .header .active{
+        display:flex;
     }
-    /* 마우스 클릭하고있을때 */
-    .header:active ul{
+    .headerImg{
 
-        display: flex;
-
+        margin-right : 10px;
+        align-content:end;
+        cursor:pointer;
     }
-    /* 마우스 한번클릭후 */
-    .header:visited ul{
-        background-color: white;
-    }
-
-
 
 
     .header li{
@@ -116,3 +109,21 @@
     }
 } 
 
+@media (prefers-color-scheme: dark) {
+    .header{
+        background: linear-gradient(-45deg, #8800f8 0%, #8800f8 100%);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        height: auto;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .current{
+        height:45px;
+        background-color: #c1a1fd;
+        color :#000000
+        
+    }
+  }
