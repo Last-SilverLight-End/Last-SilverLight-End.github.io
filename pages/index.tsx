@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
             <div className={styles.header_myName}>
               <h1>
-                 WELCOME TO MY HOMEPAGE
+                 HUNTERKILLER HOMEPAGE
               </h1>
               <br />
             </div>
@@ -49,16 +49,16 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <Header />
     </div>
 
+    <Header />
     <section className={styles.container}>
       <div className={styles.title}>
         <br></br> 
         <h1>
-           HunterKiller
+          HunterKiller
         </h1>
- 
+
       </div>
 
       <div>
@@ -75,12 +75,12 @@ const Home: NextPage = () => {
             <div className = {styles.award_cont}>
               <ul>
                 <li>
-                 MapleStoryWorld MSW HACKERTON 우수 수상
+                MapleStoryWorld MSW HACKERTON 우수 수상
                 </li>
                 <li>
-                 a KSC 학부 논문 
+                a KSC 학부 논문 
               "메타버스 기반 네일아트 제작 플랫폼 개발"
-               장려 입상
+              장려 입상
                 </li>
               </ul>
 
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
             <h2> MapleStoryWorld MSW HACKERTON 우수 수상 </h2>
             <h2> KSC 학부 논문 
               "메타버스 기반 네일아트 제작 플랫폼 개발"
-               입상 (장려) </h2>
+              입상 (장려) </h2>
 
             <h3> Others....</h3>
             <h4> SDS 삼성 알고리즘 특강 수료 &nbsp; 
@@ -167,7 +167,6 @@ const Home: NextPage = () => {
       </div>
 
     </section>
-
   </>)
 };
 

@@ -20,13 +20,13 @@ const Footer: React.FC = () => {
     <footer className={style.footer}>
       <div className={style.container}>
         <ul>
-          <li><a href="#">사이트 도움말</a></li>
+          <li><a href="#">사이트 안내</a></li>
           {/*<li><a href="#">사이트 이용약관</a></li>
           <li><a href="#">사이트 운영원칙</a></li>*/}
           <li>
-            <a href="#">개인정보취급방침</a>
+            <a href="#">개인정보는 이제 제껍니다</a>
           </li>
-          <li><a href="#">책임의 한계와 법적고지</a></li>
+          <li><a href="#">당신의 양심과 책임</a></li>
           {/*<li><a href="#">게시중단요청서비스</a></li>
           <li><a href="#">고객센터</a></li>*/}
         </ul>

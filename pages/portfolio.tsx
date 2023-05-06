@@ -250,7 +250,7 @@ const portfolioImage = [
   ],
   [
     "/images/portfolio_NailArt1.png",
-    "/images/portfolio_NailArt2.png",
+    "/images/portfolio_NailArt2.jpg",
     "/images/portfolio_NailArt3.png"
   ],
   [

@@ -14,16 +14,21 @@
 
   font-size: 20px;
   padding: 5px; 
-  color :#333333;
+  color :#202020;
   background-color: #e5ffdd;
 
   flex:2;
 }
-
+.section{
+  margin : 35px 0px;
+  display : flex;
+  justify-content: flex-end;
+}
 
 .myExplaination>ul{
   list-style-type : " *";
   max-width: max-content;
+  width: 60%;
   margin: 0;
   list-style-type: "*";
 }
@@ -41,6 +46,11 @@
   flex:1 ; 
 }
 
+.myInfo>h3{
+  padding : 10px;
+  margin : 0;
+  text-align: center;
+}
 
 .myExplaination>h2{
   text-align: center;
@@ -86,11 +96,13 @@
 
 .alignGrid{
   display : grid;
+
   grid-template-columns: 1fr 1fr;
   gap : 5%;
 }
 
 .alignGrid>h2{
+  padding : 10px;
   text-align : right;
 }
 

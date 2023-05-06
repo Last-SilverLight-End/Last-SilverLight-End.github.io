@@ -4,10 +4,13 @@
     text-align: center;
     height: auto;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .header ul{
+    position: sticky;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -53,34 +56,59 @@
     .header{
         background-color: #dddddd;
         color: #fff;
+        position: sticky;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
         height: auto;
+        width:100%;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     }
+
+
     .header ul{
-        display: flex;
+        display: none;
+        content: xxx;
         padding: auto;
         margin: auto;
         list-style: none;
         cursor: pointer;
     }
+
+    .header:hover ul{
+
+        display: flex;
+    }
+    /* 마우스 클릭하고있을때 */
+    .header:active ul{
+
+        display: flex;
+
+    }
+    /* 마우스 한번클릭후 */
+    .header:visited ul{
+        background-color: white;
+    }
+
+
+
+
     .header li{
         padding: 10px;
-        width: 100%;
+        width: 100vw;
         text-align: center;
         padding: 10px;
         
     }
     .header li:hover {
-        transform: scale(1.2);
+
         cursor: pointer;
         color: #000000;
         background: rgb(255, 247, 220);
-        transition : 0.5s;
+
     }
-    .header li:active {
-        transform: scale(1.5);
-        transition : 1s;
-    }
+
     .current{
         height:45px;
         text-align: center;
