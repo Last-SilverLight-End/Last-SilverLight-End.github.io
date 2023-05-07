@@ -14,6 +14,10 @@ export const Head: React.FC<React.PropsWithChildren & AcceptsStyle> = (props) =>
   `}>
     {props.children}
   </Cell>
+// 역할
+export const Roles:React.FC<React.PropsWithChildren & AcceptsStyle> = (props) =>
+  <div></div>
+
 
 export const Row: React.FC<React.PropsWithChildren> = ({ children }) =>
   <>{children}</>

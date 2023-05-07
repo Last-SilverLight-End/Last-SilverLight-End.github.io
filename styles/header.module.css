@@ -95,7 +95,7 @@
         
     }
     .header li:hover {
-
+        transition: all .4s ease-in-out;
         cursor: pointer;
         color: #000000;
         background: rgb(255, 247, 220);
@@ -103,6 +103,7 @@
     }
 
     .current{
+
         height:45px;
         text-align: center;
         background-color: #ffdba5;
