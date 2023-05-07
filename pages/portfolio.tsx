@@ -149,23 +149,7 @@ interface CardProps {
 // card props images 
 const Card: React.FC<CardProps> = (props) => {
   return (
-    <section css={css`
-      display: flex;
-      
-      gap: 20px;
-      flex-direction: column;
-      align-items: center;
-      object-fit: contain;
-      border-radius: 60px 80px 60px 80px / 60px 80px 60px 80px;
-      padding: 20px;
-      color: rgb(71, 70, 70);
-      flex: 1;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-      margin: 30px;
-      background-color: #ffffff;
-    `}>
-
-
+    <section className={styles.cardSection} >
       <h1 css={css`
         text-align: center;
         padding: 10px;
@@ -177,16 +161,10 @@ const Card: React.FC<CardProps> = (props) => {
       {/*한꺼번에 로딩 useEffect로 해결.*/}
 
       {/* 이미지 처리   */}
-      <div css={css`
-        width : 100%;
-
-        background-color : #e9e9e9;
-        justify-content : center;
-      `}>
+      <div className={styles.divImg} >
 
         <div css={css`
         &, & * {
-
           max-width: 100%;
         }
       `}>

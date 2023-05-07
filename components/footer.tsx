@@ -19,21 +19,21 @@ const Footer: React.FC = () => {
   return (
     <footer className={style.footer}>
       <div className={style.container}>
-        <ul>
+        {/*<ul>
           <li><a href="#">사이트 안내</a></li>
           {/*<li><a href="#">사이트 이용약관</a></li>
-          <li><a href="#">사이트 운영원칙</a></li>*/}
+          <li><a href="#">사이트 운영원칙</a></li>
           <li>
             <a href="#">개인정보 안내</a>
           </li>
           <li><a href="#"> 사이트 운영정보 </a></li>
-          {/*<li><a href="#">게시중단요청서비스</a></li>
-          <li><a href="#">고객센터</a></li>*/}
+          <li><a href="#">게시중단요청서비스</a></li>
+          <li><a href="#">고객센터</a></li>*
         </ul>
-        <div className ={style.linebar}></div>
+        <div className ={style.linebar}></div>*/}
         <div className={style.address} >
 
-          Copyright © { getToday() } CHANG-GEUN All rights reserved.
+          Copyright © { getToday() } CHANGGEUN All rights reserved.
         </div>
       </div>
     </footer>
