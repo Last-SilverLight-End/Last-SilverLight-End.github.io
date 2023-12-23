@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         <div className ={styles.cont_center}>
           <div>
             <Image alt="myHandsome pictures" src="/images/HunterKillerSleep.png" width={120} height={120} />
-            <h1>Front-End Developer</h1>
+            <h1>Front-End, Embedded Developer</h1>
             <h1>Also Can Do Back-End & Android Develop</h1>
 
           </div>

@@ -11,7 +11,6 @@ const config = {
       unoptimized: true
     }
   }
-  // 걍 무시하죠?ㄴ
 }
 
 module.exports = config
