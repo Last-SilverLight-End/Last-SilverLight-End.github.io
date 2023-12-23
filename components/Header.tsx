@@ -15,11 +15,11 @@ const HeaderButton: React.FC<HeaderButtonProps> = (props) =>
     </li>
   </Link>
 
-// router={router}가 반복되니까 이걸 없애려고
+// router={router}가 반복되니까 이걸 없애고
 // router가 제외된 HeaderButtonProps를 가져온 뒤에
-// router={router}를 알아서 넣어주는 컴포넌트를 만든거죠
+// router={router}를 알아서 넣어주는 컴포넌트를 제작
 
-type _ = Omit<HeaderButtonProps, 'router'> // 네 router라는 키를 제외한 객체
+type _ = Omit<HeaderButtonProps, 'router'> // router라는 키를 제외한 객체
 
 const createRouterProvidedHeaderButton = (router: NextRouter) => {
   const RouterProvidedHeaderButton = (props: Omit<HeaderButtonProps, 'router'>) =>

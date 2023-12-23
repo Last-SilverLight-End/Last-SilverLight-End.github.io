@@ -11,8 +11,6 @@ import styles from '../styles/main.module.css';
  * -> 알게 하려면 tsconfig.json에서 아래와 같이 작성
  * 
  * tsconfig.json 수정한 뒤에는 서버를 다시 켜 줘야.
- * 참 쉽죠?
- * 도움이 되셨다면 구독과 좋아요, 알람 설정까지.
  * 
  * @example
  * {

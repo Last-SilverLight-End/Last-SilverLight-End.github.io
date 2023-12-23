@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
     const now = new Date();
     const year = now.getFullYear();
     const month = fillZero(now.getMonth() + 1);
-    // 자스가 자바의 **한api를 무지성으로 따라해서
-    // getMonth의 **한점도 그대로 녹아들어있는데요
-    // 1월이면 0을 뱉습니다
+    // 자스가 자바 api 무지성으로 따라해서
+    // getMonth의 **한것도 그대로 녹아들어
+    // 1월이면 0을 반환
     const date = fillZero(now.getDate());
 
     return [ year, month, date ].join('.');

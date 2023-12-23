@@ -15,9 +15,8 @@ import styles from '../styles/portfolio.module.css';
  * -> 알게 하려면 tsconfig.json에서 아래와 같이 작성
  * 
  * tsconfig.json 수정한 뒤에는 서버를 다시 켜 줘야.
- * 참 쉽죠?
- * 도움이 되셨다면 구독과 좋아요, 알람 설정까지.
  * 
+
  * @example
  * {
  *   "baseUrl": ".",
@@ -305,14 +304,6 @@ const Portfolio: NextPage = () => {
           `}>Projects</h1>
 
         </div>
-
-        {/* <div className={styles.portfolio_FAS}>
-          <h3>FAS (Face Accessary Studio)</h3>
-          <h4>진행 기간 2022.03 ~ 2022.06</h4>
-
-          <h4></h4>
-        </div>
-        */ }
 
         <Card
           projectName="첫 단풍이 진 날"
