@@ -31,16 +31,12 @@
     background: rgb(255, 255, 255);
 
 }
-
-
-
 .current{
     height:45px;
     background-color: #fdd8a1;
     color :#000000
     
 }
-
  @media (max-width : 1020px){
     .menu-button-container{
         flex-direction: column;

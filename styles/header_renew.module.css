@@ -1,0 +1,37 @@
+.header_renew{
+  display:flex;
+  justify-content: space-between;
+}
+
+.header_renew ul {
+  display: flex;
+
+  list-style: none;
+  padding:10px;
+  float:left;
+}
+
+.highlighted {
+
+  cursor: pointer;
+  list-style: none;
+  padding:10px;
+  float:left;
+
+}
+
+.not_highlighted {
+
+  cursor: pointer;
+  list-style: none;
+  padding:10px;
+  float:left;
+}
+
+
+
+
+
+
+
+

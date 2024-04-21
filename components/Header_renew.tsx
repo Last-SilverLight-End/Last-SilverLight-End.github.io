@@ -1,5 +1,4 @@
-import Image from '@components/Image';
-import style from '@styles/header.module.css';
+import style from '@styles/header_renew.module.css';
 import Link from 'next/link';
 import { useRouter, type NextRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
@@ -8,27 +7,37 @@ interface HeaderButtonProps {
   path: string
   text: string
 }
+
+// 만약 라우터와 현재 페이지가 같으면 강조, 아니면 원래 색 그대로
 const HeaderButton: React.FC<HeaderButtonProps> = (props) =>
   <Link href={props.path}>
-    <li className={props.router.asPath === props.path ? style.current : undefined}>
-      <strong>{props.text}</strong>
-    </li>
+    <div className={style.header_renew}>
+      <li className={props.router.asPath === props.path ? style.highlighted : style.not_highlighted}>
+        <strong>{props.text}</strong>
+      </li>
+    </div>
   </Link>
 
+
+/*
+    <li className={props.router.asPath === props.path ? style.fuck : undefined}>
+      <strong>{props.text}</strong>
+    </li>
+*/
 // router={router}가 반복되니까 이걸 없애고
 // router가 제외된 HeaderButtonProps를 가져온 뒤에
 // router={router}를 알아서 넣어주는 컴포넌트를 제작
 
-type _ = Omit<HeaderButtonProps, 'router'> // router라는 키를 제외한 객체
+type _= Omit<HeaderButtonProps, 'router'> // router라는 키를 제외한 객체
 
 const createRouterProvidedHeaderButton = (router: NextRouter) => {
   const RouterProvidedHeaderButton = (props: Omit<HeaderButtonProps, 'router'>) =>
-    <HeaderButton {...props} router={router} />
+    <HeaderButton  {...props} router={router} />
   return RouterProvidedHeaderButton
 }
 
 /*FC -> functional component */
-const Header: FC = () => {
+const Header_renew: FC = () => {
   const router = useRouter();
   const [isActive,setIsActive] = useState(false);
 
@@ -40,8 +49,6 @@ const Header: FC = () => {
     width: 0,
     height: 0,
   });
-  const [Scroll,setScroll] = useState<number | undefined>(0);
-  //const nextScrollRef = useRef<DocumentFragment | null>;
 
   useEffect(() => {
     document.getElementById('__next')?.scrollTo(0,0);
@@ -52,32 +59,28 @@ const Header: FC = () => {
         height: window.innerHeight,
       });
     };
-
-
     window.addEventListener("resize", handleResize);
     handleResize();
-
     return () => window.removeEventListener("resize", handleResize); 
-     
   }, []);
   console.log(windowSize.width, windowSize.height);
-
   const RouterProvidedHeaderButton = createRouterProvidedHeaderButton(router);
 
   return (
     windowSize.width >= 1020 ? (
-      <div className={style.header}>
+      <div className={style.header_renew}>
+        <h1>HunKill Portfolio</h1>
         <ul>
-          <RouterProvidedHeaderButton path="/" text="메인" />
-          <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
-          <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
-          <RouterProvidedHeaderButton path="/renew" text="리뉴얼" />
+          <RouterProvidedHeaderButton  path="/" text="메인" />
+          <RouterProvidedHeaderButton  path="/introduce" text="자기소개" />
+          <RouterProvidedHeaderButton  path="/portfolio" text="포트폴리오" />
+          <RouterProvidedHeaderButton  path="/renew" text="리뉴얼" />
         </ul>
       </div>
     ) : (
-      <div className={style.header}>
-        <Image className={style.headerImg} alt="headerBtnImg" src="/images/menubar.png" height={60} width={60} onClick={handleMenuClick} />
-        <ul className = {isActive ? style.active : ''} >
+      <div className={style.header_renew}>
+        <h1>HunKill Portfolio</h1>
+        <ul>
           <RouterProvidedHeaderButton path="/" text="메인" />
           <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
@@ -88,24 +91,4 @@ const Header: FC = () => {
   );
 };
 
-/* list로 나타낼때는 이런 식으로 함
-
-const headerLinks = [
-  { label: "자기소개", href: "/introduce" },
-  { label: "포트폴리오", href: "/portfolio" },
-  { label: "개인 잡담", href: "/privateChat" },
-  { label: "쪼리핑 바보", href: "/jjoripingBabo" }
-];
-
-        {headerLinks.map(({ label, href }) => (
-          <Link href={href}>
-            <a>
-              {label}
-            </a>
-          </Link>
-          <link
-          >
-        ))}
-*/
-export default Header;
-
+export default Header_renew;
