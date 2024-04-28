@@ -69,7 +69,7 @@ const Header_renew: FC = () => {
   return (
     windowSize.width >= 1020 ? (
       <div className={style.header_renew}>
-        <h1>HunKill Portfolio</h1>
+        <h1 className={style.header_renew}>HunKill Portfolio</h1>
         <ul>
           <RouterProvidedHeaderButton  path="/" text="메인" />
           <RouterProvidedHeaderButton  path="/introduce" text="자기소개" />

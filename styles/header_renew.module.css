@@ -1,11 +1,16 @@
 .header_renew{
   display:flex;
   justify-content: space-between;
+
+}
+
+.header_renew h1 {
+  color:rgb(61, 187, 3);
+  font-weight: bold;
 }
 
 .header_renew ul {
   display: flex;
-
   list-style: none;
   padding:10px;
   float:left;
