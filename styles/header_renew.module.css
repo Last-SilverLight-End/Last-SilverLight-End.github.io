@@ -1,36 +1,39 @@
 .header_renew{
   display:flex;
+  text-align: center;
   justify-content: space-between;
-
+  
+  box-shadow: 2px 2px 2px 2px rgb(133, 133, 133);
 }
-
-.header_renew h1 {
+.header_renew_title{
+  justify-content: space-between;
+}
+.header_renew_h1 {
+  position:relative;
   color:rgb(61, 187, 3);
   font-weight: bold;
+  text-align: center ; 
+  margin:5px 0 5px 0;
+  padding-left: 5%;
 }
-
-.header_renew ul {
+.header_renew_ul {
   display: flex;
   list-style: none;
-  padding:10px;
-  float:left;
+  margin:5px 0 5px 0;
+  padding:0 5% 0 5% ;
 }
-
 .highlighted {
-
   cursor: pointer;
   list-style: none;
-  padding:10px;
-  float:left;
-
+  padding:8px;
+  margin:0 4px 0 4px;
 }
 
 .not_highlighted {
-
   cursor: pointer;
   list-style: none;
-  padding:10px;
-  float:left;
+  padding:8px;
+  margin:0 4px 0 4px;
 }
 
 

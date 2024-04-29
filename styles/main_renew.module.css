@@ -1,4 +1,6 @@
-.main{
+.mains{
 
-  background-color: aquamarine;
+  background: aquamarine;
+  padding:0;
+  margin:0;
 }

@@ -11,7 +11,7 @@ interface HeaderButtonProps {
 // 만약 라우터와 현재 페이지가 같으면 강조, 아니면 원래 색 그대로
 const HeaderButton: React.FC<HeaderButtonProps> = (props) =>
   <Link href={props.path}>
-    <div className={style.header_renew}>
+    <div className={style.header_renew_title}>
       <li className={props.router.asPath === props.path ? style.highlighted : style.not_highlighted}>
         <strong>{props.text}</strong>
       </li>
@@ -69,8 +69,8 @@ const Header_renew: FC = () => {
   return (
     windowSize.width >= 1020 ? (
       <div className={style.header_renew}>
-        <h1 className={style.header_renew}>HunKill Portfolio</h1>
-        <ul>
+        <h1 className={style.header_renew_h1}>HunKill Portfolio</h1>
+        <ul className={style.header_renew_ul}>
           <RouterProvidedHeaderButton  path="/" text="메인" />
           <RouterProvidedHeaderButton  path="/introduce" text="자기소개" />
           <RouterProvidedHeaderButton  path="/portfolio" text="포트폴리오" />
@@ -79,8 +79,8 @@ const Header_renew: FC = () => {
       </div>
     ) : (
       <div className={style.header_renew}>
-        <h1>HunKill Portfolio</h1>
-        <ul>
+        <h1 className={style.header_renew_h1}>HunKill Portfolio</h1>
+        <ul className={style.header_renew_ul}>
           <RouterProvidedHeaderButton path="/" text="메인" />
           <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />

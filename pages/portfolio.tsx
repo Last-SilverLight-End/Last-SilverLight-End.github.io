@@ -15,8 +15,9 @@ import styles from '../styles/portfolio.module.css';
  * -> 알게 하려면 tsconfig.json에서 아래와 같이 작성
  * 
  * tsconfig.json 수정한 뒤에는 서버를 다시 켜 줘야.
+ * 참 쉽죠?
+ * 도움이 되셨다면 구독과 좋아요, 알람 설정까지.
  * 
-
  * @example
  * {
  *   "baseUrl": ".",
@@ -305,6 +306,14 @@ const Portfolio: NextPage = () => {
 
         </div>
 
+        {/* <div className={styles.portfolio_FAS}>
+          <h3>FAS (Face Accessary Studio)</h3>
+          <h4>진행 기간 2022.03 ~ 2022.06</h4>
+
+          <h4></h4>
+        </div>
+        */ }
+
         <Card
           projectName="첫 단풍이 진 날"
           duration={['2022.10', '2022.12']}
@@ -401,7 +410,6 @@ const Portfolio: NextPage = () => {
           duration={['2021.10', '2021.12']}
           language={["Unity를 사용한 플랫폼 게임",
             "C# 기반, 시뮬레이션 시스템 구현",
-            "Oculus 2 를 이용하여 구현",
             "VR Oculus를 활용한 커피 바리스타 시뮬레이션 앱 개발"]}
           role ={["Player와 상호작용 구현, 메인 화면 구성", 
             "OVRController를 통한 Grabbable Script 제작",
