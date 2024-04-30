@@ -1,14 +1,16 @@
 import Image from '@components/Image';
-
-const MainName: React.FC = () => {
-
+import style from '@styles/mainname_renew.module.css';
+const mainName: React.FC = () => {
   return(
-    <div>
-      <h1> HunterKiller</h1>
-      <h1> ChangGeun_Lee</h1>
-      <Image alt="myHandsome picture" src="/images/HunterKiller.png" width={120} height={120} />
+    <div className={style.mainName} suppressHydrationWarning>
+      <div className={style.showName}>
+        <div className={style.nickName}>HunterKiller</div>
+        <div className={style.realName}>ChangGeun_Lee</div>
+      </div>
+      <div className={style.images}>
+        <Image alt="myHandsome picture" src="/images/HunterKiller.png" width={120} height={120} />
+      </div>
     </div>
   );
-
 };
-export default MainName;
+export default mainName;

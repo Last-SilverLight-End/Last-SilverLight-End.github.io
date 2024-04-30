@@ -2,12 +2,12 @@
   display:flex;
   text-align: center;
   justify-content: space-between;
-  
+  z-index: 100;
+  position: relative;
   box-shadow: 2px 2px 2px 2px rgb(133, 133, 133);
 }
-.header_renew_title{
-  justify-content: space-between;
-}
+
+
 .header_renew_h1 {
   position:relative;
   color:rgb(61, 187, 3);

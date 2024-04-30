@@ -69,7 +69,6 @@ const Header: FC = () => {
       <div className={style.header}>
         <ul>
           <RouterProvidedHeaderButton path="/" text="메인" />
-          <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
           <RouterProvidedHeaderButton path="/renew" text="리뉴얼" />
         </ul>
@@ -79,7 +78,6 @@ const Header: FC = () => {
         <Image className={style.headerImg} alt="headerBtnImg" src="/images/menubar.png" height={60} width={60} onClick={handleMenuClick} />
         <ul className = {isActive ? style.active : ''} >
           <RouterProvidedHeaderButton path="/" text="메인" />
-          <RouterProvidedHeaderButton path="/introduce" text="자기소개" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
           <RouterProvidedHeaderButton path="/renew" text="리뉴얼" />
         </ul>

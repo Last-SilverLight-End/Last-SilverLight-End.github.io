@@ -1,0 +1,35 @@
+.mainName{
+  background: #d3ffbf;
+  padding:0;
+  margin:0;
+  height: 200px;
+  align-items: center;
+  display: flex;
+}
+
+.showName{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images{
+  mix-blend-mode: multiply;
+  margin-left: auto;
+}
+
+.nickName{
+  color: #42aa28 ;
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  
+}
+
+.realName{
+  color: #177300;
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+}
+
