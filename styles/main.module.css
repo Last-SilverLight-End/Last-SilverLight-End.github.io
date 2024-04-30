@@ -17,6 +17,15 @@
   }
 }
 
+.information {
+
+  padding: 1em 0;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .linkHighlight {
   text-decoration-line: underline;
   text-decoration-color: rgb(10, 82, 227);
@@ -53,7 +62,7 @@
   font-weight: 900;
   transition: box-shadow 0.25s ease-in-out;
 }
-
+맘대로하시져 전일단 머긍ㄹ거좀가져옴
 .header_myName h1:hover {
   box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;
 }
@@ -81,16 +90,37 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   flex-direction: column;
+  padding: 1em 0;
+    gap : 10px;
+    text-align: center;
+    overflow: hidden;
+  
 }
 
 .introduce_image{
   grid-column: 2; 
   grid-row: 1 / span 2;
+  padding: 0 5em 0 1em;
 }
 
 .interest{
   display:flex;
   flex-direction: column;
+  padding: 1em 0;
+}
+
+.interest > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.interest h1{
+  color: rgb(0, 156, 26);
+  margin : 10px 0;
 }
 
 .title {
@@ -101,10 +131,9 @@
   font-size: 40px;
   font-family: "Gothic A1", sans-serif;
   display: inline-block;
-  color: #42aa28 ;;
+  color: #42aa28;
   padding: 5px 0;
 }
-
 .introduce h2 {
   font-size: 30px;
   font-family: "Gothic A1", sans-serif;
@@ -136,14 +165,14 @@
   
   text-align: center;
   overflow: hidden;
-  border-right: 1px solid #dbdbdb;
-  border-left: 1px solid #dbdbdb;
 }
+
 .cont_center > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .cont_center > div > :is(h1, h2, h4) {
   margin : 10px 0;
 }

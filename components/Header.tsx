@@ -70,7 +70,6 @@ const Header: FC = () => {
         <ul>
           <RouterProvidedHeaderButton path="/" text="메인" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
-          <RouterProvidedHeaderButton path="/renew" text="리뉴얼" />
         </ul>
       </div>
     ) : (
@@ -79,7 +78,6 @@ const Header: FC = () => {
         <ul className = {isActive ? style.active : ''} >
           <RouterProvidedHeaderButton path="/" text="메인" />
           <RouterProvidedHeaderButton path="/portfolio" text="포트폴리오" />
-          <RouterProvidedHeaderButton path="/renew" text="리뉴얼" />
         </ul>
       </div>
     )
