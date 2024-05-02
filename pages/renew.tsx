@@ -1,6 +1,4 @@
 import Header from '@components/Header_renew';
-import MainName from '@components/mainName';
-
 
 import type { NextPage } from 'next';
 import styles2 from '../styles/introduce_renew.module.css';
@@ -12,7 +10,6 @@ const Home: NextPage = () => {
         <Header/>
       </div>  
       <div>
-        <MainName/>
       </div>
       <div className ={styles2.layout}>
         <div className ={styles2.introduce1}>
