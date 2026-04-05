@@ -1,0 +1,20 @@
+# 의존성
+node_modules/
+
+# Next.js 빌드 캐시
+.next/
+
+# Static Export 빌드 결과물 (GitHub Actions에서 빌드 후 gh-pages 브랜치로 배포됨)
+out/
+
+# 환경 변수
+.env
+.env.local
+.env.*.local
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# TypeScript 증분 빌드 캐시
+*.tsbuildinfo

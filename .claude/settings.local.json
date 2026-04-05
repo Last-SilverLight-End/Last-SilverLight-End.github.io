@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/cup12/Documents/VisualCode/**)",
+      "Bash(npm run:*)",
+      "Bash(cmd /c \"taskkill /F /IM node.exe\")",
+      "Bash(cmd /c \"cd /d c:\\\\Users\\\\cup12\\\\Documents\\\\VisualCode\\\\Last-SilverLight-End_renew && rmdir /s /q .next && npm run build\")"
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+# ================================================================
+#  PORTFOLIO DATA — 이 파일만 편집하면 포트폴리오 전체가 업데이트됩니다
+# ================================================================
+
+profile:
+  name: "홍길동"
+  title: "풀스택 개발자"
+  bio: |
+    5년 경력의 풀스택 개발자로, React와 Node.js 기반의 웹 서비스 개발을 전문으로 합니다.
+    사용자 경험을 최우선으로 생각하며, 확장 가능한 아키텍처 설계에 관심이 많습니다.
+    오픈소스 기여와 지식 공유를 즐기며, 팀 전체의 성장을 중요하게 여깁니다.
+  avatar: "/avatar.jpg"
+  location: "서울, 대한민국"
+  contact:
+    email: "hong@example.com"
+    github: "https://github.com/honggildong"
+    linkedin: "https://linkedin.com/in/honggildong"
+    blog: "https://blog.example.com"
+    # resume: "/resume.pdf"   # 이력서 PDF 파일 경로 (public/ 폴더 내)
+
+experiences:
+  - company: "테크스타트 주식회사"
+    location: "서울, 강남구"
+    period:
+      start: "2022-03"
+      end: null          # null = 현재 재직 중
+    role: "시니어 풀스택 개발자"
+    description: "핀테크 B2B SaaS 플랫폼 개발 및 운영"
+    technologies:
+      - "Next.js"
+      - "TypeScript"
+      - "Node.js"
+      - "PostgreSQL"
+      - "Redis"
+      - "AWS"
+      - "Docker"
+    tasks:
+      - subject: "결제 대시보드 시스템 재설계"
+        description: |
+          레거시 jQuery 기반의 결제 관리 대시보드를 Next.js + React로 전면 리뉴얼.
+          실시간 거래 모니터링, 정산 리포트 자동화, 멀티 테넌트 권한 시스템을 구현했습니다.
+          평균 페이지 로드 시간 4.2초 → 0.8초로 단축 (81% 개선).
+        period:
+          start: "2023-06"
+          end: "2024-02"
+        role: "프론트엔드 리드"
+        technologies:
+          - "Next.js 14"
+          - "React Query"
+          - "Recharts"
+          - "Tailwind CSS"
+          - "TypeScript"
+
+      - subject: "API 게이트웨이 성능 최적화"
+        description: |
+          Node.js Express 기반 API 서버의 응답 지연 문제를 분석하고 Redis 캐싱 레이어 도입.
+          평균 API 응답 시간 340ms → 45ms로 개선 (87% 단축).
+          월간 서버 비용 35% 절감.
+        period:
+          start: "2023-01"
+          end: "2023-05"
+        role: "백엔드 개발자"
+        technologies:
+          - "Node.js"
+          - "Express"
+          - "Redis"
+          - "PostgreSQL"
+
+      - subject: "CI/CD 파이프라인 구축"
+        description: |
+          GitHub Actions 기반 CI/CD 파이프라인 도입으로 배포 자동화.
+          Docker 컨테이너화 및 AWS ECS 마이그레이션으로 배포 시간 40분 → 8분 단축.
+        period:
+          start: "2022-07"
+          end: "2022-12"
+        role: "DevOps 담당"
+        technologies:
+          - "GitHub Actions"
+          - "Docker"
+          - "AWS ECS"
+          - "Terraform"
+
+  - company: "디지털 에이전시 블루웨이브"
+    location: "서울, 마포구"
+    period:
+      start: "2020-07"
+      end: "2022-02"
+    role: "프론트엔드 개발자"
+    description: "다양한 기업 고객사를 위한 웹 서비스 및 앱 개발"
+    technologies:
+      - "React"
+      - "Vue.js"
+      - "TypeScript"
+      - "GraphQL"
+      - "Figma"
+    tasks:
+      - subject: "패션 브랜드 이커머스 전면 리뉴얼"
+        description: |
+          패션 브랜드 A사 자사몰 전면 리뉴얼 프로젝트 참여.
+          Vue 2 → React 18 마이그레이션, 장바구니/결제 플로우 UX 개선.
+          Lighthouse 성능 점수 42 → 91점으로 향상.
+        period:
+          start: "2021-05"
+          end: "2022-01"
+        role: "프론트엔드 개발"
+        technologies:
+          - "React 18"
+          - "Redux Toolkit"
+          - "Styled Components"
+          - "GraphQL"
+          - "Next.js"
+
+      - subject: "기업 인트라넷 포털 개발"
+        description: |
+          제조업 B사의 사내 인트라넷 포털 신규 개발.
+          Vue.js + Spring Boot 기반으로 전자결재, 조직도, 게시판 모듈 구현.
+        period:
+          start: "2020-10"
+          end: "2021-04"
+        role: "프론트엔드 개발"
+        technologies:
+          - "Vue.js 3"
+          - "Pinia"
+          - "Vite"
+          - "Axios"
+
+skills:
+  - category: "프론트엔드"
+    items:
+      - "React"
+      - "Next.js"
+      - "TypeScript"
+      - "Tailwind CSS"
+      - "Vue.js"
+      - "HTML / CSS"
+
+  - category: "백엔드"
+    items:
+      - "Node.js"
+      - "Express"
+      - "NestJS"
+      - "GraphQL"
+      - "REST API"
+
+  - category: "데이터베이스"
+    items:
+      - "PostgreSQL"
+      - "MySQL"
+      - "MongoDB"
+      - "Redis"
+
+  - category: "인프라 / DevOps"
+    items:
+      - "AWS (EC2, S3, Lambda)"
+      - "Docker"
+      - "GitHub Actions"
+      - "Vercel"
+      - "Linux"
+
+  - category: "도구 및 협업"
+    items:
+      - "Git / GitHub"
+      - "Jira"
+      - "Figma"
+      - "Notion"
+
+projects:
+  - name: "오픈이슈 트래커"
+    description: "GitHub Issues API를 활용한 경량 이슈 트래킹 웹앱. 다중 저장소 이슈 통합 뷰, 라벨/담당자 필터링 기능 제공."
+    period:
+      start: "2024-01"
+      end: "2024-03"
+    # 로컬 이미지 예시: public/projects/ 폴더에 파일을 넣고 경로를 지정하세요
+    media:
+      src: "/projects/open-issue-tracker.png"
+      alt: "오픈이슈 트래커 스크린샷"
+    technologies:
+      - "Next.js"
+      - "TypeScript"
+      - "GitHub API"
+      - "Tailwind CSS"
+    links:
+      github: "https://github.com/honggildong/open-issue-tracker"
+      demo: "https://open-issue-tracker.vercel.app"
+
+  - name: "한국어 타이핑 연습 앱"
+    description: "한국어 타자 연습을 위한 PWA. 단어별 WPM 통계, 오타 분석, 자음/모음 약점 리포트 기능 제공."
+    period:
+      start: "2023-08"
+      end: "2023-10"
+    # YouTube URL 예시: 링크를 그대로 넣으면 모달에서 자동으로 embed 플레이어로 표시됩니다
+    # media:
+    #   src: "https://www.youtube.com/watch?v=VIDEO_ID"
+    technologies:
+      - "React"
+      - "TypeScript"
+      - "Vite"
+      - "PWA"
+    links:
+      github: "https://github.com/honggildong/korean-typing"
+      demo: "https://korean-typing.netlify.app"
+
+education:
+  - school: "한국대학교"
+    degree: "공학사"
+    major: "컴퓨터공학과"
+    period:
+      start: "2016-03"
+      end: "2020-02"
+    description: "졸업 논문: 딥러닝 기반 한국어 감성 분석 모델 비교 연구"
